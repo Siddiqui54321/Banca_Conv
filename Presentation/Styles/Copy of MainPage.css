@@ -1,0 +1,62 @@
+.image {
+	background-image:url(../images1/login_03.gif);
+
+	height:25;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:center;
+}
+.image:hover:onMouseOver {
+	background-image:url(../images1/login_13.gif);
+	color: #666666;
+}
+
+
+.image2 {
+	background-image:url(../images1/login_13.gif);
+	color: #666666;
+	
+	height:25;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:center;
+}
+
+
+.style3 {	font-size: 24px;
+	color: #666666;
+	font-weight: bold;
+}
+.style4 {	color: #608000;
+	font-weight: bold;
+}
+
+
+.image1 {
+	background-image:url(../images1/left_button_inactive_2.gif);
+	width:183;
+	height:21;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:4;
+
+}
+.image1:hover {
+	background-image:url(../images1/left_button_active_2.gif);
+	width:183;
+	color: #666666;
+
+}

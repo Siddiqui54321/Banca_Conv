@@ -1,0 +1,18 @@
+## Visual Studio ##
+.vs/
+bin/
+obj/
+
+## User files ##
+*.user
+*.suo
+
+## Logs ##
+*.log
+
+## OS files ##
+Thumbs.db
+.DS_Store
+
+## Configs (optional – see explanation below) ##
+# appsettings.Development.json

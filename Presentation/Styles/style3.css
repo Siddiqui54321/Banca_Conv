@@ -1,0 +1,53 @@
+/* CSS Document */
+
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; color:#666666; size:12px;
+
+	
+	}
+
+
+
+a   { text-decoration: none; color:#024aa6}
+
+a:active { text-decoration: none; color:#024aa6}
+
+a:hover { text-decoration: underline; color:#004477}
+
+.Whitefont {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#ffffff;
+}
+
+.textfield
+{
+    FONT-SIZE: 11px;
+    BACKGROUND: #FFFFFF;
+    BORDER-BOTTOM: #ffffff 1px solid;
+    BORDER-RIGHT: #ffffff 1px solid;
+    BORDER-TOP: #ffffff 1px solid;
+    BORDER-LEFT: #ffffff 1px solid;
+    COLOR: #81b5dd;
+	font-weight:bold;	
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.style5 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+	font-size: 14px;
+	}
+.style3 {color: #608000; font-weight: bold; font-size: 10px; }
+
+.leftbg
+{
+background-image:url(../images/main/left_2.gif); background-repeat:repeat-x; BACKGROUND-COLOR:#70b4d9; 
+}

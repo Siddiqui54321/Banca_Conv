@@ -1,0 +1,271 @@
+using System;
+using System.Text;
+using System.Data;
+using SHMA.Enterprise; 
+using SHMA.Enterprise.Data;
+
+namespace SHMA.Enterprise.Data{
+	public class KeyNumGenDB : SHMA.Enterprise.DataGateway{
+		public KeyNumGenDB(DataHolder dh):base(dh){}	
+		public override String TableName {
+			get {return "PR_ED_KN_KEYNUMGENDB";}
+		}
+		public static bool IsAutoNumber(string POR_ORGACODE, string PSE_ENTITYID, string PKN_FIELDID){
+			const String strQuery= "SELECT COUNT(*) FROM PR_ED_KN_KEYNUMGEN where POR_ORGACODE = ? and  PSE_ENTITYID = ? and PKN_FIELDID = ? and PKN_AUTOMANUAL <> 'N'";
+			IDbCommand myCommand = DB.CreateCommand(strQuery);		
+			myCommand.Parameters.Add(DB.CreateParameter("@POR_ORGACODE", DbType.String, POR_ORGACODE));			
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, PSE_ENTITYID));
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_FIELDID", DbType.String, PKN_FIELDID));			
+			if ((int)myCommand.ExecuteScalar()>0)
+				return true;
+			else
+				return false;
+		}
+		public static double GetMaxSerial(string POR_ORGACODE, string PSE_ENTITYID, string PKN_FIELDID){
+			const String strQuery= "SELECT max(PKN_SRNO) FROM PR_ED_KN_KEYNUMGEN where POR_ORGACODE = ? and  PSE_ENTITYID = ? and PKN_FIELDID = ?";
+			IDbCommand myCommand = DB.CreateCommand(strQuery);
+			myCommand.Parameters.Add(DB.CreateParameter("@POR_ORGACODE", DbType.String, POR_ORGACODE));			
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, PSE_ENTITYID));
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_FIELDID", DbType.String, PKN_FIELDID));			
+			object maxSerial = myCommand.ExecuteScalar();			
+			if (maxSerial==DBNull.Value)
+				return 1;
+			else
+				return double.Parse(maxSerial.ToString());
+		}
+
+		public static DataTable GetNumGenSettings(string PSE_ENTITYID, string FIELD_COMBINATION, string VALUE_COMBINATION){
+			//string strQuery= "SELECT PKN_STARTNO FROM PR_ED_KN_KEYNUMGEN where POR_ORGACODE = ? and  PSE_ENTITYID = ? and PKN_FIELDID = ? and PKN_AUTOMANUAL = 'A' AND ((PKN_FIELDCOMBINATION=? AND PKN_VALUECOMBINATION=?)  OR (PKN_FIELDCOMBINATION is null AND PKN_VALUECOMBINATION is null))";
+//			StringBuilder sbQuery = new StringBuilder("SELECT PR_ED_KL_KEYLEVELS.PKL_LVLWIDTH AS NumberWidth, ");			
+//			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.POR_ORGACODE as POR_ORGACODE, PR_ED_KN_KEYNUMGEN.PKN_SRNO ,");			
+//			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.pkn_lastno as lastno,  PR_ED_KN_KEYNUMGEN.PKN_FIELDID as fieldid, PR_ED_KN_KEYNUMGEN.PKN_AUTOMANUAL FROM PR_ED_KL_KEYLEVELS INNER JOIN ");
+//			sbQuery.Append(" PR_ED_KN_KEYNUMGEN ON");
+//			sbQuery.Append(" PR_ED_KL_KEYLEVELS.PSE_ENTITYID = PR_ED_KN_KEYNUMGEN.PSE_ENTITYID AND ");
+//			sbQuery.Append(" PR_ED_KL_KEYLEVELS.PKL_LVLNO = PR_ED_KN_KEYNUMGEN.PKL_LVLNO ");
+//	
+//			sbQuery.Append(" WHERE (PR_ED_KN_KEYNUMGEN.PSE_ENTITYID = ?) AND ");
+//			//sbQuery.Append(" AND (PR_ED_KN_KEYNUMGEN.PKN_AUTOMANUAL = 'A') AND ");
+//			sbQuery.Append(" (PR_ED_KN_KEYNUMGEN.PKN_FIELDCOMBINATION = ?) and (PR_ED_KN_KEYNUMGEN.PKN_VALUECOMBINATION = ?)"	);
+			
+
+			StringBuilder sbQuery = new StringBuilder(" SELECT PR_ED_KN_KEYNUMGEN.PKN_FIELDCOMBINATION, PR_ED_KN_KEYNUMGEN.PKN_VALUECOMBINATION,");
+			sbQuery.Append(" PR_ED_KL_KEYLEVELS.POR_ORGACODE, PR_ED_KL_KEYLEVELS.PKL_LVLWIDTH AS NumberWidth, PR_ED_KN_KEYNUMGEN.PKN_SRNO, ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PKN_LASTNO AS lastno, PR_ED_KN_KEYNUMGEN.PKN_STOPNO, PR_ED_KN_KEYNUMGEN.PKN_OTHERLASTNO, PR_ED_KN_KEYNUMGEN.PKN_STARTNO, PR_ED_KN_KEYNUMGEN.PKN_AUTOMANUAL, ");
+			sbQuery.Append(" PR_ED_SE_SYSTEMENTITY.PSE_LVLFIELD AS fieldid, ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PKL_LVLNO, PR_ED_KN_KEYNUMGEN.PSE_ENTITYID");
+			sbQuery.Append(" FROM PR_ED_SE_SYSTEMENTITY INNER JOIN");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN ON PR_ED_SE_SYSTEMENTITY.PSE_ENTITYID = PR_ED_KN_KEYNUMGEN.PSE_ENTITYID INNER JOIN ");
+			sbQuery.Append(" PR_ED_KL_KEYLEVELS ON PR_ED_KN_KEYNUMGEN.POR_ORGACODE = PR_ED_KL_KEYLEVELS.POR_ORGACODE AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.POR_ORGACODE = PR_ED_KL_KEYLEVELS.POR_ORGACODE AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.POR_ORGACODE = PR_ED_KL_KEYLEVELS.POR_ORGACODE AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PSE_ENTITYID = PR_ED_KL_KEYLEVELS.PSE_ENTITYID AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PSE_ENTITYID = PR_ED_KL_KEYLEVELS.PSE_ENTITYID AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PSE_ENTITYID = PR_ED_KL_KEYLEVELS.PSE_ENTITYID AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PKL_LVLNO = PR_ED_KL_KEYLEVELS.PKL_LVLNO AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PKL_LVLNO = PR_ED_KL_KEYLEVELS.PKL_LVLNO AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PKL_LVLNO = PR_ED_KL_KEYLEVELS.PKL_LVLNO");
+
+//			sbQuery.Append(" WHERE     (PR_ED_EC_ENTITYCOLUMN.PSE_ENTITYID = 'FN_GL_TR_NG_VCHCAPNMS') AND ");
+//			sbQuery.Append(" (PR_ED_KN_KEYNUMGEN.PKN_FIELDCOMBINATION = 'POR_ORGACODE~PLC_LOCACODE~PVT_VCHTTYPE~PFS_ACNTYEAR~PPT_PTYPCODE~PPD_PERDNO')");
+//			sbQuery.Append(" AND (PR_ED_KN_KEYNUMGEN.PKN_VALUECOMBINATION = '001~001~001~20042004~0001~11')");
+//			sbQuery.Append(" AND (PR_ED_EC_ENTITYCOLUMN.PEC_COLLEVELBREAKUP = 'Y')");
+
+			sbQuery.Append(" WHERE     (PR_ED_SE_SYSTEMENTITY.PSE_ENTITYID = ?) AND ");
+			sbQuery.Append(" (PR_ED_KN_KEYNUMGEN.PKN_FIELDCOMBINATION = ?)");
+			sbQuery.Append(" AND (PR_ED_KN_KEYNUMGEN.PKN_VALUECOMBINATION = ?)");
+	//		sbQuery.Append(" AND (PR_ED_EC_ENTITYCOLUMN.PEC_COLLEVELBREAKUP = 'Y')");
+
+			IDbCommand myCommand = DB.CreateCommand(sbQuery.ToString());
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, PSE_ENTITYID));
+//			//myCommand.Parameters.Add(DB.CreateParameter("@POR_ORGACODE", DbType.String, POR_ORGACODE));			
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_FIELDCOMBINATION", DbType.String, FIELD_COMBINATION));
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_VALUECOMBINATION", DbType.String, VALUE_COMBINATION));
+//			//myCommand.Parameters.Add(DB.CreateParameter("@PKN_FIELDCOMBINATION", DbType.String, FIELD_COMBINATION));
+//			//myCommand.Parameters.Add(DB.CreateParameter("@PKN_VALUECOMBINATION", DbType.String, VALUE_COMBINATION));
+			System.Data.Common.DbDataAdapter da = DB.CreateDataAdapter(myCommand);
+			DataTable myTable=new DataTable();
+			da.Fill(myTable);
+			return myTable;
+		}
+		
+		public static DataTable GetNumGenSettingsByFieldComb(string PSE_ENTITYID, string FIELD_COMBINATION, string VALUE_COMBINATION){
+			StringBuilder sbQuery = new StringBuilder(" SELECT PR_ED_KN_KEYNUMGEN.PKN_FIELDCOMBINATION, PR_ED_KN_KEYNUMGEN.PKN_VALUECOMBINATION,");
+			sbQuery.Append(" PR_ED_KL_KEYLEVELS.POR_ORGACODE, PR_ED_KL_KEYLEVELS.PKL_LVLWIDTH AS NumberWidth, PR_ED_KN_KEYNUMGEN.PKN_SRNO, ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PKN_LASTNO AS lastno, PR_ED_KN_KEYNUMGEN.PKN_STOPNO, PR_ED_KN_KEYNUMGEN.PKN_OTHERLASTNO, PR_ED_KN_KEYNUMGEN.PKN_STARTNO, PR_ED_KN_KEYNUMGEN.PKN_AUTOMANUAL, ");
+			sbQuery.Append(" PR_ED_SE_SYSTEMENTITY.PSE_LVLFIELD AS fieldid, ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PKL_LVLNO, PR_ED_KN_KEYNUMGEN.PSE_ENTITYID " );
+			//TODO: Add this to enable Prefix, PostFix
+			sbQuery.Append(", PR_ED_KN_KEYNUMGEN.PKN_EXPRESSION ");
+			sbQuery.Append(", PR_ED_KN_KEYNUMGEN.PPT_PTYPCODE  ");
+			sbQuery.Append(", PR_ED_KN_KEYNUMGEN.PKN_FRDATEFIELD ");
+			sbQuery.Append(" FROM PR_ED_SE_SYSTEMENTITY INNER JOIN");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN ON PR_ED_SE_SYSTEMENTITY.PSE_ENTITYID = PR_ED_KN_KEYNUMGEN.PSE_ENTITYID INNER JOIN ");
+			sbQuery.Append(" PR_ED_KL_KEYLEVELS ON PR_ED_KN_KEYNUMGEN.POR_ORGACODE = PR_ED_KL_KEYLEVELS.POR_ORGACODE AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PSE_ENTITYID = PR_ED_KL_KEYLEVELS.PSE_ENTITYID AND ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.PKL_LVLNO = PR_ED_KL_KEYLEVELS.PKL_LVLNO");
+
+			sbQuery.Append(" WHERE     (PR_ED_SE_SYSTEMENTITY.PSE_ENTITYID = ?) AND ");
+			sbQuery.Append(" (PR_ED_KN_KEYNUMGEN.PKN_FIELDCOMBINATION = ?)");
+			if(!(FIELD_COMBINATION.Equals("DEFAULT"))){
+				sbQuery.Append(" AND (PR_ED_KN_KEYNUMGEN.PKN_VALUECOMBINATION = ?)");
+			}
+		//	sbQuery.Append(" AND (PR_ED_EC_ENTITYCOLUMN.PEC_COLLEVELBREAKUP = 'Y')");
+
+			IDbCommand myCommand = DB.CreateCommand(sbQuery.ToString());
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, PSE_ENTITYID));
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_FIELDCOMBINATION", DbType.String, FIELD_COMBINATION));
+			if(!(FIELD_COMBINATION.Equals("DEFAULT"))){
+				myCommand.Parameters.Add(DB.CreateParameter("@PKN_VALUECOMBINATION", DbType.String, VALUE_COMBINATION));
+			}
+			System.Data.Common.DbDataAdapter da = DB.CreateDataAdapter(myCommand);
+			DataTable myTable=new DataTable();
+			da.Fill(myTable);
+			return myTable;
+		}
+
+		public static DataTable GetDistinctFieldCombinations(string entityID){
+			StringBuilder sbQuery = new StringBuilder("select Distinct PKN_FIELDCOMBINATION");
+			sbQuery.Append(" from PR_ED_KN_KEYNUMGEN ");
+			sbQuery.Append(" WHERE     PR_ED_KN_KEYNUMGEN.PSE_ENTITYID = ? ");
+
+			IDbCommand myCommand = DB.CreateCommand(sbQuery.ToString());
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, entityID));
+
+			System.Data.Common.DbDataAdapter da = DB.CreateDataAdapter(myCommand);
+			DataTable myTable=new DataTable();
+			da.Fill(myTable);
+			return myTable;
+		}
+		public static DataTable GetFieldValCombinations(string entityID) 
+		{
+			StringBuilder sbQuery = new StringBuilder("select POR_ORGACODE, PKN_FIELDCOMBINATION, VALU_COMBINATIONS, ");
+			sbQuery.Append(" from PR_ED_KN_KEYNUMGEN ");
+			sbQuery.Append(" WHERE     PR_ED_KN_KEYNUMGEN.PSE_ENTITYID = ? ");
+
+			IDbCommand myCommand = DB.CreateCommand(sbQuery.ToString());
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, entityID));
+
+			System.Data.Common.DbDataAdapter da = DB.CreateDataAdapter(myCommand);
+			DataTable myTable=new DataTable();
+			da.Fill(myTable);
+			return myTable;
+		}
+
+		public static IDataReader GetNumGenInfo(string POR_ORGACODE, string PSE_ENTITYID, string PKN_FIELDCOMBINATION, string PKN_VALUECOMBINATION){
+			//string strQuery= "SELECT PKN_STARTNO FROM [RAPIDDB].[dbo].[PR_ED_KN_KEYNUMGEN] where POR_ORGACODE = ? and  PSE_ENTITYID = ? and PKN_FIELDID = ? and PKN_AUTOMANUAL = 'A' AND ((PKN_FIELDCOMBINATION=? AND PKN_VALUECOMBINATION=?)  OR (PKN_FIELDCOMBINATION is null AND PKN_VALUECOMBINATION is null))";
+			StringBuilder sbQuery = new StringBuilder("SELECT PR_ED_KL_KEYLEVELS.PKL_LVLWIDTH AS NumberWidth, ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN.pkn_lastno as lastno, PR_ED_KN_KEYNUMGEN.PKN_STOPNO, PR_ED_KN_KEYNUMGEN.PKN_OTHERLASTNO, PR_ED_KN_KEYNUMGEN.PKN_STARTNO, PR_ED_KN_KEYNUMGEN.PKN_FIELDID FROM PR_ED_KL_KEYLEVELS INNER JOIN ");
+			sbQuery.Append(" PR_ED_KN_KEYNUMGEN ON PR_ED_KL_KEYLEVELS.POR_ORGACODE = PR_ED_KN_KEYNUMGEN.POR_ORGACODE AND ");
+			sbQuery.Append(" PR_ED_KL_KEYLEVELS.PSE_ENTITYID = PR_ED_KN_KEYNUMGEN.PSE_ENTITYID AND ");
+			sbQuery.Append(" PR_ED_KL_KEYLEVELS.PKL_LVLNO = PR_ED_KN_KEYNUMGEN.PKL_LVLNO ");
+			
+			sbQuery.Append(" WHERE (PR_ED_KN_KEYNUMGEN.PSE_ENTITYID = ?) AND (PR_ED_KN_KEYNUMGEN.POR_ORGACODE = ?) AND ");
+			sbQuery.Append(" AND (PR_ED_KN_KEYNUMGEN.PKN_AUTOMANUAL = 'A') AND ");
+			sbQuery.Append(" ((PR_ED_KN_KEYNUMGEN.PKN_FIELDCOMBINATION IS NULL) AND (PR_ED_KN_KEYNUMGEN.PKN_VALUECOMBINATION IS NULL) OR");
+			sbQuery.Append(" (PR_ED_KN_KEYNUMGEN.PKN_FIELDCOMBINATION = ?) AND (PR_ED_KN_KEYNUMGEN.PKN_VALUECOMBINATION = ?))");
+
+			IDbCommand myCommand = DB.CreateCommand(sbQuery.ToString());
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, PSE_ENTITYID));
+			//myCommand.Parameters.Add(DB.CreateParameter("@POR_ORGACODE", DbType.String, POR_ORGACODE));
+			//myCommand.Parameters.Add(DB.CreateParameter("@PKN_FIELDID", DbType.String, PKN_FIELDID));			
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_FIELDCOMBINATION", DbType.String, PKN_FIELDCOMBINATION));
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_VALUECOMBINATION", DbType.String, PKN_VALUECOMBINATION));
+			myCommand.Transaction=DB.Transaction;
+			return myCommand.ExecuteReader();
+		}
+
+		public static DataTable GetSystemEntityInfo(string PSE_ENTITYID){
+			StringBuilder sbQuery = new StringBuilder("SELECT * FROM PR_ED_SE_SYSTEMENTITY ");
+			sbQuery.Append(" WHERE (PR_ED_SE_SYSTEMENTITY.PSE_ENTITYID = ?) ");
+
+			IDbCommand myCommand = DB.CreateCommand(sbQuery.ToString());
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, PSE_ENTITYID));
+
+			System.Data.Common.DbDataAdapter da = DB.CreateDataAdapter(myCommand);
+			DataTable myTable=new DataTable();
+			da.Fill(myTable);
+			return myTable;
+		}
+
+		public static string GetNumGenInfoAgain(string POR_ORGACODE, string PSE_ENTITYID, decimal PKL_LVLNO, decimal PKN_SRNO){
+			// going mad
+			//string strQuery= "SELECT PKN_STARTNO FROM PR_ED_KN_KEYNUMGEN where POR_ORGACODE = ? and  PSE_ENTITYID = ? and PKN_FIELDID = ? and PKN_AUTOMANUAL = 'A' AND ((PKN_FIELDCOMBINATION=? AND PKN_VALUECOMBINATION=?)  OR (PKN_FIELDCOMBINATION is null AND PKN_VALUECOMBINATION is null))";
+			//StringBuilder sbQuery = new StringBuilder("SELECT isnull(pkn_lastno,'0') as lastno FROM PR_ED_KN_KEYNUMGEN ");
+			StringBuilder sbQuery = new StringBuilder("SELECT case pkn_lastno when null then '0' when '' then '0' else pkn_lastno end) as lastno FROM PR_ED_KN_KEYNUMGEN ");
+			sbQuery.Append("where POR_ORGACODE=? AND PSE_ENTITYID=? AND ");
+			sbQuery.Append("PKL_LVLNO = ? and PKN_SRNO = ? ");
+			
+			IDbCommand myCommand = DB.CreateCommand(sbQuery.ToString());
+			myCommand.Parameters.Add(DB.CreateParameter("@POR_ORGACODE", DbType.String, POR_ORGACODE));
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, PSE_ENTITYID));			
+			myCommand.Parameters.Add(DB.CreateParameter("@PKL_LVLNO", DbType.Decimal, PKL_LVLNO));
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_SRNO", DbType.Decimal, PKN_SRNO));
+
+			myCommand.Transaction=DB.Transaction;
+			return myCommand.ExecuteScalar().ToString();
+		}
+
+		public static bool UpdateLastNo(string newNumber, string oldNumber, string POR_ORGACODE, string PSE_ENTITYID, decimal PKL_LVLNO, decimal PKN_SRNO){
+			//string strQuery= "SELECT PKN_STARTNO FROM PR_ED_KN_KEYNUMGEN where POR_ORGACODE = ? and  PSE_ENTITYID = ? and PKN_FIELDID = ? and PKN_AUTOMANUAL = 'A' AND ((PKN_FIELDCOMBINATION=? AND PKN_VALUECOMBINATION=?)  OR (PKN_FIELDCOMBINATION is null AND PKN_VALUECOMBINATION is null))";
+			StringBuilder sbQuery=new StringBuilder("update PR_ED_KN_KEYNUMGEN set pkn_lastno = ? ");
+			sbQuery.Append("where pkn_lastno = ? ");
+			sbQuery.Append("AND POR_ORGACODE=? AND PSE_ENTITYID=? AND ");
+			sbQuery.Append("PKL_LVLNO = ? and PKN_SRNO = ? ");
+
+			IDbCommand myCommand = DB.CreateCommand(sbQuery.ToString());
+			myCommand.Parameters.Add(DB.CreateParameter("@new_numbwe", DbType.String, newNumber));
+			myCommand.Parameters.Add(DB.CreateParameter("@old_number", DbType.String, oldNumber));			
+			myCommand.Parameters.Add(DB.CreateParameter("@POR_ORGACODE", DbType.String, POR_ORGACODE));			
+			myCommand.Parameters.Add(DB.CreateParameter("@PSE_ENTITYID", DbType.String, PSE_ENTITYID));
+			myCommand.Parameters.Add(DB.CreateParameter("@PKL_LVLNO", DbType.Decimal, PKL_LVLNO));
+			myCommand.Parameters.Add(DB.CreateParameter("@PKN_SRNO", DbType.Decimal, PKN_SRNO));
+			myCommand.Transaction=DB.Transaction;
+			if (myCommand.ExecuteNonQuery()>0)
+				return true;
+			else
+				return false;
+		}
+			
+		public static System.Collections.Hashtable GetLogicalEntityId(string entityId) 
+		{
+			string entityName="", entityFieldName="";
+			System.Collections.Hashtable logicalEntity=new System.Collections.Hashtable();
+			string Qry = "SELECT PSE_LOGICALENTITYFIELD, PSE_LOGICALENTITYID FROM PR_ED_SE_SYSTEMENTITY WHERE PSE_ENTITYID =  ?";
+			IDbCommand myCommand = DB.CreateCommand(Qry);
+			myCommand.Parameters.Add(DB.CreateParameter("@pse_entityid",DbType.String, entityId));
+			IDataReader DReader = myCommand.ExecuteReader();
+			if(DReader.Read())
+			{
+				if(DReader[0] !=null)
+					entityFieldName = DReader[0].ToString();
+				if(DReader[1] !=null)
+					entityName = DReader[1].ToString();
+			}
+			if(!DReader.IsClosed)
+				DReader.Close();
+			
+			logicalEntity.Add("LOGICALENTITYFIELD",entityFieldName);
+			logicalEntity.Add("LOGICALENTITYID",entityName);
+			return logicalEntity;
+		}
+//		public static string GetNewNumber(string POR_ORGACODE, string PSE_ENTITYID, string PKN_FIELDID, string FIELD_COMBINATION, string PKN_VALUE_COMBINATION){
+//			IDataReader reader = PR_ED_KN_KEYNUMGENDB.GetNumGenInfo(POR_ORGACODE, PSE_ENTITYID, PKN_FIELDID, PKN_FIELDCOMBINATION, PKN_VALUECOMBINATION);
+//			double dbloldNumber;
+//			string strNewNumber;
+//			double dblNewNumber;
+//			if (reader.Read()){
+//				dbloldNumber = double.Parse(reader.GetString(1));
+//				dblNewNumber = dbloldNumber+1;
+//				strNewNumber = dblNewNumber.ToString().PadLeft(int.Parse(reader.GetString(0)),'0');
+//
+//				if (UpdateLastNo(strNewNumber, dbloldNumber.ToString(), POR_ORGACODE, PSE_ENTITYID, PKN_FIELDID, PKN_FIELDCOMBINATION, PKN_VALUECOMBINATION))
+//					return strNewNumber;
+//				else
+//					throw new ApplicationException("Cannot update auto number.");			
+//			}
+//			else{
+//				throw new ApplicationException("No Matching Combination for Key found");
+//			}
+//		}			
+	}
+}

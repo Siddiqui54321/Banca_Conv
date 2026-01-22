@@ -1,0 +1,42 @@
+Old code for wmo page
+private void dGrid_ItemDataBound(object sender, DataGridItemEventArgs e)
+		{
+if(e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+			{
+				string status = ((DataRowView)(e.Item.DataItem)).Row["np1_selected"].ToString();
+				DropDownList ddlStatus = ((DropDownList)e.Item.FindControl("ddlStatus"));
+                //ddlStatus.Enabled = status.Equals("P"); old for showing only np1_selected=P
+
+                ddlStatus.Enabled = status.Equals("P") || status.Equals("G"); // enable
+
+
+                /*
+				ListItem item = ddlStatus.Items.FindByValue(status.Equals("R") ? "Y" : "N");
+				if(item != null)
+				{
+					item.Selected = true;
+				}
+				*/
+
+                LNCM_COMMENTSDB cmt = new LNCM_COMMENTSDB(dataHolder);
+				string porposal = ((DataRowView)(e.Item.DataItem)).Row["NP1_PROPOSAL"].ToString();
+				IDataReader temp = cmt.getCommentsOfPorposal(porposal);
+
+				Repeater repAllComments = ((Repeater)e.Item.FindControl("repAllComments"));
+				repAllComments.DataSource = temp;
+				repAllComments.DataBind();
+
+				temp.Close();
+
+				if(repAllComments.Items.Count==0)
+					repAllComments.Visible=false;
+				
+				//e.Item.Attributes.Add("onmouseover","this.style.backgroundColor='lime';");
+				//e.Item.Attributes.Add("onmouseover","showComments("+porposal+")");
+				e.Item.Attributes.Add("onmouseout","hideComments("+porposal+")");
+
+				//LinkButton btn = (LinkButton)e.Item.FindControl("lblProposal");
+				//btn.Attributes.Add("onclick","setValue('"+btn.Text+"');executeReport('PROFILE');");
+				//btn.Text
+			}
+}

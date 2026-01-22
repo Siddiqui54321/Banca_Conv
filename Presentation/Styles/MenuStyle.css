@@ -1,0 +1,272 @@
+BODY {
+	FONT-SIZE: 12px; MARGIN: 0px 0px 0px 10px; COLOR: #000000; FONT-FAMILY: vardana; BACKGROUND-COLOR: #f1f2f2
+}
+TABLE {
+	FONT-SIZE: 10px; FONT-FAMILY: verdana
+}
+.DATATABLE {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; FONT-FAMILY: verdana
+}
+sINPUT {
+	FONT-SIZE: 11px; BOrder-LEFT: white thin; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; FONT-FAMILY: vardana; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4
+}
+.FrameMenu {
+	BOrder-RIGHT: #333366 1px solid; BOrder-TOP: #333366 1px solid; BOrder-LEFT: #333366 1px solid; BOrder-BOTTOM: #333366 1px solid
+}
+.FrameData {
+	BOrder-RIGHT: #333366 1px solid; BOrder-TOP: #333366 1px solid; BOrder-LEFT: #333366 1px solid; BOrder-BOTTOM: #333366 1px solid
+}
+.inputtext {
+	FONT-SIZE: 10px; COLOR: #333333; FONT-FAMILY: vardana; BACKGROUND-COLOR: white
+}
+.subheading {
+	FONT-SIZE: 12px; FONT-FAMILY: vardana; HEIGHT: 20px
+}
+.listerdata {
+	FONT-SIZE: 10px; BOrder-LEFT: white thin; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4
+}
+.inputtextreadonly {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #dec7a4
+}
+.inputtextarea {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 530px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; HEIGHT: 100px; BACKGROUND-COLOR: #eadbc4
+}
+.combo1 {
+	FONT-SIZE: 10px; FONT-FAMILY: vardana
+}
+.subheading1 {
+	FONT-SIZE: 11px; FONT-FAMILY: vardana
+}
+DIV {
+	FONT-FAMILY: verdana
+}
+.MISCDIV {
+	FONT-WEIGHT: bold; FONT-FAMILY: verdana
+}
+.OptionHeading {
+	FONT-SIZE: 13px; FONT-FAMILY: verdana
+}
+.heading {
+	FONT-SIZE: 12px; FONT-FAMILY: verdana
+}
+.GroupHeading {
+	FONT-WEIGHT: bold
+}
+.firstrowstyle {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; BOrder-LEFT: white thin; COLOR: white; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; FONT-FAMILY: verdana; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #255b97; FONT-COLOR: white
+}
+.columnstyle {
+	FONT-SIZE: 10px; FONT-FAMILY: verdana
+}
+.columnstyle1 {
+	FONT-SIZE: 10px; FONT-FAMILY: verdana; BACKGROUND-COLOR: white
+}
+.columnstyle2 {
+	FONT-SIZE: 10px; FONT-FAMILY: verdana; BACKGROUND-COLOR: #c2cdda
+}
+.columnstyle3 {
+	FONT-SIZE: 11px; FONT-FAMILY: verdana; HEIGHT: 12px; BACKGROUND-COLOR: pink
+}
+.newcolumnstyle {
+	FONT-SIZE: 11px; FONT-FAMILY: verdana
+
+
+.button {
+	BACKGROUND: #b6e7ef; BOrder-BOTTOM: #104a7b 1px solid; BOrder-LEFT: #afc4d5 1px solid; BOrder-RIGHT: #104a7b 1px solid; BOrder-TOP: #afc4d5 1px solid; COLOR: #000066; CURSOR: hand; FONT-FAMILY: verdana; FONT-SIZE: 11px; HEIGHT: 19px; TEXT-DECORATION: none
+}
+
+
+
+.Default {
+	FONT-SIZE: 11px; HEIGHT: 20px; FONT-FAMILY: verdana
+}; HEIGHT: 20px
+}
+.Rab {
+	BOrder-RIGHT: #000000 1px solid; PADDING-RIGHT: 1px; BOrder-TOP: #000000 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; BOrder-LEFT: #000000 1px solid; MARGIN-RIGHT: -18px; PADDING-TOP: 0px; BOrder-BOTTOM: #000000 1px solid; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif
+}
+.SNo {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 40px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: right
+}
+.Currency {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 48px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: right
+}
+.Rate1 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 96px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: right
+}
+.Rate2 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 560px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: right
+}
+.Amount1 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 120px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: right
+}
+.Amount2 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 120px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: right
+}
+.DescNarr1 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 240px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.DescNarr2 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 240px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.Code1 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 80px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.Code2 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 160px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.DocNo1 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 80px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.DocNo2 {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 120px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.Name {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 240px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.Address {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 240px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.Telephone {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 120px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.Email {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 120px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.DisplayDescS {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 120px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.DisplayDescM {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 200px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.DisplayDescL {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 400px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: #eadbc4; TEXT-ALIGN: left
+}
+.TextAreaS {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 400px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; HEIGHT: 35px; BACKGROUND-COLOR: #eadbc4
+}
+.TextAreaM {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 400px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; HEIGHT: 70px; BACKGROUND-COLOR: #eadbc4
+}
+.TextAreaL {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 400px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; HEIGHT: 105px; BACKGROUND-COLOR: #eadbc4
+}
+.TextAreaXL {
+	FONT-SIZE: x-small; BOrder-LEFT: white thin; WIDTH: 400px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; BOrder-RIGHT-STYLE: none; HEIGHT: 140px; BACKGROUND-COLOR: #eadbc4
+}
+.Combo10 {
+	FONT-SIZE: 11px; BOrder-LEFT: white thin; WIDTH: 50px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; FONT-FAMILY: verdana; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: lightblue
+}
+.Combo2 {
+	FONT-SIZE: 11px; BOrder-LEFT: white thin; WIDTH: 100px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; FONT-FAMILY: verdana; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: lightblue
+}
+.Combo3 {
+	FONT-SIZE: 11px; BOrder-LEFT: white thin; WIDTH: 150px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; FONT-FAMILY: tahoma,sans-serif; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: lightblue
+}
+.Combo4 {
+	FONT-SIZE: 11px; BOrder-LEFT: white thin; WIDTH: 200px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; FONT-FAMILY: tahoma,sans-serif; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: lightblue
+}
+.Combo5 {
+	FONT-SIZE: 11px; BOrder-LEFT: white thin; WIDTH: 300px; COLOR: black; BOrder-TOP-STYLE: none; BOrder-BOTTOM: thin; FONT-FAMILY: tahoma,sans-serif; BOrder-RIGHT-STYLE: none; BACKGROUND-COLOR: lightblue
+}
+.cselect {
+	WIDTH: 255px; COLOR: white; HEIGHT: 22px; BACKGROUND-COLOR: #6699cc
+}
+ATABLE {
+	BOrder-RIGHT: 0px; BOrder-TOP: 0px; FONT-SIZE: 10px; BOrder-LEFT: 0px; BOrder-BOTTOM: 0px; FONT-FAMILY: verdana
+}
+A {
+	COLOR: #000099
+}
+.swnu {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.sb {
+	FONT-SIZE: 11px; COLOR: #003366; FONT-FAMILY: tahoma,sans-serif
+}
+.bnu {
+	FONT-SIZE: 13px; COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.sbnu {
+	FONT-SIZE: 11px; COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.snub {
+	FONT-SIZE: 11px; COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.snu {
+	FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.sw {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif
+}
+.s {
+	FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif
+}
+.swnub {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.sbnub {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #003366; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.sbd {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif
+}
+.swb {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif
+}
+.sbbd {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #104a7b; FONT-FAMILY: tahoma,sans-serif
+}
+.fwnu {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.fnu {
+	FONT-SIZE: 11px; COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.fw {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif
+}
+.f {
+	FONT-SIZE: 11px; FONT-FAMILY: tahoma,sans-serif
+}
+.flb {
+	FONT-WEIGHT: bold; FONT-SIZE: 24px; COLOR: #000000; FONT-FAMILY: tahoma,sans-serif
+}
+.flbs {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #104a7b; FONT-FAMILY: tahoma,sans-serif
+}
+.Tdom {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #104a7b; FONT-FAMILY: tahoma,sans-serif
+}
+.pbnu {
+	FONT-SIZE: 11px; COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #104a7b; FONT-FAMILY: tahoma,san-serif
+}
+.Wf {
+	FONT-SIZE: 12px; FONT-FAMILY: tahoma,sans-serif
+}
+.ns4Wf {
+	FONT-SIZE: 13px; FONT-FAMILY: tahoma,sans-serif
+}
+.menu {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #000066; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+TR.H {
+	BACKGROUND-COLOR: #c3d6e6
+}
+.bttntext {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #336699; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.Bsbttn {
+	BOrder-RIGHT: #104a7b 1px solid; BOrder-TOP: #afc4d5 1px solid; FONT-SIZE: 13px; BACKGROUND: #d6e7ef; BOrder-LEFT: #afc4d5 1px solid; CURSOR: hand; COLOR: #000066; BOrder-BOTTOM: #104a7b 1px solid; FONT-FAMILY: tahoma,sans-serif; TEXT-DECORATION: none
+}
+.sbttn {
+	BOrder-RIGHT: #104a7b 1px solid; BOrder-TOP: #afc4d5 1px solid; FONT-SIZE: 10px; BACKGROUND: #d6e7ef; BOrder-LEFT: #afc4d5 1px solid; WIDTH: 30px; CURSOR: hand; COLOR: #000066; BOrder-BOTTOM: #104a7b 1px solid; FONT-FAMILY: tahoma,sans-serif; HEIGHT: 16px; TEXT-DECORATION: none
+}
+.ButtonColumn
+{
+	font-size:xx-small;width:100px; text-align:center; color:White}
+	
+
+	

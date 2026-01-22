@@ -1,0 +1,47 @@
+<%@ Page language="c#" Codebehind="shgn_dh_se_displayselection_MI_ET_DS_SUBLIMITSDSPSLCN.aspx.cs" AutoEventWireup="false" Inherits="SHAB.Presentation.shgn_dh_se_displayselection_MI_ET_DS_SUBLIMITSDSPSLCN" %>
+<%@ Register TagPrefix="CV" Namespace="SHMA.CodeVision.Presentation.WebControls" Assembly="CodeVision" %>
+<%@ Register TagPrefix="UC" TagName="DispSelHeader" Src="DispSelHeader.ascx" %>
+<%@ Register TagPrefix="UC" TagName="EntityHeading" Src="EntityHeading.ascx" %>
+<%@ Register TagPrefix="UC" TagName="DispSelButton2" Src="DispSelButton2.ascx" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<UC:DispSelHeader id=dispSelHeader runat="server"></UC:DispSelHeader> 
+		<script language="javascript" src="JSFiles/PortableSQL.js"></script>		
+		<LINK href="Styles/ComboBox.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="JSFiles/ComboBox.js"></script>
+
+		<CV:PageClientScript id="pageClientScript" runat="server"></CV:PageClientScript>		
+	</HEAD>
+	<body>
+		<UC:EntityHeading ParamSource="FixValue"  ParamValue=""   id="EntityHeading" runat="server"></UC:EntityHeading>
+		<form id="myForm" name="myForm" method="post" runat="server">
+		<fieldset>
+			<TABLE class="DispSelTable" id="entryTable">
+				<TR id='row1' >
+					<TD>
+						Cover
+					</TD>
+					<TD> 
+						<CV:ComboBox  ListWidth="400" ColumnMapping="" DescriptionColumn="" ValueField = "COVERID" TextFields = "COVERID,COVERNAME" TableName="COVER" WhereColumns="" WhereValues ="" WhereOperators ="" QueryExtraInfo="" id="COVERID" tabIndex="2" runat="server" Width='10.0pc' MaxLength="20" BaseType="Number"  onchange=""
+						></CV:ComboBox><CV:CompareValidator id="cfvCOVERID" runat="server"  ControlToValidate="COVERID" Operator="DataTypeCheck"  Type="Double" ErrorMessage="Number Format is Incorrect "  Display="Dynamic"></CV:CompareValidator>
+					</TD>
+					<TD>
+						Type
+					</TD>
+					<TD>
+						<CV:dropdownlist id="RECTYPE" tabIndex="4"  Width="5.0pc"  onchange=""
+						runat="server" >
+						<asp:ListItem Value="S">Sublimit</asp:ListItem><asp:ListItem Value="D">Deductible</asp:ListItem><asp:ListItem Value="E">Exclusion</asp:ListItem></CV:dropdownlist>
+					</TD>
+					<TD>
+						<UC:DispSelButton2 id=dispSelButton runat="server"></UC:DispSelButton2>					
+					</TD>
+				</TR>
+			</TABLE>
+			<INPUT type="hidden" name="frm_FetchData_qry" id="frm_FetchData_qry">
+			</fieldset>
+		</form>
+	</body>
+</HTML>
+

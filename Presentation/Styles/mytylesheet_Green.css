@@ -1,0 +1,104 @@
+.textbox {  
+border: 1px #336699 solid; 
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 10px; 
+color: #336699;
+}
+
+.menu_button {  
+;
+}
+
+.link1 {
+color:white;
+text-decoration: none;
+}
+
+.link1 a.hover {
+color:orange;
+text-decoration: underline;
+}
+
+.image {
+	background-image:url(../images/left_button_inactive_2.gif);
+	width:183;
+	height:21;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:4;
+
+}
+.image:hover {
+	background-image:url(../images/left_button_active_2.gif);
+	width:183;
+	color: #666666;
+
+}
+
+.yesno {
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.login {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.row_bg {
+	background-color: #F4F8FB;
+}
+
+.form_title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #336699;
+	font-weight: bold;
+	font-size: 11px;
+}
+.form_heading {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:16px;
+	background-color: #336699;
+}
+
+.form_heading_2 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;
+	background-color: #6699cc;
+}
+
+.form_heading_3a {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;
+	background-color: #98AFC7;
+}
+
+
+.style1 {font-size: 14px;
+	font-weight: bold;
+	color: #559CBD;
+}
+
+.main {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+	font-size:12px;
+}
+
+.text_font{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+	font-size:10px;
+}

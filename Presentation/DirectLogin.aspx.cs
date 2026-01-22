@@ -1,0 +1,55 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+
+namespace Insurance.Presentation
+{
+	/// <summary>
+	/// Summary description for DirectLogin.
+	/// </summary>
+	public partial class DirectLogin : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, System.EventArgs e)
+		{
+			Session.Add ("BrokerName", "Super Broker");
+			Session.Add ("LoginBrokerId", 1);
+		
+			Session.Add("CompanyId", 1);
+			Session.Add("LoginUserID", 1);
+			Response.Write("<script type='text/javascript'>");
+			//Response.Write("parent.document.location='../Presentation/ProposalEntryMainFrame.aspx'");
+			Response.Write("parent.document.location='../Presentation/MainPage.aspx'");
+			Response.Write("</script>");
+		}
+
+		#region Web Form Designer generated code
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: This call is required by the ASP.NET Web Form Designer.
+			//
+			InitializeComponent();
+			base.OnInit(e);
+
+			Response.Cache.SetCacheability(HttpCacheability.NoCache);
+			Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
+			Response.Cache.SetNoStore();
+		}
+		
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{    
+		}
+		#endregion
+	}
+}

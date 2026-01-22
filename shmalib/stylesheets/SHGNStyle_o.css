@@ -1,0 +1,356 @@
+BODY {
+	BACKGROUND-COLOR: F1F2F2; COLOR: #000000; FONT-FAMILY: vardana; FONT-SIZE: 12px; MARGIN: 0px 0px 0px 10px
+}; 
+TABLE {
+	FONT-FAMILY: verdana; FONT-SIZE: 10px;
+};
+sINPUT {
+	FONT-FAMILY: vardana; FONT-SIZE: 11px; BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black 
+};
+/*Use inputtext class with input text boxes*/
+.inputtext {
+	BACKGROUND-COLOR: white; COLOR: #333333; FONT-SIZE: 10px;  FONT-FAMILY: vardana
+};
+/*Use inputtext class with input text boxes*/
+.subheading {
+	FONT-SIZE: 12px; HEIGHT: 20px; FONT-FAMILY: vardana
+}
+/*Use inputtext class with input text boxes*/
+.listerdata {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: 10px
+}
+
+/*Use inputtext class for input text boxes*/
+.inputtextreadonly {
+	BACKGROUND-COLOR: #dec7a4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small
+}; 
+/*Use inputtextarea class for input textarea boxes*/
+.inputtextarea {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; HEIGHT: 100px; WIDTH: 530px
+}
+/*Use combo class for lister (combo) */
+.combo1 {
+	FONT-SIZE: 10px; FONT-FAMILY: vardana
+}
+
+/*Use thisclass for heading of File*/
+.subheading1 {
+	FONT-FAMILY: vardana; FONT-SIZE: 11px;
+}
+
+DIV {
+	FONT-FAMILY: vardana
+}
+.optionheading {
+	FONT-FAMILY: verdana; FONT-SIZE: 13px;
+}
+/*Use thisclass for heading of File*/
+.heading {
+	FONT-FAMILY: vardana; FONT-SIZE: 12px;
+}
+
+/*Use this class for GroupHeading*/
+.GroupHeading {
+	FONT-WEIGHT: bold
+}
+/*Use firstrowstyle class for first row (title row) of input table*/
+.firstrowstyle {
+	FONT-COLOR: white; BACKGROUND-COLOR: 255B97; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: white; FONT-SIZE: 11px; FONT-FAMILY: vardana; FONT-WEIGHT: bold
+}
+/*Use columnstyle class for columns of input table*/
+.columnstyle {
+	FONT-SIZE: 10px; FONT-FAMILY: vardana
+}
+/*Use columnstyle class for columns of input table*/
+.columnstyle1 {
+	BACKGROUND-COLOR: white; FONT-SIZE: 10px; FONT-FAMILY: vardana
+}
+/*Use columnstyle class for columns of input table*/
+.columnstyle2 {
+	BACKGROUND-COLOR: C2CDDA; FONT-SIZE: 10px; FONT-FAMILY: vardana
+}
+/*Use columnstyle class for columns of input table*/
+.columnstyle3 {
+	BACKGROUND-COLOR: pink; FONT-SIZE: 11px; HEIGHT: 12px; FONT-FAMILY: vardana
+}
+
+/*Use newcolumnstyle class for new row of input table*/
+.newcolumnstyle {
+	FONT-SIZE: 11px; HEIGHT: 20px; FONT-FAMILY: vardana
+
+/*Use button class for command buttons*/
+.button {
+	BACKGROUND: #b6e7ef; BORDER-BOTTOM: #104a7b 1px solid; BORDER-LEFT: #afc4d5 1px solid; BORDER-RIGHT: #104a7b 1px solid; BORDER-TOP: #afc4d5 1px solid; COLOR: #000066; CURSOR: hand; FONT-FAMILY: vardana; FONT-SIZE: 11px; HEIGHT: 19px; TEXT-DECORATION: none
+}
+
+
+/*Use default class with default textbox*/
+.Default {
+	FONT-SIZE: 11px; HEIGHT: 20px; FONT-FAMILY: vardana
+}
+}
+.Rab {
+	BORDER-RIGHT: #000000 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; BORDER-LEFT: #000000 1px solid; MARGIN-RIGHT: -18px; PADDING-TOP: 0px; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif
+}
+
+/*Use default class with default textbox*/
+.SNo{
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: right; WIDTH: 40px
+}
+/*Use currency class with input textbox of currency*/
+.Currency {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: right; WIDTH: 48px
+}
+/*Use Rate class with input textbox of Rate*/
+.Rate1 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: right; WIDTH: 96px
+}
+/*Use Rate class with input textbox of Rate*/
+.Rate2 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: right; WIDTH: 560px
+}
+/*Use inputtext class with input text boxes*/
+.Amount1 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: right; WIDTH: 120px
+}
+/*Use inputtext class with input text boxes*/
+.Amount2 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: right; WIDTH: 120px
+}
+/*Use inputtext class with input text boxes*/
+.DescNarr1 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 240px
+}
+/*Use inputtext class with input text boxes*/
+.DescNarr2 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 240px
+}
+/*Use inputtext class with input text boxes*/
+.Code1 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 80px
+}
+/*Use inputtext class with input text boxes*/
+.Code2 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 160px
+}
+/*Use inputtext class with input text boxes*/
+.DocNo1 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 80px
+}
+/*Use inputtext class with input text boxes*/
+.DocNo2 {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 120px
+}
+/*Use inputtext class with input text boxes*/
+.Name {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 240px
+}
+/*Use inputtext class with input text boxes*/
+.Address {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 240px
+}
+/*Use inputtext class with input text boxes*/
+.Telephone {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 120px
+}
+/*Use inputtext class with input text boxes*/
+.Email {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 120px
+}
+/*Use inputtext class with input text boxes*/
+.DisplayDescS {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 120px
+}
+/*Use inputtext class with input text boxes*/
+.DisplayDescM {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 200px
+}
+/*Use inputtext class with input text boxes*/
+.DisplayDescL {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; TEXT-ALIGN: left; WIDTH: 400px
+}
+/*Use inputtextarea class for input textarea boxes*/
+.TextAreaS {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; HEIGHT: 35px; WIDTH: 400px
+}
+/*Use inputtextarea class for input textarea boxes*/
+.TextAreaM {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; HEIGHT: 70px; WIDTH: 400px
+}
+/*Use inputtextarea class for input textarea boxes*/
+.TextAreaL {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; HEIGHT: 105px; WIDTH: 400px
+}
+/*Use inputtextarea class for input textarea boxes*/
+.TextAreaXL {
+	BACKGROUND-COLOR: #eadbc4; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; FONT-SIZE: x-small; HEIGHT: 140px; WIDTH: 400px
+}
+/*Use combo class for lister (combo) */
+.Combo10 {
+	FONT-FAMILY: vardana; FONT-SIZE: 11px; BACKGROUND-COLOR: lightblue; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; WIDTH: 50px
+}
+/*Use combo class for lister (combo) */
+.Combo2 {
+	FONT-FAMILY: vardana; FONT-SIZE: 11px; BACKGROUND-COLOR: lightblue; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; WIDTH: 100px
+}
+/*Use combo class for lister (combo) */
+.Combo3 {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; BACKGROUND-COLOR: lightblue; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; WIDTH: 150px 
+}
+/*Use combo class for lister (combo) */
+.Combo4 {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; BACKGROUND-COLOR: lightblue; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; WIDTH: 200px
+}
+/*Use combo class for lister (combo) */
+.Combo5 {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; BACKGROUND-COLOR: lightblue; BORDER-BOTTOM: thin; BORDER-LEFT: white thin; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; COLOR: black; WIDTH: 300px 
+}
+
+.cselect {
+	BACKGROUND-COLOR: #6699cc; COLOR: white; HEIGHT: 22px; WIDTH: 255px
+}
+
+ATABLE {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-FAMILY: vardana; FONT-SIZE: 10px
+}
+A {
+	COLOR: #000099
+}
+.swnu {
+	COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.sb {
+	COLOR: #003366; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px
+}
+.bnu {
+	COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none
+}
+.sbnu {
+	COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.snub {
+	COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.snu {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.sw {
+	COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px
+}
+.s {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px
+}
+.swnub {
+	COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.sbnub {
+	COLOR: #003366; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.sbd {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.swb {
+	COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.sbbd {
+	COLOR: #104a7b; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.fwnu {
+	COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.fnu {
+	COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.fw {
+	COLOR: #ffffff; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px
+}
+.f {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px
+}
+.flb {
+	COLOR: #000000; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 24px; FONT-WEIGHT: bold
+}
+.flbs {
+	COLOR: #104a7b; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.Tdom {
+	COLOR: #104a7b; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold
+}
+.pbnu {
+	COLOR: #000099; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+.title {
+	COLOR: #104a7b; FONT-FAMILY: tahoma,san-serif; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+.Wf {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 12px
+}
+.ns4Wf {
+	FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 13px
+}
+.menu {
+	COLOR: #000066; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+TR.H {
+	BACKGROUND-COLOR: #c3d6e6
+}
+.bttntext {
+	COLOR: #336699; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.Bsbttn {
+	BACKGROUND: #d6e7ef; BORDER-BOTTOM: #104a7b 1px solid; BORDER-LEFT: #afc4d5 1px solid; BORDER-RIGHT: #104a7b 1px solid; BORDER-TOP: #afc4d5 1px solid; COLOR: #000066; CURSOR: hand; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 13px; TEXT-DECORATION: none
+}
+.sbttn {
+	
+}
+.pbttn {
+	BACKGROUND: #d6e7ef; BORDER-BOTTOM: #104a7b 1px solid; BORDER-LEFT: #afc4d5 1px solid; BORDER-RIGHT: #104a7b 1px solid; BORDER-TOP: #afc4d5 1px solid; COLOR: #000066; CURSOR: hand; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; HEIGHT: 19px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 2px; TEXT-DECORATION: none
+}
+.obttn {
+	BACKGROUND: #d6e7ef; COLOR: #777777; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 11px; PADDING-BOTTOM: 1px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; PADDING-TOP: 1px; TEXT-DECORATION: none; VERTICAL-ALIGN: middle
+}
+.ns4obttn {
+	BACKGROUND: #d6e7ef; COLOR: #8ca5b5; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.ns4sbttn {
+	BACKGROUND: #d6e7ef; BORDER-BOTTOM: #104a7b 1px solid; BORDER-LEFT: #afc4d5 1px solid; BORDER-RIGHT: #104a7b 1px solid; BORDER-TOP: #afc4d5 1px solid; COLOR: #000066; FONT-FAMILY: tahoma,sans-serif; FONT-SIZE: 12px; HEIGHT: 19px; TEXT-DECORATION: none
+}
+.drpdwn {
+	BACKGROUND-COLOR: #d6e7ef; COLOR: #000066; FONT-FAMILY: tahoma,san-serif; FONT-SIZE: 11px
+}
+TABLE.Mtable TD {
+	BORDER-BOTTOM: #93bee2 1px solid
+}
+.transactionDark {
+	BORDER-BOTTOM: #336699 1px solid; BORDER-LEFT: #336699 1px solid; BORDER-RIGHT: #336699 1px solid; BORDER-TOP: #336699 1px solid
+}
+.transactionLight {
+	BORDER-BOTTOM: #336699 1px solid; BORDER-LEFT: #336699 1px solid; BORDER-RIGHT: #336699 1px solid; BORDER-TOP: #336699 1px solid
+}
+.msglistcntrl TD {
+	BORDER-BOTTOM: medium none
+}
+A.tab {
+	COLOR: #ffffff; FONT-FAMILY: Tahoma, san-serif; FONT-SIZE: 11px; TEXT-DECORATION: none
+}
+FONT.tab {
+	COLOR: #f4d500; FONT-FAMILY: Tahoma, san-serif; FONT-SIZE: 11px
+}
+.PPModuleTtlTxt {
+	COLOR: #104a7b; FONT-FAMILY: Tahoma, sans-serif
+}
+.PPDesTxt {
+	FONT-FAMILY: Tahoma, san-serif
+}
+.PPModuleBrd {
+	BACKGROUND-COLOR: #dbeaf5
+}
+.PPModuleTtlTbl {
+	BACKGROUND-COLOR: #dbeaf5
+}
+.PPDynamicTbl {
+	BACKGROUND-COLOR: #ffffff
+}
+.PPRSbmtBtn {
+	BACKGROUND: #dbeaf5; BORDER-BOTTOM: #104a7b 1px solid; BORDER-LEFT: #afc4d5 1px solid; BORDER-RIGHT: #104a7b 1px solid; BORDER-TOP: #afc4d5 1px solid; COLOR: #000066; CURSOR: hand; FONT-FAMILY: Tahoma, san-serif; FONT-SIZE: 13px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}

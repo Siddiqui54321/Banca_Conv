@@ -1,0 +1,140 @@
+using System;
+using System.Web;
+using System.Web.UI;
+
+namespace SHMA.Enterprise.Presentation
+{
+	public class TwoStepController: PageController
+	{
+		public TwoStepController()
+		{
+		}
+		
+		protected override void  Page_Load(object sender, System.EventArgs e )
+		{
+			try
+			{
+				setCachePolicy();
+				//Response.Cache.SetCacheability(Cacheability);
+			
+				if (!IsPostBack)
+				{ 
+
+					string ApplyPageVarification = System.Configuration.ConfigurationSettings.AppSettings["ApplyPageVerification"] == null?"N":System.Configuration.ConfigurationSettings.AppSettings["ApplyPageVerification"] ;
+					if (ApplyPageVarification == "Y")
+					{
+						//if (this.ToString() != "ASP.Login_aspx" && this.ToString() != "ASP.shgn_gs_se_stdgridscreen_SHSM_DS_LOGINSELECTION_aspx" && this.ToString() != "ASP.shgn_ss_se_stdscreen_SHSM_FORCEPASSWORDCHANGE_aspx" )
+                        // _ASPX
+                        if (this.ToString().ToUpper().IndexOf("LOGIN") < 0 && this.ToString().ToUpper().IndexOf("SHGN_GS_SE_STDGRIDSCREEN_SHSM_DS_LOGINSELECTION_ASPX") < 0 && this.ToString().ToUpper().IndexOf("SHGN_SS_SE_STDSCREEN_SHSM_FORCEPASSWORDCHANGE_ASPX") < 0)
+						{
+							//Server.Transfer(System.Configuration.ConfigurationSettings.AppSettings["AccessrightsPage"]) ;
+							string strSAA_APPCODE, strSPT_PRGTYPECODE, strSAO_OPTCODE;
+							strSAA_APPCODE = SessionObject.GetString("s_SAA_APPCODE") ;
+							strSPT_PRGTYPECODE = SessionObject.GetString("s_SPT_PRGTYPECODE") ;
+							strSAO_OPTCODE = SessionObject.GetString("s_SAO_OPTCODE") ;
+
+							if(shsm.SHSM_AllowEntity.fsallowEntity(SessionObject.GetString("s_SUS_USERCODE"),Utilities.File2EntityID(this.ToString()),strSAA_APPCODE,strSPT_PRGTYPECODE,strSAO_OPTCODE) == false)
+							{ 
+								Server.Transfer("~/Presentation/Accessrights.htm");
+							}
+						}
+					}
+					FirstStep();
+				}
+			}
+
+			catch (SHMA.Enterprise.Exceptions.HandledException ex)
+			{
+				Console.WriteLine(ex.Message);
+				Response.End();
+			}
+			
+			catch (Exception ex)
+			{
+				//ErrorHandle(ex.Message);
+				ErrorHandle(ex);
+				//Response.End();
+			}
+			finally
+			{
+			}
+		}
+
+		protected void FirstStep()      
+		{
+			ValidateParams();				
+			dataHolder = InitDataHolder();
+			dataHolder = GetInputData(dataHolder);
+			ValidateInputData(dataHolder);
+			ProcessInput(dataHolder);
+			BindInputData(dataHolder);		
+			PrepareInputUI(dataHolder); 
+		}
+      
+		protected virtual void ValidateParams()
+		{
+			base.ValidateRequest();
+		}
+
+		protected virtual DataHolder GetInputData(DataHolder dataHolder)
+		{ return dataHolder;}
+		protected virtual void ValidateInputData(DataHolder dataHolder)		
+		{
+			//if (! this.IsValid) 
+		{  //generate exception
+		}
+		}		
+		protected virtual void ProcessInput(DataHolder dataHolder) { }
+		protected virtual void SaveProcessesedData(DataHolder dataHolder)		
+		{
+			Save(dataHolder);
+		}
+		protected virtual void BindInputData(DataHolder dataHolder){}
+		protected virtual void PrepareInputUI(DataHolder dataHolder) { }	
+
+		protected string getHighLighted()
+		{
+			return  "highLightLabel";
+		}
+
+		//AD;30/06/2009;START
+		protected bool IsRecordSelected(System.Data.IDataReader dataReader, string[] PrimaryKeys, string DataTableName)
+		{
+			bool selected = true;
+			int recordCount=0;
+			int pageNumber=1;
+			int PAGE_SIZE= SHMA.Enterprise.Configuration.AppSettings.GetInt("NoOfListerRows") ;
+
+			System.Data.DataTable table = new System.Data.DataTable("DataTableName");
+			recordCount = Utilities.Reader2Table(dataReader, table, PAGE_SIZE, PrimaryKeys, out pageNumber);
+
+			if (recordCount>0)
+			{
+				foreach (string pk in PrimaryKeys)
+				{
+					string strPK = SessionObject.GetString(pk);
+					if (strPK == null || strPK.Trim().Length == 0)
+					{
+						if(table.Rows[0][pk].ToString() == null || table.Rows[0][pk].ToString() == "")
+						{
+							selected  = false;
+						}
+						else
+						{
+							SessionObject.Set(pk,table.Rows[0][pk].ToString());
+						}
+					}
+				}
+			}
+			else
+			{
+				selected  = false;
+			}
+
+			dataReader.Close();
+			return selected;
+		}
+		//AD;30/06/2009;END
+
+	}
+}

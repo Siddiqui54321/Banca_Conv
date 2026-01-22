@@ -1,0 +1,221 @@
+﻿-------------------------------------JS-BANK Phase 2 ---------------------------------------------
+Below form use in Set requirement from Admin
+ReferredListForCallCenterApproval.aspx
+ChannelCode=2
+LNP1_POLICYMASTRDB.cs line 2636 for referal case approved
+
+Should be copy below
+Dll files from bin folder done
+Pages:-
+SuitabilityAssessment_Page.aspx for check illrate widow and senior citizen done
+shgn_bt_se_button_ILUS_ET_GP_PLANRIDER.aspx  for remove popup 003 message done
+-----For include DDA report
+PersonalPage_menue.aspx for DDA Report deploy   Done
+shmalib\jscript\Illustration.js for attached new report  Done
+DDAForm_Billingual.rpt in Crystal Report folder Done
+
+---- For Report Policy printing
+PolicySpecSch_alico.rpt Done
+---- Change message from BSC Code to SLIC Agent Details
+                       
+shgn_ss_se_stdscreen_ILUS_ET_NM_PLANDETAILS.aspx  Done
+---------DB Update
+UPDATE laag_agent 
+SET aag_imedsupr = 9100000
+WHERE aag_agcode LIKE '910%'
+and aag_imedsupr is null
+ on SLILASJS@LIVE
+-----------------------------For Fax # -------------------------------------------------
+shgn_ss_se_stdscreen_ILUS_ET_UC_ADDRESS.aspx  Done 
+----------------- For showing more columns on WMO/VCS/GM---------------------------------------
+PendingListForCallCenterApproval.aspx Done
+ManualPolicyIssuanceOfPendingProposals.aspx Done
+Copy in Presentation/Images/Detail_Icon.png Done
+ProposalDetails.aspx
+
+------------------------------------------Bank Account IBAN working Phase III ------------------------------------------------------
+shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx  -- for IBAN PK36SCBL0000001123457670 page shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx line 1121
+PolicyAcceptance.aspx  IBAN 
+Alter table lnp1_policymastr add NP1_IBAN  VARCHAR2(25); IBAN
+
+Alter table LNU1_UNDERWRITI add NU1_IBAN   VARCHAR2(25); IBAN
+
+--------------Query for retrive IBAN #--------------------------------------
+Line 1673 cs file PolicyAcceptance.aspx.cs
+select NPH_CODE, NPH_LIFE, NU1_SMOKER, NU1_ACCOUNTNO,NU1_IBAN from lnu1_underwriti where np1_proposal=''
+
+update lnu1_underwriti set pbb_branchcode = '9010', pbK_bankcode = '2025117198' where nu1_accountno = '' and np1_proposal ='111-ubl-9876453' and nu1_life='F'
+
+SessionObject.Set("NU1_IBAN", txtNU1_ACCIBAN.Text);
+ILUS_ET_NM_PER_PERSONALDET.cs line 188,239
+line 251 Insert 261
+Validation checkMandatoryColumns() 1052 Javascript
+Session["BankCode"]
+-
+-------------------------------------------------------------------------------------------------------------------------------------
+All countries DB Script location C:\AppSource\Banca_Conv_6.0.0_JS\Country data.sql
+
+shgn_ss_se_stdscreen_ILUS_ET_NM_PLANDETAILS.aspx -- Slic Agent details
+shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx -- For single life and BM/FM
+
+-------------------------- Gridview changes ok not ok BM & GM WMO -----------------------------------------------------------
+line 237 ManualPolicyIssuanceOfPendingProposals.aspx BM Role
+PendingListForCallCenterApproval.aspx
+Proposal 2025117189 BCO2F9010 GM2F0017
+-------------------- CBC and VCS --------------------------------------
+PendingListForCallCenterApproval.aspx 
+Discrepant status="" same as Not OK
+Rejected Status="D"  same as Declined
+-----------------------------------------For Resolve issue Error: Table doesnt have a primary key.-------------------------------
+shgn_ss_se_stdscreen_ILUS_ET_NM_PLANDETAILS.aspx.cs line 950 apply try catch 
+try{
+
+}
+catch (Exception ex)
+            {
+                if (!ex.Message.Contains("doesn't have a primary key") || !ex.Message.Contains("doesnt have a primary key"))
+                    throw; // rethrow if it’s a real error
+            }
+
+--------------------------- After UAT Result------------------------------------------------------------------
+Point 11-N
+Page Copy ProposalDetails.aspx  Done applied on LIVE UAT
+Create view Done
+Create or Replace view VUE_Proposal_Info as
+Select lnp1.np1_proposal proposal,
+       nvl(lnp1.np1_policyno, 'Not issued') policy,
+       lnp1.np1_propdate Proposal_date,
+       lnph.nph_fullname Name,
+       SUBSTR(lnph.nph_idno, 1, 5) || '-' || SUBSTR(lnph.nph_idno, 6, 7) || '-' ||
+       SUBSTR(lnph.nph_idno, 13, 1) CNIC,
+       -- lnph.nph_idno CNIC,
+       TRUNC(MONTHS_BETWEEN(SYSDATE, lnph.nph_birthdate) / 12) AS age,
+       ocp.cop_descr Occupation,
+       lnu1.nu1_accountno Account_Number,
+       lna.nad_mobile Phone_Number,
+       lna.nad_faxno Fax_Number,
+       npr.NPR_BENEFITTERM Plan_Term,
+       npr.npr_sumassured Sum_Assured,
+       (SELECT CASE ln.cqn_subcode
+                 WHEN '1' THEN
+                  'Illiterate'
+                 WHEN '2' THEN
+                  'Primary-Urdu Reading'
+                 WHEN '3' THEN
+                  'Middle Schooling'
+                 WHEN '4' THEN
+                  'High School'
+                 WHEN '5' THEN
+                  '12 Years & More'
+                 ELSE
+                  ''
+               END
+          FROM LNAN_QUESTIONNAIRE ln
+         WHERE ln.np1_proposal = lnp1.np1_proposal
+           AND ln.cqn_code = 'BP03'
+         FETCH FIRST 1 ROWS ONLY) education,
+       (SELECT CASE ln.cqn_subcode
+                 WHEN '1' THEN
+                  'Widow/Widower'
+                 WHEN '2' THEN
+                  'Un-married'
+                 WHEN '3' THEN
+                  'Married'
+                 ELSE
+                  ''
+               END
+          FROM LNAN_QUESTIONNAIRE ln
+         WHERE ln.np1_proposal = lnp1.np1_proposal
+           AND ln.cqn_code = 'BP04'
+         FETCH FIRST 1 ROWS ONLY) Matrial_Status,
+       (select sum(pr.npr_premium) + nvl(sum(pr.NPR_LOADING), 0)
+          from lnpr_product pr
+         where lnp1.np1_proposal = pr.np1_proposal
+           AND (NVL(pr.npr_basicflag, 'N') = 'Y' or
+               nvl(pr.npr_selected, 'N') = 'Y')) Annual_Premium,
+       (select CASE
+                 WHEN P.CMO_MODE = 'A' THEN
+                  'Annually'
+                 WHEN P.CMO_MODE = 'H' THEN
+                  'Half Yearly'
+                 WHEN P.CMO_MODE = 'Q' THEN
+                  'Quarterly'
+                 WHEN P.CMO_MODE = 'M' THEN
+                  'Monthly'
+               END
+          from lnpr_product p
+         where lnp1.np1_proposal = p.np1_proposal
+           and npr_basicflag = 'Y') Premium_Mode,
+       (select cmt.cm_comments
+          from LNCM_COMMENTS cmt
+         where cmt.np1_proposal = lnp1.np1_proposal
+           and cmt.cm_commentdate =
+               (select max(cmt1.cm_commentdate)
+                  from LNCM_COMMENTS cmt1
+                 where cmt.np1_proposal = cmt1.np1_proposal)) Comments,
+       (select cmt.cm_commentdate
+          from LNCM_COMMENTS cmt
+         where cmt.np1_proposal = lnp1.np1_proposal
+           and cmt.cm_commentdate =
+               (select max(cmt1.cm_commentdate)
+                  from LNCM_COMMENTS cmt1
+                 where cmt.np1_proposal = cmt1.np1_proposal)) Comments_date,
+       initcap(lna.nad_address1) || ',' || initcap(lna.nad_address2) || ',' ||
+       initcap(lna.nad_address3) || ',' || initcap(ct.cct_descr) || ',' ||
+       initcap(prov.cpr_descr) || ',' || initcap(country.ccn_descr) Address,
+       (select MAX(lncm.cm_commentdate)
+          from LNCM_COMMENTS lncm
+         where lncm.np1_proposal = lnp1.np1_proposal
+           and lncm.cm_commentby like '%CBC%') cbc_date,
+       
+       'N/A' AS Transaction_Status,
+       'N/A' AS Transaction_Date,
+       'N/A' AS FT_Number
+  from lnp1_policymastr lnp1,
+       LNPH_PHOLDER     LNPH,
+       LNU1_UNDERWRITI  LNU1,
+       LCOP_OCCUPATION  ocp,
+       lnad_address     lna,
+       LCCT_CITY        CT,
+       lnpr_product     npr,
+       lnp2_policymastr lnp2,
+       lccn_country     country,
+       lcpr_province    prov
+where LNU1.NP1_PROPOSAL = LNP1.NP1_PROPOSAL
+   and lnp1.np1_proposal = lnp2.np1_proposal
+   AND LNU1.NPH_CODE = LNPH.NPH_CODE
+   AND LNU1.NPH_LIFE = LNPH.NPH_LIFE
+   AND LNU1.NU1_LIFE = 'F'
+   and ocp.cop_occupaticd = lnph.cop_occupaticd
+   AND CT.CCN_CTRYCD = lna.CCN_CTRYCD
+   AND CT.CCT_CITYCD = lna.CCT_CITYCD
+   and LNa.NPH_CODE = LNPH.NPH_CODE
+   and lna.nad_addresstyp = 'C'
+   and npr.np1_proposal = lnp1.np1_proposal
+   and npr.np2_setno = lnp2.np2_setno
+   and nvl(npr.npr_basicflag, 'N') = 'Y'
+   and ct.ccn_ctrycd = country.ccn_ctrycd
+   AND ct.cct_provcd = prov.cpr_provcd
+   and prov.cpr_provcd = lna.cpr_provcd
+ --  and lnp1.np1_proposal = '2025117175'
+
+---------------------------- DDA Single Report------------------------------------------------------
+Pages: PersonalPage_menue.aspx , ExecuteReport.aspx , shmalib\jscript\Illustration.js Done applied on LIVE UAT
+DLL
+Insert into LPVL_VALIDATION(PPR_PRODCD,PVL_VALIDATIONFOR,PVL_LEVEL,Pvl_Validrange,Pvl_Valuecomb) Done applied on LIVE UAT
+values('999','REPORT','12','DDA_JSB','DDAJSB')
+-----------------------------------------------------------------------------------------------------
+For Point 18-N
+PendingListForCallCenterApproval.aspx Done applied on LIVE UAT
+
+For Point 
+
+-------------------------------- Auto Read Yearly income in Suitability assisment --------------------------
+Page=SuitabilityAssessment_Page.aspx and DLL 
+Session["YearlyIncome"] = txtNPH_ANNUINCOME.Text.ToString(); line 1246 
+Line 984 same above in page shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx.cs
+-------------------------------- After Final UAT-------------------------------------
+Deploy View VUE_Proposal_Info
+Copy Detail Report
+ 
+

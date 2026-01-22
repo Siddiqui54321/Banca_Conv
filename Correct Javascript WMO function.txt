@@ -1,0 +1,48 @@
+    window.onload = function () {
+              var grid = document.getElementById('<%= dGrid.ClientID %>');
+    if (!grid) return;
+
+    var bankCode = '<%= Session["BankCode"] %>';
+    var userType = '<%= Session["UserType"] %>';
+              var dropdowns = grid.getElementsByTagName("select");
+
+              for (var i = 0; i < dropdowns.length; i++) {
+                  var ddl = dropdowns[i];
+
+                  for (var j = 0; j < ddl.options.length; j++) {
+                      if (ddl.options[j].value === "Y") {
+                          if (bankCode === "F" && userType === "M") {
+                              ddl.options[j].text = "Referred to GM";
+                          }
+                          else if (bankCode === "F" && userType === "H") {
+                              ddl.options[j].text = "Approved";
+                          }
+                          else if (bankCode === "F" && userType === "W") {
+                              ddl.options[j].text = "Proceed to CBC";
+                             
+                                                           
+                          }
+                          else {
+                              ddl.options[j].text = "Ok";
+                          }
+                      }
+                      else if (ddl.options[j].value === "N") {
+                          if (bankCode === "F" && userType === "W") {
+                              
+                              ddl.options[j].text = "Declined";
+                              ddl.add(new Option("Discrepant", "T"));
+                          }
+                          else if (bankCode === "F") {
+                              ddl.options[j].text = "Reject";
+                          }
+                          else {
+                              ddl.options[j].text = "Not Ok";
+                          }
+                      }
+                  }
+                  
+                  if (!ddl.value || ddl.value === "") {
+                      ddl.value = ".";
+                  }
+              }
+          };

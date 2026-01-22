@@ -1,0 +1,457 @@
+A:visited{
+	font-family: arial;
+	color: Blue;
+	text-decoration:none
+}
+A{
+	font-family: arial;
+	text-decoration:none
+}
+BODY{
+	font-size: 14px;	
+	margin: 0px 0px 0px 10px;
+	color: #000000;
+	font-family: arial;
+	background-color: #C2DA78;
+	background-attachment:fixed; 
+}
+legend{font-weight:bold;font-family: arial;color: #4b5f2f;}
+
+TABLE{
+	font-size: 12px;
+	font-family: arial;
+}
+
+INPUT
+{
+	font-size: 12px;
+	font-family: Arial;
+	background-color: #ffffff;
+}
+
+.BUTTON
+{
+	font-family: arial;
+	background-color:#C2DA78;
+}
+
+.DATEBOX
+{
+	border-right: medium none;
+	border-top: medium none;
+	font-size: 12px;
+	border-left: medium none;
+	border-bottom: medium none;
+	font-family: Arial;
+	background-color: #ffffff;
+}
+
+TEXTAREA
+{
+	font-family: Arial;
+	font-size: 12;
+	background-color: #ffffff;
+}
+
+SELECT{
+	font-family: Arial;
+	font-size: 12;
+	width:10em;	
+	background-color: #ffffff;
+}
+
+.TRow_Normal {
+		font-size: 12px;
+		font-family: arial;
+		background-color: #d5ec8a;
+	}
+	
+.TRow_Alt {
+		font-size: 12px;
+		font-family: arial;
+		background-color: #E0F3BE;
+	}
+
+.ServerError
+{
+	font-family: arial;
+	font-weight: bold;
+	color: White;
+	background-color: Red;
+	width: 642px;
+}
+
+
+.NumericField
+{
+	text-align: right;
+	font-family: arial;
+}
+
+.RequiredField
+{
+	/*background-color: #E1F8FF;*/
+	background-color: #E0F3BE;
+	font-family: arial;
+}
+.EditItem
+{
+	background-color: Yellow;
+	font-family: arial;
+}
+
+
+.ListerGrid{
+        left: 14px; 
+        top: 25px;
+        overflow: auto; 
+        position: absolute; 
+        font-family: arial;
+}
+
+
+.EntityHeading
+{
+	font-size: 12px;
+	font-family: Arial;
+	background-color:"#cccccc";
+	text-align:center;
+	font-weight:bold
+	
+}
+.ListerHeader
+{
+	font-size: 12px;
+	font-family: arial;
+	color: white;	
+	background-color: #669900;
+	cursor:hand
+}
+
+.ListerItem{
+	font-size: xx-small;
+	cursor:hand;
+	font-family: arial;
+	background-color: #ffffff;
+}
+.ListerAlterItem{
+	font-size: xx-small;
+	background-color: #ffffff;
+	cursor:hand;
+	font-family: arial;
+}
+.ListerSelItem{
+	font-size: xx-small;
+	background-color:#E0F3BE;
+	font-family: arial;
+}
+
+
+.Pager
+{
+	width: 45px;
+	font-weight: bold;
+	background-color: #E0F3BE;
+	height: 1px;
+	font-size: xx-small;
+	font-family: arial;
+}
+.GridSelRow
+{
+	font-family: arial;
+}
+	
+.GridRow{
+	background-color:White;
+	font-family: arial;
+}
+	
+.GridHeader
+{
+	font-weight: bold;
+	font-size:9pt;	
+	color: white;	
+	font-family: Arial;
+	background-color: #669900;
+}
+
+.btnHideLister{
+	position:absolute;
+	left:10;
+	top:12;
+	width:50px;
+	z-index:100;
+	border-collapse:collapse;
+	font-family: arial;
+}
+	
+	
+.EnquiryRow{
+	cursor:hand
+}	
+	
+.LabelLikeText{
+	cursor:hand; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: transparent; BORDER-BOTTOM-STYLE: none;font-family: arial;
+}		
+
+							/* Divisions */
+.TabularDiv{
+	left: 11px;
+	overflow: auto;
+	position: absolute;
+	top: 20px;
+	font-family: arial;	
+}							
+.ListerFieldSet{
+	height: 303px;
+	font-family: arial;
+}
+
+.ListerDiv{
+	left: 16px;
+	overflow: auto;
+	width: 300px;
+	position: absolute;
+	top: 40px;
+	height: 500px;
+	font-family: arial;
+}
+
+.NormalEntryTableDiv{
+	left: 16px;
+	overflow: visible;
+	position: absolute;
+	top: 14px;
+	font-family: arial;
+	}
+
+.EntryTableDiv{
+	left: 256px;
+	overflow: visible;
+	position: absolute;
+	top: 40px;
+	height:80%;
+	font-family: arial;
+}
+.GridDivWithLister{
+	left: 450px;
+	overflow: visible;
+	position: absolute;
+	top: 40px;
+	height:100%;
+	font-family: arial;
+}
+.GridDiv{
+	left: 18px;
+	overflow: visible;
+	position: absolute;
+	top: 40px;
+	height:100%;
+	font-family: arial;
+}
+.SelectionDiv{
+	left: 16px;
+	position: absolute;
+	top: 25px;
+	font-family: arial;
+}
+
+
+						/* Hide Button 
+==============================================================*/
+.btnHideLister{	
+	position:absolute;
+	left:12;
+	top:15;
+	width:50px;
+	font-family: arial;
+}
+.btnHideListerPressed{	
+	position:absolute;
+	left:12;
+	top:15;
+	width:50px;	
+	BORDER-TOP-STYLE: inset; 
+	BORDER-RIGHT-STYLE: inset;
+	BORDER-LEFT-STYLE: inset;
+	BORDER-BOTTOM-STYLE: inset;
+	font-family: arial;
+}
+.EnquiryDiv{
+	width:100%	;
+	font-family: arial;
+}
+
+.GridSelectedField
+{
+	background-color:F0E0B0;
+	font-family: arial;
+}
+
+.DHFieldCaption
+{
+	font-weight: bold;
+	font-family: arial;
+}
+.DHFieldValue
+{
+	font-family: arial;
+}
+
+.DSFieldCaption
+{
+	font-weight: bold;
+	font-family: arial;
+}
+
+
+.PageTotalRow
+{
+font-weight: bold;
+font-size: xx-small;
+margin: 0px;
+color: white;
+padding: 0px;
+border: #255b97 0px;
+font-family: Arial;
+background-color: #255b97;
+text-align: right;
+}
+
+.GrandTotalRow
+{
+font-weight: bold;
+font-size: xx-small;
+margin: 0px;
+color: white;
+padding: 0px;
+border: #255b97 0px;
+font-family: Arial;
+background-color: #255b97;
+text-align: right;
+}
+
+
+.SummaryText{ 
+
+BORDER:none; 
+
+BACKGROUND-COLOR: transparent;
+
+color:White;
+
+font-weight:bold;
+font-family: arial;
+}
+
+
+
+						/* Rowset 
+==============================================================*/
+
+.RowSetGrid{
+	left: 10px;	
+	top: 2px;
+	overflow: auto;	
+	position: absolute;		
+	font-family: arial;
+}
+
+.AcceptButton{
+	CURSOR: hand; 	COLOR: blue;	font-weight:bold;
+	font-family: arial;
+}
+.PictureControl {
+	HEIGHT:100px;WIDTH:100px;font-family: arial;
+} 
+.NumericCell
+{
+	  text-align:right; font-family: arial;
+}
+
+
+/*==============================================================
+						DatePopup
+==============================================================*/
+.MonthHeaderStyle
+{
+	color:Black;
+	background-color:#d4deef;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+}
+
+.DayHeaderStyle
+{
+	color:Black;
+	background-color:#e3eaf2;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+}
+
+.WeekdayStyle
+{
+	color:Blue;
+	background-color:White;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+}
+
+.WeekendStyle
+{
+	color:Red;
+	background-color:White;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+}
+
+.TodayDayStyle
+{
+	color:White;
+	background-color:#e3eaf2;
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+}
+
+.SelectedDateStyle
+{
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+}
+
+.HolidayStyle
+{
+	font-family:Verdana,Helvetica,Tahoma,Arial;
+	font-size:XX-Small;
+}
+
+.divWaiting
+{
+	color:#000000; 
+	font-family: Verdana;
+	font-size: 12px;
+	border: solid 1px #333333;
+	background-color: #E0F3BE;
+	text-align:center;
+	border-left: solid 1px #333333; 
+	border-bottom: solid 2px #333333; 
+	border-right: solid 2px #333333; 
+	vertical-align:middle;
+}
+
+.TextToLable
+{
+	font-size: 12;
+	font-family: Arial;
+	background-color: #C2DA78;
+	BORDER-TOP-STYLE: none; 
+	BORDER-RIGHT-STYLE: none;
+	BORDER-LEFT-STYLE: none;
+	BORDER-BOTTOM-STYLE: none;
+}
+
+.CalculatorTableDiv{
+	overflow: visible;
+	position: absolute;
+	font-family: arial;
+	}

@@ -1,0 +1,414 @@
+/***********************************************************************************/
+/************************* New styles for LOGIN - Blue **************************/
+/***********************************************************************************/
+.top_bg{
+	background-image: url(../images/top_bg.gif);
+}
+
+.AppImage{
+	background-image: url(../images/ilasbanc.jpg);
+	background-repeat: no-repeat;
+	background-position:top;
+}
+
+.line{
+	background-image: url(../images/top_bg_blue_line.gif);
+}
+
+
+.LeftTopHeader {
+	background-image: url(../images/left_top_header_2.gif);
+	background-repeat: no-repeat;
+}
+
+.LeftTopDown{
+	background-image: url(../images/left_button_footer_2.gif);
+	background-repeat: no-repeat;
+}
+
+/**** Login Box ****/
+.loginBox_TopLeft {
+	background-image: url(../images/login_01.gif);
+	background-repeat: no-repeat;
+}
+
+.loginBox_TopCenttre {
+	background-image: url(../images/login_02.gif);
+}
+
+.loginBox_TopRight {
+	background-image: url(../images/login_04.gif);
+	background-repeat: no-repeat;
+}
+
+.loginBox_OnePixel {
+	background-image: url(../images/one_pixel_05.gif);
+}
+
+.loginBox_bg {
+	background-image: url(../images/login_06.gif);
+}
+
+.loginBox_FooterLeft {
+	background-image: url(../images/login_11.gif);
+}
+
+.loginBox_FooterBG {
+	background-image: url(../images/login_12.gif);
+}
+
+.loginBox_Button {
+	background-image: url(../images/login_14.gif);
+	background-repeat: no-repeat;
+}
+.loginBox_Button:hover {
+	cursor: pointer;
+}
+
+.loginBox_FooterRight {
+	background-image: url(../images/login_15.gif);
+}
+/******* Login Box - End ********/
+
+/***********************************************************************************/
+/************************* New styles for LOGIN - Green - END **************************/
+/***********************************************************************************/			
+
+		
+
+html 
+{
+/*scrollbar-face-color:#3B9320;
+scrollbar-arrow-color:#FFFFFF;
+scrollbar-track-color:#DEE8CA;
+
+scrollbar-shadow-color: #99FF33;
+scrollbar-darkshadow-color: #99FF66;
+scrollbar-highlight-color: #00FF00;
+scrollbar-3dlight-color: #009999;*/
+}
+
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;	
+}
+
+
+
+
+.textbox {  
+border: 1px #336699 solid; 
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 10px; 
+color: #336699;
+}
+
+
+
+.menu_button {  
+;
+}
+
+.link1 {
+color:white;
+text-decoration: none;
+}
+
+.link1 a.hover {
+color:orange;
+text-decoration: underline;
+}
+
+.image {
+	display: block;
+	background-image:url(../images/left_button_inactive.gif);
+	width:183px;
+	height:21px;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:4;
+
+}
+.loginuser 
+{
+	/*width:183;
+	height:10;*/
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #006699;/* #FFFFFF;*/
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:auto;
+	padding-bottom:auto
+}
+.image:hover {
+	background-image:url(../images/left_button_active.gif);
+	width:183;
+	color: #666666;
+
+}
+
+
+.image3 {
+	background-image:url(../images/888.gif);
+	color: #666666;
+	
+	height:25;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:center;
+}
+
+.image2 {
+	background-image:url(../images/777.gif);
+
+	height:25;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight:bold;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:center;
+}
+.image2:hover {
+	background-image:url(../images/888.gif);
+	color: #666666;
+
+}
+
+.yesno {
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+.login {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.row_bg {
+	background-color: #F4F8FB;
+}
+
+.form_title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #336699;
+	font-weight: bold;
+	font-size: 11px;
+}
+.form_heading {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:11px;
+	vertical-align:middle;
+	padding-top:6;
+	text-align:left;
+
+	/*background-color: #91abc0;*/
+	/*background-color: #9CBA62;*/ /*previous*/
+	background-color:#336699;
+	/*background-color: #BDD197;*//*light*/
+}
+
+.form_heading_2 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;
+	background-color: #6699cc;
+}
+
+.form_heading_3a {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:12px;
+	background-color: #98AFC7;
+}
+
+
+.style1 {font-size: 14px;
+	font-weight: bold;
+	color: #559CBD;
+}
+
+.main {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+	font-size:12px;
+}
+
+.text_font{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+	font-size:10px;
+}
+
+/***********************************************************************************/
+/************************* New styles for Personalization **************************/
+/***********************************************************************************/
+/*Background color Image*/
+.img__top_bg {
+	background-image:url(../images/top_bg.gif);
+}
+/*Adamjee Logo Image*/
+.img__adamjeelogo {
+	background-image:url(../Images/CompanyLogo.gif);
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+/*ILas Logo Image*/
+.img__ilasbanc {
+	background-image:url(../images/ilasbanc.jpg);
+	background-repeat:no-repeat;
+	background-position:top;
+}
+/*Top Horizontal Menu Image*/
+.img__777 {
+	background-image:url(../images/777.gif);
+	/*background-repeat:no-repeat;*/
+}
+/*Left Vertical Menu(Normal) Image*/
+.img__left_navigation_top_design{
+	background-image:url(../images/left_navigation_top_design.gif);
+	background-repeat:no-repeat;
+}
+.img__left_navigation_bot_design{
+	background-image:url(../images/left_navigation_bot_design.gif);
+	background-repeat:no-repeat;
+}
+/*Left Vertical Menu(Admin) Image*/
+
+/************************** Medical Detail **********************/
+.ItemStyle
+{
+	background-color:#F4F8FB;
+	display: table-row !important;
+	border: 1px solid #F4F8FB;
+}
+.ItemStyleAlt
+{
+	border: 1px solid #F4F8FB;
+	background-color:white;
+	display: table-row !important;
+}
+
+.ItemStyleAlt > td,
+.ItemStyle > td {
+	padding: 4px 8px;
+}
+
+/************* New Style for Buttons - start ***************/
+a.button2 {
+background-image:url(../images/bg_btn.gif);
+background-repeat:repeat-x;
+font-weight: bold;
+font-size: 11px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+padding: 4px 12px;
+text-align: center;
+min-width: 75px;
+line-height: 25px;
+}
+a.button2:link {
+background-image:url(../images/bg_btn.gif);
+background-repeat:repeat-x;
+color: #FFF;
+text-decoration: none;
+}
+a.button2:visited {
+background-image:url(../images/bg_btn.gif);
+background-repeat:repeat-x;
+color: #fff;
+text-decoration: none;
+
+font-weight: bold;
+font-size: 11px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+padding: 4px 12px;
+text-align: center;
+min-width: 75px;
+line-height: 25px;
+}
+a.button2:hover {
+background-image:url(../images/bglight_btn.gif);
+background-repeat:repeat-x;
+color: #fff;
+text-decoration: none;
+}
+
+.button2TD 
+{
+	background-color:#f5f5f5;
+	/*text-align: right;*/
+}
+/************* New Style for Buttons - end ***************/
+
+
+
+
+/***************************************************************************************/
+/***************************** Busy Status DIV *****************************************/
+/***************************************************************************************/
+#graybackground-div
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 200%;
+    background-color: #808080;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 10;
+    display: none;
+}
+#message-div
+{
+    position: absolute;
+    top: 100%;
+    left:50%;
+    margin-left: -150px;
+    margin-top: -40px;
+    background-color: #0066FF;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='#0066FF',EndColorStr='#CCFFFF');
+    width: 275px;
+    height: 5px;
+    border: 2px solid #FF6600;
+    font-family: Arial;
+    text-align: center;
+    color:Blue;
+    font-size: 12px;
+    z-index: 20;
+    display: none;
+}
+#message-div div
+{
+    /*padding: 70px;*/
+}
+.BusyDIV
+{
+	background-image:url(../Images/busy.gif);
+	background-repeat:no-repeat
+}
+/***************************************************************************************/
+/***************************** Busy Status DIV - End ***********************************/
+/***************************************************************************************/

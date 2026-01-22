@@ -1,0 +1,301 @@
+A:visited{
+	color: Blue;
+	text-decoration:none
+}
+A{
+	text-decoration:none
+}
+BODY{
+	font-size: 12px;	
+	margin: 0px 0px 0px 10px;
+	color: #000000;
+	font-family: vardana;
+	background-color: #d4deea;
+}
+legend{font-weight:bold}
+
+TABLE{
+	font-size: 10px;
+	font-family: verdana;
+	background-color: #d4deea;
+	color: #336699
+}
+
+INPUT
+{
+	font-family: Verdana;
+	font-size: xx-small;
+}
+SELECT{
+	font-family: Verdana;
+	font-size: xx-small;
+	width:10em;	
+}
+
+.ServerError
+{
+	font-weight: bold;
+	color: White;
+	background-color: Red;
+	width: 642px;
+}
+
+
+.NumericField
+{
+	text-align: right;
+}
+
+.RequiredField
+{
+	background-color: #E1F8FF;
+}
+.EditItem
+{
+	background-color: Yellow;
+}
+
+
+.ListerGrid{
+        left: 14px; 
+        top: 25px;
+        overflow: auto; 
+        position: absolute; 
+}
+
+
+.EntityHeading
+{
+	font-size: 12px;
+	font-family: verdana;
+	background-color:"#cccccc";
+	text-align:center;
+	font-weight:bold
+	
+}
+.ListerHeader
+{
+	font-weight: bold;
+	font-size:xx-small;	
+	color: white;	
+	font-family: verdana;
+	background-color: #255b97;
+	cursor:hand
+}
+.ListerItem{
+	font-size: xx-small;
+	cursor:hand;
+}
+.ListerAlterItem{
+	font-size: xx-small;
+	background-color: #ffffff;
+	cursor:hand;
+}
+.ListerSelItem{
+	font-size: xx-small;
+	background-color:#F0E0B0
+}
+
+
+.Pager
+{
+	width: 45px;
+	font-weight: bold;
+	background-color: #f1f2f2;
+	height: 1px;
+	font-size: Smaller;
+}
+.GridSelRow
+{
+	background-color: #F0E0B0;
+}
+	
+.GridRow{
+	background-color:White;
+}
+	
+.GridHeader
+{
+	font-weight: bold;
+	font-size:x-small;	
+	color: white;	
+	font-family: verdana;
+	background-color: #255b97;
+}
+
+.btnHideLister{
+	position:absolute;
+	left:10;
+	top:12;
+	width:50px;
+	z-index:100;
+	border-collapse:collapse
+}
+	
+	
+.EnquiryRow{
+	cursor:hand
+}	
+	
+.LabelLikeText{
+	cursor:hand; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: transparent; BORDER-BOTTOM-STYLE: none
+}		
+
+							/* Divisions */
+.TabularDiv{
+	left: 11px;
+	overflow: auto;
+	position: absolute;
+	top: 20px;
+}							
+.ListerFieldSet{
+	height: 303px;
+}
+
+.ListerDiv{
+	left: 16px;
+	overflow: auto;
+	width: 400px;
+	position: absolute;
+	top: 40px;
+	height: 500px;
+}
+
+.NormalEntryTableDiv{
+	left: 16px;
+	overflow: visible;
+	position: absolute;
+	top: 14px;
+	height:100%
+	}
+
+.EntryTableDiv{
+	left: 456px;
+	overflow: visible;
+	position: absolute;
+	top: 40px;
+	height:100%
+}
+.GridDivWithLister{
+	left: 450px;
+	overflow: visible;
+	position: absolute;
+	top: 40px;
+	height:100%
+}
+.GridDiv{
+	left: 18px;
+	overflow: visible;
+	position: absolute;
+	top: 40px;
+	height:100%
+}
+.SelectionDiv{
+	left: 16px;
+	position: absolute;
+	top: 25px;
+}
+
+
+						/* Hide Button 
+==============================================================*/
+.btnHideLister{	
+	position:absolute;
+	left:12;
+	top:15;
+	width:50px;
+}
+.btnHideListerPressed{	
+	position:absolute;
+	left:12;
+	top:15;
+	width:50px;	
+	BORDER-TOP-STYLE: inset; 
+	BORDER-RIGHT-STYLE: inset;
+	BORDER-LEFT-STYLE: inset;
+	BORDER-BOTTOM-STYLE: inset
+}
+.EnquiryDiv{
+	width:100%	
+}
+
+.GridSelectedField
+{
+	background-color:F0E0B0;
+}
+
+.DHFieldCaption
+{
+	font-weight: bold;
+}
+.DHFieldValue
+{
+}
+
+.DSFieldCaption
+{
+	font-weight: bold;
+}
+
+
+.PageTotalRow
+{
+font-weight: bold;
+font-size: xx-small;
+margin: 0px;
+color: white;
+padding: 0px;
+border: #255b97 0px;
+font-family: verdana;
+background-color: #255b97;
+text-align: right;
+}
+
+.GrandTotalRow
+{
+font-weight: bold;
+font-size: xx-small;
+margin: 0px;
+color: white;
+padding: 0px;
+border: #255b97 0px;
+font-family: verdana;
+background-color: #255b97;
+text-align: right;
+}
+
+
+.SummaryText{ 
+
+BORDER:none; 
+
+BACKGROUND-COLOR: transparent;
+
+color:White;
+
+font-weight:bold;
+
+}
+
+
+
+						/* Rowset 
+==============================================================*/
+
+.RowSetGrid{
+	left: 10px;	
+	top: 2px;
+	overflow: auto;	
+	position: absolute;		
+}
+
+.AcceptButton{
+	CURSOR: hand; 	COLOR: blue;	font-weight:bold;
+}
+.PictureControl {
+	HEIGHT:100px;WIDTH:100px;
+} 
+.NumericCell
+{
+	  text-align:right; 
+}

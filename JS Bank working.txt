@@ -1,0 +1,185 @@
+
+class="form_heading"
+style="vertical-align: top"
+class="form_heading"
+RBH /GM Approval Required message
+SuitabilityAssessment_Page.aspx line # 208
+Javascript code
+ <script type="text/javascript" language="javascript">
+
+    var bcode= '<%= Session["BankCode"] %>';
+                
+    </script>
+Line # 210
+ else if (parseInt(qualitativePercent + quantitativePercent) >= 20 && parseInt(qualitativePercent + quantitativePercent) <= 30) {
+                        //document.getElementById('lbl_Decisions').innerHTML = "RHB Approval Required"; old code
+                         // new code bcode is a BankCode javascript variable
+
+                        if (bcode === '9') {
+                            document.getElementById('lbl_Decisions').innerHTML = "RHB Approval Required";
+                        }
+                        else {
+                            document.getElementById('lbl_Decisions').innerHTML = "GM Approval Required";
+                        }
+                        
+
+                    }
+---------------------- Reports ----------------------------------------------------------
+PersonalDetailAndIllustration Execute from Propoal Status
+
+Personal Profile PersonalDetail_Bilingual_Suitability 2025117158
+Page ManualPolicyIssuanceSearch.aspx for Proposal Report
+
+
+
+--------------For starting personal page error
+Page=clsIlasUtility.cs line # 508
+//string query = "Select PCT_ANYCOMMENDATE from SLILASPRD.pct_control";
+            string query = "Select PCT_ANYCOMMENDATE from SLILASJS.pct_control";
+
+New  Task
+1-2025100079 Refer case move to admin from URL
+2- Why RBH & GM user find case NP2_Substandard = 'N' but it will Y (Resolved)
+3-Check Admin query where remove not Line # 1844 Page=LNP1_POLICYMASTRDB.cs  Resolved but more check , More check
+
+
+NEW WMO case
+2025100073 / BCO2F9001 agent=60011 successfully transfred to ILS
+
+New GM case
+2025100075 / BCO2F9010 / BM2F9010 / GM2F0017 / WMO2F0001 / VCS2F20005 / WMO2F0001 / Admin
+
+New GM case2
+2025100077
+------------------------------------------------JSB Process flow (Standard Case) -------------------------------------------------------
+
+----------- Working for WMO -----------
+1) For Login WMO for approval assign Menu-------------------------------
+Update lcsd_systemdtl mn set mn.CSD_TYPE='10,I,M,H,W' where mn.csd_type='10,I,M,H' and mn.csh_id='MENUE' 
+
+2) For Login WMO for Payment collection-------------------------------- 
+Update lcsd_systemdtl mn set mn.CSD_TYPE='11,I,M,L,H,O,W' where mn.csd_type='11,I,M,L,H,O' and mn.csh_id='MENUE'  
+
+3) For showing standard case in WMO screen for approval
+Page=LNP1_POLICYMASTRDB.cs line # 1859 add below condition
+  else if (userType == "W")
+            {
+                query_.Append(" AND p1.np1_channeldetail='" + bankCode + "'  ");
+              //  query_.Append(" AND p1.np1_channelsdetail='" + branchCode + "'  "); no need Branch code for WMO user
+                if (bankCode == "F")
+                {
+                    query_.Append(" AND p1.np1_checked='N'");
+                }
+            }
+
+4) No code change for case move from WMO to VCS its depends on user type
+
+5) For showing standard case in WMO payment collection screen
+Page PendingListForCallCenterApproval.aspx.cs line # 33 add user type
+      if (SessionObject.Get("s_USE_TYPE") != null && SessionObject.GetString("s_USE_TYPE") == "M" || SessionObject.GetString("s_USE_TYPE") == "W") //BM also for JSB WMO user
+
+6) For collect payment by WMO and mark status
+Page PendingListForCallCenterApproval.aspx.cs Add condition for user type WMO  line # 88
+if (SessionObject.Get("s_USE_TYPE") != null && SessionObject.GetString("s_USE_TYPE") == "M" || SessionObject.GetString("s_USE_TYPE") == "W") //BM and WMO JSB
+
+------------------------------------------------JSB Process flow (Sub Standard Case GM Approval Required) -------------------------------------------------------
+For Mark status by BM for GM
+Page LNP1_POLICYMASTR.cs
+else if(status.Equals("Y"))
+			{
+                 String result = LNP1_POLICYMASTRDB.ProposalStatusandBankCode(proposal);
+                 string[] parts = result.Replace("'", "").Split(',');
+                String forcedStatus = "R";
+
+                 if (parts[0].ToString() == "Y" && parts[1].ToString() == "F")
+                    forcedStatus = "G";
+
+                LNP1_POLICYMASTRDB.MarkStatus(proposal, forcedStatus);	
+
+For Case showing in GM
+Page=LNP1_POLICYMASTRDB.cs line # 1794
+ // new code pick GM data
+            else if (selected.Length <= 0 && userType == "H" && bankCode == "F")
+            {
+                query_.Append(" AND nvl(p2.np2_substandar,'D') = 'Y' and np1_selected = 'G' "); // GM pick sub-standard case
+            }
+
+For enable ddlStatus if NP1_Selected = P or =G
+ManualPolicyIssuanceOfPendingProposals.aspx.cs 
+line # 199 ddlStatus.Enabled = status.Equals("P") || status.Equals("G"); 
+--------------------Pages-----------------------------
+BM = ManualPolicyIssuanceOfPendingProposals.aspx
+CBC = PendingListForCallCenterApproval.aspx
+Admin = TransferPolicy.aspx
+BM Payment collection =PendingListForCallCenterApproval.aspx
+
+--------------- For GM Login ------------------------------------
+In Login Page line # 368 add below line
+  else if(SessionObject.Get("s_CCD_CODE").ToString() == "F" && SessionObject.Get("s_CCH_CODE").ToString() == "2" && (txtUserCode.Text.ToString().ToUpper().StartsWith("GM")))
+  {
+   blnBranchSelection = false;
+  }
+
+-- Display Referal Staff LOV 
+Form shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx
+line # 148 in aspx html page
+if (SessionObject.Get("s_CCD_CODE").ToString() == "9" || SessionObject.Get("s_CCD_CODE").ToString() =="F")
+----------------------------------------------------------------------------------------------------------
+------------------ Populate Referal staff value in LOV BOP or JS---------------------------
+Step-1
+Page LoginPage.aspx.cs line no 356 make session for bank from below line
+ Session["BankCode"] = SessionObject.Get("s_CCD_CODE").ToString();
+
+Step-2
+Class LCNT_NATIONALITYDB.cs
+Line no 58 comment old line and write below query
+
+sb_query.Append("SELECT Staff_id,Staff_id||'-'||Staff_name as Staff_name FROM LSCH_STAFFCHANNELMAPPING P where P.CCD_CODE='" + System.Web.HttpContext.Current.Session["BankCode"].ToString() + "' ORDER BY 2");
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Below JSB standard successfull case
+2025100062 / BCO2F9010 /WMO2F0001 / VCS2F0005 /WMO2F0001
+
+After JSB standard case check BOP standard case
+2025100071 / BSO290550 / BM290550 / CBC290006 / BM290550 
+
+After JSB-Sub standard Case Test BOP
+2025100072 / BSO290550 / RBH290004 / CBC290002 /BM290550 / Admin
+
+BCO2F9010
+2025100064 / BCO2F9010 new sample case correct
+
+  Mark Status imh  
+2025100069 / BCO2F9010 new sample case Referad 29%
+JSB Sub-standard 
+2025100070 / BCO2F9010 / BM2F9010  / GM2F0017 / WMO2F0001 / VCS2F20005 / WMO2F0001 / Admin  Referad new case
+
+
+
+
+
+SLBANCAUAT.TRANSFER_BAPROPOSAL
+SLBANCAUAT.TRANSFERTOILAS
+
+ORA-06512: at "SLBANCAUAT.TRANSFER_BAPROPOSAL", line 44
+ORA-06512: at "SLBANCAUAT.TRANSFERTOILAS", line 6
+ORA-06512: at line 1'
+
+
+POLICY_ACCEPTANCE.cs
+
+Plain rider
+ protected void ddlBSCCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string inputLove = ddlBSCCode.SelectedItem.Text.ToString();
+
+            
+            string[] parts = inputLove.Split('-');
+
+           txtAgentCode.Text = parts[0].ToString();
+            txtAgentName.Text= parts[1].ToString();
+
+
+        }
+
+

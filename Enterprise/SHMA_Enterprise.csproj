@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{857C4071-77A1-427C-B042-2CF9CA46A634}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Enterprise</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Enterprise</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/Enterprise/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DNH.Common.Errors">
+      <Name>DNH.Common.Errors</Name>
+      <HintPath>bin\DNH.Common.Errors.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorld.UI">
+      <Name>eWorld.UI</Name>
+      <HintPath>bin\eWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApplicationObjectDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AuditLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Batch\BatchConstant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Batch\BatchDML.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Batch\BatchJobDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Batch\BatchJobLogDB.cs" />
+    <Compile Include="Batch\JobParamHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\ColumnTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\KeyLevels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\KeyNumGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Business\NumGenInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClassLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Constants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataGateway.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataHolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ColumnTransformDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ConstraintManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\DB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\DB_Adhoc.cs" />
+    <Compile Include="Data\KeyLevelsDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\KeyNumGenDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\KeyNumGenFrequencyDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ParameterCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\PeriodTypeDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\PortableSQL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\rowset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Types.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Util.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Encryption64.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EnvHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\Exceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\ProcessException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formula\ExpressionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formula\FunctionEvaluator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formula\FunctionEvaluatorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\CustomExceptionLogger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Log\DBErrorLogger.cs" />
+    <Compile Include="Log\TextLogger.cs" />
+    <Compile Include="NameValueCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OleDbCustomCommandBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\EnvVarCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\ErrorMessageFilter\ErrorMessageFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\ErrorMessageFilter\ErrorMessageFilterDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\Filters\ApplyControlFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\Filters\BaseFieldFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\Filters\ProgrammableLengthFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\PageController.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentation\SessionObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\TwoStepController.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\ComboBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\ComboItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\CompareValidator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\DataGrid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\DateBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\DateLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\DatePopUp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\DependentDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\DropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\FileUpload.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\ImageBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\LookupBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\LookupItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\LookupText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\MultiTextDropDown.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\PeeredRequiredFieldValidator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\RadioButtonList.cs" />
+    <Compile Include="Presentation\WebControls\TextArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\WebControls\TextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RunTimeLibrary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Security\ApplicationLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendingMail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="shgn\ProcessCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="shgn\SHGNCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="shgn\SHGNDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="shgn\SHGNDateUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="shgn\SHGNGetGlobalPara.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="shgn\SupportClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SHSM_AllowEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TableModule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TransactionRouting\TransactionRouting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="xml\xmlReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

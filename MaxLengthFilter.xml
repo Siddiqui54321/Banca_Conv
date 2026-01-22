@@ -1,0 +1,48 @@
+<FilterXML>
+<EntityName EntityName="BN_GB_ST_SG_QUICKACNTOPEN">
+  <FieldName FieldName="txtDMP_PRODCODE">
+    <FilterType FilterType="PROGRAMMABLELENGTHFILTER">
+       <FieldLength FieldLength="5">
+       </FieldLength>
+    </FilterType>
+  </FieldName>
+</EntityName>
+<EntityName EntityName="BN_CT_ST_ST_EXIMDETAIL">
+  <FieldName FieldName="txtDMP_PRODCODE_REF">
+     <FilterType FilterType="PROGRAMMABLELENGTHFILTER">
+	<FieldLength FieldLength="2">
+        </FieldLength>
+     </FilterType>
+  </FieldName>
+  <FieldName FieldName="txtDCS_SCHEMCODE_REF">
+     <FilterType FilterType="PROGRAMMABLELENGTHFILTER">
+	<FieldLength FieldLength="2">
+        </FieldLength>
+     </FilterType>
+  </FieldName>
+  <FieldName FieldName="txtMBM_NUMBER_REF">
+     <FilterType FilterType="PROGRAMMABLELENGTHFILTER">
+	<FieldLength FieldLength="15">
+        </FieldLength>
+     </FilterType>
+  </FieldName>
+  <FieldName FieldName="txtDMP_PRODCODE_REFACC">
+     <FilterType FilterType="PROGRAMMABLELENGTHFILTER">
+	<FieldLength FieldLength="2">
+        </FieldLength>
+     </FilterType>
+  </FieldName>
+  <FieldName FieldName="txtDCS_SCHEMCODE_REFACC">
+     <FilterType FilterType="PROGRAMMABLELENGTHFILTER">
+	<FieldLength FieldLength="2">
+        </FieldLength>
+     </FilterType>
+  </FieldName>
+  <FieldName FieldName="txtMBM_NUMBER_REFACC">
+     <FilterType FilterType="PROGRAMMABLELENGTHFILTER">
+	<FieldLength FieldLength="10">
+        </FieldLength>
+     </FilterType>
+  </FieldName>
+</EntityName>
+</FilterXML>

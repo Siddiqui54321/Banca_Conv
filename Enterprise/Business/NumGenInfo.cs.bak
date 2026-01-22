@@ -1,0 +1,194 @@
+using System;
+using System.Data;
+using SHMA.Enterprise;
+using SHMA.Enterprise.Data;
+using System.Text;
+namespace SHMA.Enterprise.Business {
+	[CLSCompliant(false)]
+	public class NumGenInfo {
+		private bool keyAuto=false;
+		private string lastno=null;
+		private decimal width;
+		private decimal levelNo;
+		private string entityID=null;
+		private string orgCode;
+		private decimal serialNo;
+		private bool definitionFound;
+		private string keyColumnName = "";
+		private string expression = "";
+		private decimal stopNumber;
+		private decimal otherStopNumber;
+		private decimal startNumber;
+		private string frequencyDateField="";
+		private string frequencyType="";
+		public NumGenInfo(string entityID,  NameValueCollection columnNameValue) 
+		{
+			DataTable table = KeyNumGenDB.GetDistinctFieldCombinations(entityID);
+			DataTable table1;
+			DataTable seTable = KeyNumGenDB.GetSystemEntityInfo(entityID);
+			if(seTable.Rows.Count >0) {
+			 DataRow seRow = seTable.Rows[0];
+				if(seRow["PSE_LVLFIELD"]!=null)
+					keyColumnName = seRow["PSE_LVLFIELD"].ToString();
+			}
+			this.entityID = entityID; 
+			string strValueComb=null;
+			string strFieldComb=null;
+			int tableCounter=0;
+			
+			foreach(DataRow drow in table.Rows) 
+			{
+				tableCounter++;
+				strFieldComb = drow["PKN_FIELDCOMBINATION"].ToString();
+				String[] FieldComb = strFieldComb.Split("~".ToCharArray());
+			
+				StringBuilder sb = new StringBuilder();
+				for(int i=0;i<FieldComb.Length;i++)
+				{
+					if(columnNameValue.ContainsKey(FieldComb[i]))
+					{
+						sb.Append(columnNameValue[FieldComb[i]]);
+						sb.Append("~");
+					}
+				}
+				strValueComb =  sb.ToString();
+				int lastIndexOfTild = strValueComb.LastIndexOf("~");
+				if (lastIndexOfTild>0){
+					strValueComb = strValueComb.Remove(strValueComb.LastIndexOf("~"), 1);
+				}
+			
+				if(strFieldComb.ToUpper()=="DEFAULT")
+					table1 = KeyNumGenDB.GetNumGenSettingsByFieldComb(entityID, "notAssigned", strValueComb);
+				else
+					table1 = KeyNumGenDB.GetNumGenSettingsByFieldComb(entityID, strFieldComb, strValueComb);
+
+				
+				if(!(table1.Rows.Count>0) && table.Rows.Count==tableCounter ) {
+					table1 = KeyNumGenDB.GetNumGenSettingsByFieldComb(entityID, "DEFAULT", strValueComb);
+				}
+
+				if (table1.Rows.Count>0)
+				{
+					DataRow row = table1.Rows[0];
+					width = row["NumberWidth"]==DBNull.Value?row["lastno"].ToString().Length:decimal.Parse(row["NumberWidth"].ToString());
+					lastno = row["lastno"].ToString();
+
+					if ((row["PKN_AUTOMANUAL"]!=DBNull.Value) && (row["PKN_AUTOMANUAL"].ToString().Trim() == "A"))
+					{
+						keyAuto = true;
+					}
+					orgCode  = row["POR_ORGACODE"].ToString();
+					levelNo = (decimal) row["PKL_LVLNO"];
+					serialNo  = (decimal) row["PKN_SRNO"];
+					stopNumber = Convert.ToDecimal(row["PKN_STOPNO"]==DBNull.Value?0:row["PKN_STOPNO"]);
+					otherStopNumber = Convert.ToDecimal(row["PKN_OTHERLASTNO"]!=DBNull.Value?row["PKN_OTHERLASTNO"]:0);
+					startNumber = Convert.ToDecimal(row["PKN_STARTNO"]==DBNull.Value?0:row["PKN_STARTNO"]);
+					frequencyDateField = row["PKN_FRDATEFIELD"]==DBNull.Value?"":row["PKN_FRDATEFIELD"].ToString();
+					frequencyType = row["PPT_PTYPCODE"]==DBNull.Value?"":row["PPT_PTYPCODE"].ToString();
+					//TODO: Add this to enable Prefix, PostFix
+					expression = row["PKN_EXPRESSION"]==DBNull.Value?"":row["PKN_EXPRESSION"].ToString().Trim();
+					
+					keyColumnName = row["fieldid"].ToString().Trim();
+					if((!columnNameValue.ContainsKey(keyColumnName)) || keyColumnName == "" || keyColumnName == null)
+						throw new Exception ("KeyColumn Not Properly Defined");
+					definitionFound = true;
+				}			
+			
+				if (definitionFound) 
+				{
+					break;
+				}															 
+			}						 
+		}
+		
+		public bool IsAuto{
+			get{
+				return keyAuto;
+			}
+		}
+
+
+		public bool DefinitionFound
+		{
+			get
+			{
+				return definitionFound;
+			}
+		}
+		
+		public string LastNo{
+			get{
+				return lastno;
+			}
+			set{
+				lastno=value;
+			}
+		}
+
+		public decimal NumberWidth{
+			get{
+				return width;
+			}
+		}
+		public decimal LevelNo{
+			get{
+				return levelNo;
+			}
+		}
+		public string EntityID{
+			get{
+				return entityID;
+			}
+		}
+		public string OrganizationCode{
+			get{
+				return orgCode;
+			}
+		}
+		public decimal SerialNo{
+			get{
+				return serialNo;
+			}
+		}
+
+		public string KeyColumnName
+		{
+			get
+			{
+				return keyColumnName;
+			}
+		}
+
+		public string Expression {
+			get {
+				return expression;
+			}
+		}
+		public decimal StopNumber {
+			get{
+				return stopNumber;
+			}
+		}
+		public decimal OtherStopNumber{
+			get{
+				return otherStopNumber;
+			}
+		}
+		public decimal StartNumber{
+			get{
+				return startNumber;
+			}
+		}
+		public string FrequencyDateField{
+			get{
+				return frequencyDateField;
+			}
+		}
+		public string FrequencyType{
+			get{
+				return frequencyType;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SHMA_Enterprise">
+</Property><Property Name="Solution File" Value="D:\SHMA Projects\Dot Net\Library\3.5\Enterprise\SHMA_Enterprise.sln">
+</Property><Property Name="Date" Value="19 May 2014">
+</Property><Property Name="Time" Value="17:34:02">
+</Property></Properties><Event ErrorLevel="0" Project="SM_TRANDAUDIT" Source="..\SM_TRANDAUDIT\SM_TRANDAUDIT.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SM_TRANDAUDIT" Source="..\SM_TRANDAUDIT\SM_TRANDAUDIT.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SM_TRANDAUDIT" Source="..\SM_TRANDAUDIT\SM_TRANDAUDIT.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

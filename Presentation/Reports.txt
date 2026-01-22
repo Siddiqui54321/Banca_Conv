@@ -1,0 +1,79 @@
+  TextBox1.Text = file_name_generate().ToString();
+            Hashtable MyVal = new Hashtable();
+            //"0A10b5"
+            MyVal.Add("P_SESSION_ID", TextBox1.Text.ToString());//Session["Report_User"].ToString());
+            MyVal.Add("P_REPORT_NAME", "PQ_PS_MIS_1258");
+            MyVal.Add("P_POLICY_NO", "Null");
+            MyVal.Add("P_CHANNEL_NO", Convert.ToInt16("1"));
+            MyVal.Add("P_REGION_CODE", "ALL");
+            MyVal.Add("P_BRANCH_CODE", ddlBranch.SelectedValue.ToString()); //"ALL");
+            MyVal.Add("P_AGENT_CODE", ddlAgentCode.SelectedValue.ToString()); //"ALL");
+            MyVal.Add("P_STATUS", "ALL");
+            MyVal.Add("P_CHOICE", "ALL");
+            MyVal.Add("P_NOTICES", "ALL");
+            MyVal.Add("P_FLAG", "");
+            MyVal.Add("P_LAPSE_PERIOD", ddlLapsePeriod.SelectedValue.ToString());
+            MyVal.Add("P_DATE_1", txtDateFrom.Text.ToString());
+            MyVal.Add("P_DATE_2", txtDateTo.Text.ToString());
+            MyVal.Add("P_DATE_3", DateTime.Now.ToString("dd-MMM-yyyy"));
+            MyVal.Add("P_DATE_4", DateTime.Now.ToString("dd-MMM-yyyy"));
+            MyVal.Add("P_REMINDER", "");
+            MyVal.Add("P_ESCALATING_STS", "");
+          
+
+
+            Sql = obj_dal.DML_by_pro("proc_pqt_portal_calling_report", MyVal);
+            if (Sql == "done")
+            {
+                lblError.Text = "Report download";
+                //string filePath1 = Server.MapPath("~/PORTAL_REPORT/" + TextBox1.Text.Trim().ToString() + ".pdf");
+
+                string filePath1 = (@"C:/inetpub/wwwroot/Ind_Life/UnitReport/" + TextBox1.Text.Trim().ToString() + ".pdf");
+
+
+                Response.ContentType = "Application/pdf";
+                Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath1));
+                Response.WriteFile(filePath1);
+                Response.End();
+
+
+using System.Collections;
+using System.Text;
+using System.IO;
+
+Hashtable MyVal = new Hashtable();
+
+ public string DML_by_pro(string procedureName, Hashtable Parameters)
+    {
+
+        {
+
+            try
+            {
+                cmd.CommandText = procedureName;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = GetOraConn();
+                //int loopCounter=0;
+                ICollection ParamKeys = Parameters.Keys;
+                foreach (object key in ParamKeys)
+                {
+
+                    cmd.Parameters.Add(new OracleParameter(key.ToString(), Parameters[key.ToString()]));
+                }
+
+                cmd.Connection.Open();
+                cmd.ExecuteNonQuery();
+                cmd.Connection.Close();
+                cmd.Parameters.Clear();
+                return "done";
+            }
+
+            catch (Exception ex)
+            {
+                cmd.Parameters.Clear();
+                cmd.Connection.Close();
+                return ex.Message;
+            }
+
+
+        }
