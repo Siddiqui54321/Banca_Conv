@@ -688,6 +688,23 @@ namespace SHAB.Presentation
                 return;
             }
 
+            // Below check AML validation
+            string Sql = "Select count(NQN_ANSWER) as Total_Ques From LNQN_QUESTIONNAIRE  P where P.NP1_PROPOSAL='" + SessionObject.Get("NP1_PROPOSAL") +
+             "' AND  P.cqn_code not in ('0900','0910','0920','0930','0940','0960','0970','9310','9320','9300','0950')";
+
+            int Tot_Question = Convert.ToInt16(GetdataOraOledb(Sql).Rows[0]["Total_Ques"]);
+
+            if (Tot_Question < 45)
+            {
+                ShowAlert("Please complete fill AML/CFT form ");
+            }
+
+            // End AML validation
+            else
+
+
+            { 
+
             SHSM_AuditTrail auditTrail = new SHSM_AuditTrail();
             columnNameValue = new NameValueCollection();
             SaveTransaction = false;
@@ -743,7 +760,7 @@ namespace SHAB.Presentation
                             //from UBL, BAL & FWBL
                             string bopsFlowCode = ConfigurationSettings.AppSettings["BOPSFlow"].ToString();
                             string companyFlowCode = ConfigurationSettings.AppSettings["CompanyFlow"].ToString();
-                            if (bopsFlowCode.Contains(SessionObject.GetString("s_CCD_CODE"))  && SessionObject.GetString("s_CCH_CODE") == "2")
+                            if (bopsFlowCode.Contains(SessionObject.GetString("s_CCD_CODE")) && SessionObject.GetString("s_CCH_CODE") == "2")
                             {
                                 if (DecisionValues.Text == SUBSTANDARD)
                                 {
@@ -1018,6 +1035,9 @@ namespace SHAB.Presentation
 
 
             }
+
+            // Below close for AML validation
+        }
         }
 
         sealed protected override void DataBind(DataHolder dataHolder)
@@ -2289,6 +2309,46 @@ namespace SHAB.Presentation
             Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
             Response.Cache.SetNoStore();
         }
+
+        #region "Imran_Work"
+        private OleDbConnection GetConn()
+        {
+            OleDbConnection conOra = new OleDbConnection(System.Configuration.ConfigurationManager.AppSettings["DSN"]);
+            return conOra;
+
+
+        }
+        public DataTable GetdataOraOledb(string sql)
+        {
+            OleDbCommand cmd = new OleDbCommand();
+            //  cmd.Connection = conOra; old
+            cmd.Connection = GetConn();
+            cmd.Connection.Open();
+            cmd.CommandText = sql;
+            cmd.CommandType = CommandType.Text;
+            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            dt.Reset();
+            dt.Clear();
+
+            da.Fill(dt);
+            //cmd.Dispose(); old
+            cmd.Connection.Close();
+
+            return dt;
+
+
+        }
+
+        protected void ShowAlert(string message)
+        {
+            string script = $"alert('{message}');";
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Alert", script, true);
+        }
+
+
+        #endregion
+
 
     }
 }

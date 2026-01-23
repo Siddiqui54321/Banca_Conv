@@ -234,7 +234,16 @@
 					setCurrentImage('imgMedicalDetail');
 					obj1 = document.getElementById("img2");
 					obj1.src="images/Navigation/MedicalDetail.jpg";
-				}
+                }
+
+                if (currentScreen == 'shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL') {
+                    document.getElementById('mainContentFrame').style.height = '600.0px';
+                    setCurrentImage('imgAMLCFTDetail');
+                    obj1 = document.getElementById("img2");
+                    obj1.src = "images/Navigation/MedicalDetail.jpg";
+                }
+
+
                 if (currentScreen == 'shgn_gp_gp_ILUS_ET_GP_SutabilityAssessment') {
                     document.getElementById('mainContentFrame').style.height = '600.0px';
                     setCurrentImage('imgSuitabilityAssessment');
@@ -469,6 +478,13 @@
 																				<td width="1" align="center"><img src="images/divider.gif" width="1" height="25"></td>
 																				<td id="MedicalTab" align="center" class="img__777"><a href="#" class="image2" id="imgMedicalDetail" onclick="setPageByApplyingRules('imgMedicalDetail','shgn_gp_gp_ILUS_ET_GP_MEDICALDETAIL');">&nbsp;  
 																						Medical Detail &nbsp;</a></td>
+                                                                              
+                                                                                <td width="1" align="center"><img src="images/divider.gif" width="1" height="25"></td>
+
+                                                                                <td id="AMLCFTTab" align="center" class="img__777"><a href="#" class="image2" id="imgAMLCFTDetail" onclick="setPageByApplyingRules('imgAMLCFTDetail','shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL');">&nbsp;  
+																						AML/CFT &nbsp;</a></td>
+
+
                                                                                 <td width="1" align="center"><img src="images/divider.gif" width="1" height="25"></td>
                                                                                 <td id="AssessmentTab align="center" class="img__777"><a href="#" runat="server" class="image2" id="imgSuitabilityAssessment" onclick="setPageByApplyingRules('imgSuitabilityAssessment','shgn_gp_gp_ILUS_ET_GP_SutabilityAssessment');">&nbsp;  
 																						Suitability Assessment &nbsp;</a></td>
