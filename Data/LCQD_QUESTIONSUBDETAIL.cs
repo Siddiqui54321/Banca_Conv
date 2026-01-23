@@ -17,7 +17,6 @@ namespace SHAB.Data
 		{		
 			get {return "LCQD_QUESTIONSUBDETAIL"; }		
 		}
-
 		public static IDataReader getMedicalSubQuestions(string cqnCode,string prodCode)
 		{
 			StringBuilder sb = new StringBuilder();
@@ -37,7 +36,6 @@ namespace SHAB.Data
 			myCommand.Parameters.Add(DB.CreateParameter("@ppr_prodcd",DbType.String, 3, prodCode));			
 			return myCommand.ExecuteReader();
 		}
-
 		public DataHolder getAssessmentQuestionnaireData(string cch_code, string ccd_code, string ccs_code,string default_)
 		{
             StringBuilder query = new StringBuilder();
@@ -63,7 +61,6 @@ namespace SHAB.Data
             }
             this.Holder.FillData(myCommand, "LNQN_QUESTIONNAIRE_DATA");return this.Holder;			
         }
-
         public DataHolder getAssessmentQuestionnaireOptionsData(string cqn_code)
         {
             StringBuilder query = new StringBuilder();
