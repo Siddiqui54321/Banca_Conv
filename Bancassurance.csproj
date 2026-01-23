@@ -671,6 +671,20 @@
     <Compile Include="Presentation\AgentHierarchy.aspx.designer.cs">
       <DependentUpon>AgentHierarchy.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\AMLCFT_Button.aspx.cs">
+      <DependentUpon>AMLCFT_Button.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentation\AMLCFT_Button.aspx.designer.cs">
+      <DependentUpon>AMLCFT_Button.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\AMLCFT_Page.aspx.cs">
+      <DependentUpon>AMLCFT_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentation\AMLCFT_Page.aspx.designer.cs">
+      <DependentUpon>AMLCFT_Page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\ApplicationSelection.aspx.cs">
       <DependentUpon>ApplicationSelection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -804,6 +818,13 @@
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_USERUPLOAD.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_USERUPLOAD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx.cs">
+      <DependentUpon>shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx.designer.cs">
+      <DependentUpon>shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_USERUPLOAD.aspx.cs">
       <DependentUpon>shgn_gp_gp_USERUPLOAD.aspx</DependentUpon>
@@ -2463,6 +2484,8 @@
     <Content Include="Presentation\AgentHierarchy.aspx">
       <SubType>Form</SubType>
     </Content>
+    <Content Include="Presentation\AMLCFT_Button.aspx" />
+    <Content Include="Presentation\AMLCFT_Page.aspx" />
     <Content Include="Presentation\ApplicationSelection.aspx" />
     <Content Include="Presentation\BranchSelection.aspx" />
     <Content Include="Presentation\Calculator.aspx" />
@@ -2485,6 +2508,7 @@
     <Content Include="Presentation\PolicyAlterReqPageGroup.aspx" />
     <Content Include="Presentation\ProposalDetails.aspx" />
     <Content Include="Presentation\shgn_dh_se_displayselection_USERUPLOAD.aspx" />
+    <Content Include="Presentation\shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx" />
     <Content Include="Presentation\shgn_gp_gp_USERUPLOAD.aspx" />
     <Content Include="Presentation\shgn_gs_se_stdgridscreen_USERUPLOAD.aspx" />
     <Content Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_CD_COMPANYDET.aspx">
@@ -2992,6 +3016,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\AgentHierarchy.aspx.resx">
       <DependentUpon>AgentHierarchy.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\AMLCFT_Page.aspx.resx">
+      <DependentUpon>AMLCFT_Page.aspx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\ApplicationSelection.aspx.resx">
       <DependentUpon>ApplicationSelection.aspx.cs</DependentUpon>
