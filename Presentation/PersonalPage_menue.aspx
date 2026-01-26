@@ -452,7 +452,7 @@
 																						Home &nbsp;</a></td>
 																				-->
 																				<td width="1" align="center"><img src="images/divider.gif" width="1" height="25"></td>
-																				<td align="center" class="img__777"><a href="#" class="image2" id="imgPersonal" onclick="showTable(2);setPageByApplyingRules('imgPersonal','shgn_gp_gp_ILUS_ET_GP_PERONAL');">&nbsp; Personal &nbsp;</a></td>  <%--one - line--%>
+																				<td align="center" class="img__777"><a href="#" class="image2" id="imgPersonal" onclick="showTable(2);setPageByApplyingRules('imgPersonal','shgn_gp_gp_ILUS_ET_GP_PERONAL');">&nbsp; Personal &nbsp;</a></td> 
 																				<!-- 
 																				<td width="1" align="center"><img src="images/divider.gif" width="1" height="25"></td>
 																				<td align="center" background="images/111.gif"><a href="#" class="image2" id="imgPurpose" onclick="setPageByApplyingRules('imgPurpose','shgn_gp_gp_ILUS_ET_GP_PURPOSE');">&nbsp; 
