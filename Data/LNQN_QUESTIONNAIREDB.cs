@@ -138,6 +138,52 @@ namespace SHAB.Data
 			myCommand.Parameters.Add(DB.CreateParameter("@cqn_code",DbType.String, 10, cqnCode));
 			this.Holder.FillData(myCommand, "LNQN_QUESTIONNAIRE");return this.Holder;			
 		}
+		//Below function added for AML
+		public DataHolder getMedicalQuestionnaireData_AML(string proposal, string prodCode, string default_)
+		{
+			string qcode = string.Empty;
+			if (default_ == "1")
+			{
+				qcode = "0970";
+			}
+			else
+			{
+				qcode = "0971";
+			}
+			StringBuilder query = new StringBuilder();
+			query.Append("Select * from ( ");
+			query.Append("select lc.cqn_code, lc.cqn_desc, lc.cqn_condition, lc.cqn_short ");
+			query.Append("  from lcqn_questionnaire lc ");
+			query.Append("inner join lpqn_questionnaire lp ");
+			query.Append("  on lp.cqn_code = lc.cqn_code ");
+			query.Append(" where lp.ppr_prodcd = ? ");
+			query.Append(" and lc.cqn_code<>'" + qcode + "'  and lc.cqn_type=? and lc.cqn_short is null ");
+			query.Append(" union all ");
+			query.Append("select lc.cqn_code, lc.cqn_desc, lc.cqn_condition, lc.cqn_short ");
+			query.Append("  from lcqn_questionnaire lc ");
+			query.Append("inner join lpqn_questionnaire lp ");
+			query.Append("  on lp.cqn_code = lc.cqn_code ");
+			query.Append(" where lp.ppr_prodcd = ? and lc.cqn_short is null");
+			query.Append(" and lc.cqn_code='" + qcode + "' and lc.cqn_type=? )");
+
+			StringBuilder query_ = new StringBuilder();
+
+			query_.Append("select lc.cqn_code,lc.cqn_desc,lc.cqn_condition,lc.cqn_short from lcqn_questionnaire lc ");
+			query_.Append("inner join lpqn_questionnaire lp on ");
+			query_.Append("lp.cqn_code = lc.cqn_code ");//and lp.pqn_default = ? 
+			query_.Append("where lp.ppr_prodcd = ? order by cqn_code ");
+			IDbCommand myCommand = DB.CreateCommand(query.ToString(), DB.Connection);
+			//myCommand.Parameters.Add(DB.CreateParameter("@pqn_default",DbType.String, 1, default_));
+			myCommand.Parameters.Add(DB.CreateParameter("@ppr_prodcd", DbType.String, 3, prodCode));
+			myCommand.Parameters.Add(DB.CreateParameter("@cqn_type", DbType.String, 1, default_));
+			myCommand.Parameters.Add(DB.CreateParameter("@ppr_prodcd", DbType.String, 3, prodCode));
+			myCommand.Parameters.Add(DB.CreateParameter("@cqn_type", DbType.String, 1, default_));
+			if (this.Holder == null)
+			{
+				this.Holder = new DataHolder();
+			}
+			this.Holder.FillData(myCommand, "LNQN_QUESTIONNAIRE_DATA"); return this.Holder;
+		}
 		public static bool isConditionTrue(string prodCode,string proposal,string cqnCode,string condID)
 		{			
 			ace.ProcedureAdapter call =  new ace.ProcedureAdapter("CHECK_LCQNCONDITION_CALL",(OleDbConnection)DB.Connection);

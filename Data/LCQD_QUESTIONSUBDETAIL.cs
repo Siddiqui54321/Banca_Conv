@@ -153,6 +153,8 @@ namespace SHAB.Data
 			myCommand.Parameters.Add(DB.CreateParameter("@cqn_code",DbType.String, 10, cqnCode));
 			this.Holder.FillData(myCommand, "LNQN_QUESTIONNAIRE");return this.Holder;			
 		}
+
+
 		public static bool isConditionTrue(string prodCode,string proposal,string cqnCode,string condID)
 		{			
 			ace.ProcedureAdapter call =  new ace.ProcedureAdapter("CHECK_LCQNCONDITION_CALL",(OleDbConnection)DB.Connection);
