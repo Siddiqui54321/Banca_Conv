@@ -27,17 +27,40 @@ namespace Bancassurance.Presentation
             string user = System.Convert.ToString(Session["s_USE_USERID"]);
             string userType = ace.Ace_General.getUserType(user);
 
+            if (userType != "A")
+            {
+                lblAlert.Text = "You are not Authorized...";
+                return;
+            }
+
             if (!IsPostBack)
             {
-                if (userType == "A")
-                {
-                    BindDLL(); BindDLL1(); Binddata();
-                }
-                else
-                {
-                    lblAlert.Text = ("You are not Authorized...");
-                }
+                BindDLL();
+                BindDLL1();
+                Binddata();
 
+            }
+
+            ToggleFMBM(); // 👈 MUST run every time
+
+        }
+
+        private void ToggleFMBM()
+        {
+            string bank = ddlCCD_CHANNELDTLCD.SelectedItem.Text.Trim();
+
+            if (bank == "JS Bank")
+            {
+                lblFMBM.Visible = true;
+                RadioButtonFMBM.Visible = true;
+                RadioButtonFMBM.Enabled = true;
+            }
+            else
+            {
+                RadioButtonFMBM.ClearSelection();
+                RadioButtonFMBM.Enabled = false;
+                RadioButtonFMBM.Visible = false;
+                lblFMBM.Visible = false;
             }
         }
 
@@ -52,6 +75,8 @@ namespace Bancassurance.Presentation
                 columnNameValue.Add("staff_id", txtStaffID.Text.Trim() == "" ? null : txtStaffID.Text);
                 columnNameValue.Add("staff_name", txtStaffName.Text.Trim() == "" ? null : txtStaffName.Text);
 
+                string fmbm = RadioButtonFMBM.SelectedValue;
+
                 if (txtStaffID.Text == "" || txtStaffID.Text == null || txtStaffName.Text == "" || txtStaffName == null)
                 {
                     ClientScript.RegisterClientScriptBlock(this.GetType(), "",
@@ -65,17 +90,20 @@ namespace Bancassurance.Presentation
                     {
                         string sqlString = "insert into LSCH_STAFFCHANNELMAPPING (cch_code,\n" +
                         "ccd_code,\n" +
+                        "ccs_field1,\n" +
                         "staff_id,\n" +
                         "staff_name)\n" +
                         "values(\n" +
                         " '" + columnNameValue.getObject("cch_code") + "', \n" +
                         " '" + columnNameValue.getObject("ccd_code") + "', \n" +
+                        " '" + fmbm + "', \n" +
                         " '" + columnNameValue.getObject("staff_id") + "', \n" +
                         " '" + columnNameValue.getObject("staff_name") + "' \n" +
                         ")";
                         DB.executeDML(sqlString);
                         //lblAlert.ForeColor = System.Drawing.Color.Green;
                         //lblAlert.Text = "Record Saved...";
+                        RadioButtonFMBM.ClearSelection();
                         ClientScript.RegisterClientScriptBlock(this.GetType(), "",
                             "swal('','Record Saved','')", true);
 
@@ -100,7 +128,7 @@ namespace Bancassurance.Presentation
 
         protected void Binddata()
         {
-            string query = @"SELECT S.STAFF_ID,S.STAFF_NAME,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S INNER JOIN cch_channel ch on ch.cch_code = s.cch_code INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code order by LENGTH(ltrim(rtrim(S.STAFF_ID))) asc, ltrim(rtrim(S.STAFF_ID)) asc"; 
+            string query = @"SELECT S.ccs_field1, S.STAFF_ID,S.STAFF_NAME,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S INNER JOIN cch_channel ch on ch.cch_code = s.cch_code INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code order by LENGTH(ltrim(rtrim(S.STAFF_ID))) asc, ltrim(rtrim(S.STAFF_ID)) asc"; 
             //string query = @"SELECT S.STAFF_ID,S.STAFF_NAME,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S  
             //                INNER JOIN cch_channel ch on ch.cch_code = s.cch_code
             //                INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code
@@ -137,12 +165,13 @@ namespace Bancassurance.Presentation
                 //            INNER JOIN cch_channel ch on ch.cch_code = s.cch_code
                 //            INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code
                 //            and cd.cch_code ='" + ddlCCH_CHANNELCD.SelectedValue + "' and s.ccd_code = '" + ddlCCD_CHANNELDTLCD.SelectedValue + "' and s.staff_id = '" + txtStaffID.Text + "'";
-                string query = @"SELECT S.STAFF_ID,S.STAFF_NAME,Ch.Cch_Descr,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S INNER JOIN cch_channel ch on ch.cch_code = s.cch_code INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code and cd.cch_code ='" + ddlCCH_CHANNELCD.SelectedValue + "' and s.ccd_code = '" + ddlCCD_CHANNELDTLCD.SelectedValue + "' and s.staff_id = '" + txtStaffID.Text + "' order by LENGTH(ltrim(rtrim(S.STAFF_ID))) asc, ltrim(rtrim(S.STAFF_ID)) asc"; ;
+                string query = @"SELECT S.ccs_field1, S.STAFF_ID,S.STAFF_NAME,Ch.Cch_Descr,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S INNER JOIN cch_channel ch on ch.cch_code = s.cch_code INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code and cd.cch_code ='" + ddlCCH_CHANNELCD.SelectedValue + "' and s.ccd_code = '" + ddlCCD_CHANNELDTLCD.SelectedValue + "' and s.staff_id = '" + txtStaffID.Text + "' order by LENGTH(ltrim(rtrim(S.STAFF_ID))) asc, ltrim(rtrim(S.STAFF_ID)) asc"; ;
                 DataTable dt = DB.getDataTable(query);
                 if (dt.Rows.Count > 0)
                 {
                     grdStaffChMap.DataSource = dt;
                     grdStaffChMap.DataBind();
+                    RadioButtonFMBM.Text = null;
                     txtStaffID.Text = null;
                     txtStaffName.Text = null;
                     lblAlert.Text = "";
@@ -155,6 +184,7 @@ namespace Bancassurance.Presentation
                         "swal('','Record Not Found','')", true);
                     grdStaffChMap.DataSource = null;
                     grdStaffChMap.DataBind();
+                    RadioButtonFMBM.Text = null;
                     txtStaffID.Text = null;
                     txtStaffName.Text = null;
 
@@ -162,7 +192,7 @@ namespace Bancassurance.Presentation
             }
             else if (ddlCCH_CHANNELCD.SelectedValue != null && ddlCCH_CHANNELCD.SelectedValue != "" && ddlCCD_CHANNELDTLCD.SelectedValue != null && ddlCCD_CHANNELDTLCD.SelectedValue != "") // && txtStaffID.Text == null && txtStaffID.Text == "")
             {
-                string query1 = @"SELECT S.STAFF_ID,S.STAFF_NAME,Ch.Cch_Descr,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S
+                string query1 = @"SELECT S.ccs_field1, S.STAFF_ID,S.STAFF_NAME,Ch.Cch_Descr,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S
                             INNER JOIN cch_channel ch on ch.cch_code = s.cch_code
                             INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code
                             and cd.cch_code ='" + ddlCCH_CHANNELCD.SelectedValue + "' and s.ccd_code = '" + ddlCCD_CHANNELDTLCD.SelectedValue + "'  order by LENGTH(ltrim(rtrim(S.STAFF_ID))) asc, ltrim(rtrim(S.STAFF_ID)) asc";
@@ -236,6 +266,9 @@ namespace Bancassurance.Presentation
             Label2.Visible = false;
             btnUpload.Visible = false;
             FileUpload1.Visible = false;
+            ToggleFMBM();
+            //lblFMBM.Visible = false;
+            //RadioButtonFMBM.Visible = false;
 
         }
 
@@ -254,9 +287,19 @@ namespace Bancassurance.Presentation
                     columnNameValue.Add("ccd_code", ddlCCD_CHANNELDTLCD.SelectedValue.Trim() == "" ? null : ddlCCD_CHANNELDTLCD.SelectedValue);
                     columnNameValue.Add("staff_id", txtStaffID.Text.Trim() == "" ? null : txtStaffID.Text);
                     columnNameValue.Add("staff_name", txtStaffName.Text.Trim() == "" ? null : txtStaffName.Text);
+                    string fmbm = RadioButtonFMBM.SelectedValue;
                     //Executing DML					
-                    string qry = "UPDATE LSCH_STAFFCHANNELMAPPING SET STAFF_NAME='" + columnNameValue.getObject("staff_name") + "'" +
-                        " where cch_code = '" + columnNameValue.getObject("cch_code") + "' and ccd_code = '" + columnNameValue.getObject("ccd_code") + "' and staff_id = '" + columnNameValue.getObject("staff_id") + "'";
+                    //string qry = "UPDATE LSCH_STAFFCHANNELMAPPING SET STAFF_NAME='" + columnNameValue.getObject("staff_name") + "'" +    
+                    //    " where cch_code = '" + columnNameValue.getObject("cch_code") + "' and ccd_code = '" + columnNameValue.getObject("ccd_code") + "' and staff_id = '" + columnNameValue.getObject("staff_id") + "'";
+
+                    string qry = "UPDATE LSCH_STAFFCHANNELMAPPING SET " +
+                                 "STAFF_NAME = '" + columnNameValue.getObject("staff_name") + "', " +
+                                 "CCS_FIELD1 = '" + fmbm + "' " +
+                                 "WHERE cch_code = '" + columnNameValue.getObject("cch_code") + "' " +
+                                 "AND ccd_code = '" + columnNameValue.getObject("ccd_code") + "' " +
+                                 "AND staff_id = '" + columnNameValue.getObject("staff_id") + "'";
+
+
                     DB.executeDML(qry);
                     btnSearch_Click(null, null);
                     //lblAlert.ForeColor = System.Drawing.Color.Green;
@@ -282,7 +325,7 @@ namespace Bancassurance.Presentation
         {
             //DataTable dt = LNP1_POLICYMASTRDB.GetExcelReportForStaffChannel(ddlCCH_CHANNELCD.Text, ddlCCD_CHANNELDTLCD.Text);
 
-            string query1 = @"SELECT S.STAFF_ID,S.STAFF_NAME,Cd.Ccd_Descr BANK_NAME FROM LSCH_STAFFCHANNELMAPPING S
+            string query1 = @"SELECT Cd.Ccd_Descr BANK_NAME, S.STAFF_ID STAFF_ID, S.STAFF_NAME STAFF_NAME, S.ccs_field1 FM_BM FROM LSCH_STAFFCHANNELMAPPING S
                             INNER JOIN cch_channel ch on ch.cch_code = s.cch_code
                             INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code
                             and cd.cch_code ='" + ddlCCH_CHANNELCD.SelectedValue + "' and s.ccd_code = '" + ddlCCD_CHANNELDTLCD.SelectedValue + "' ";
@@ -388,9 +431,15 @@ namespace Bancassurance.Presentation
 
                     for (int row = 0; row <= GridView1.Rows.Count - 1; row++)
                     {
-                        Sql = "Insert into LSCH_STAFFCHANNELMAPPING (staff_id,staff_name,cch_code,ccd_code)" +
-                            " values('" + GridView1.Rows[row].Cells[0].Text.ToString() + "'," +
-                       "'" + GridView1.Rows[row].Cells[1].Text.ToString() + "'," +
+
+                        string staffId = CleanCell(GridView1.Rows[row].Cells[0].Text);
+                        string staffName = CleanCell(GridView1.Rows[row].Cells[1].Text);
+                        string field1 = CleanCell(GridView1.Rows[row].Cells[2].Text);
+
+                        Sql = "Insert into LSCH_STAFFCHANNELMAPPING (staff_id,staff_name,ccs_field1,cch_code,ccd_code)" +
+                            " values('" + staffId + "'," +
+                       "'" + staffName + "'," +
+                       "'" + field1 + "'," +
                        //"'" + "2" + "'," +                       
                        "'" + ddlCCH_CHANNELCD.SelectedValue + "', " +
                        "'" + ddlCCD_CHANNELDTLCD.SelectedValue + "')"; 
@@ -451,11 +500,23 @@ namespace Bancassurance.Presentation
 
         }
 
+        private string CleanCell(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value) || value == "&nbsp;")
+                return "";
+            return value.Trim();
+        }
+
         protected void btnUploadDisp_Click(object sender, EventArgs e)
         {
             Label2.Visible = true;
             btnUpload.Visible = true;
             FileUpload1.Visible = true;
+        }
+
+        protected void RadioButtonFMBM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ToggleFMBM();
         }
 
         public string DML(string sql)

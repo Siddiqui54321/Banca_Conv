@@ -114,6 +114,24 @@ namespace Bancassurance.Presentation
         protected global::SHMA.Enterprise.Presentation.WebControls.TextBox txtStaffName;
 
         /// <summary>
+        /// lblFMBM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFMBM;
+
+        /// <summary>
+        /// RadioButtonFMBM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::SHMA.Enterprise.Presentation.WebControls.RadioButtonList RadioButtonFMBM;
+
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

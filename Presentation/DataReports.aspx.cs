@@ -339,7 +339,7 @@ namespace Bancassurance.Presentation
 						{
 							l=l.Substring(0,249);
 						}
-						ExcelQuery = "INSERT INTO [Sheet1$] ([SNO],[POLICY_NUMBER],[BRANCH CODE],[BRANCH NAME],[BANK NAME],[CLIENT NAME], [CNIC]," +
+ExcelQuery = "INSERT INTO [Sheet1$] ([SNO],[POLICY_NUMBER],[BRANCH CODE],[BRANCH NAME],[BANK NAME],[CLIENT NAME], [CNIC]," +
 							"[ACCOUNTNO],[AC BRANCH CODE],[AC BRANCH NAME],[PROPOSAL_NUMBER]," +
 							"[CELL_NO],[ADDRESS],[CLIENT DOB],[CLIENT AGE],[POSTING DATE], " +
 							"[RBH DECISION],[RBH DECISION DATE],[CBC DECISION],[CBC DECISION DATE]," +
@@ -348,12 +348,14 @@ namespace Bancassurance.Presentation
 							"[POLICY YEAR],[Premium Remarks], [Last Premium Received],"+
 							"[Conventional/ Takaful],[PLANDESC],[TERM], [PAYMENTMODE],[PROPOSALDATE]," +
 							" [PROPSIGNDATE],[PROPOSALREF],[PAYMENTREF],[COMMENCENTDATE],[STAFFID]," +
-							" [STAFFNAME], " +
-							"[RIDERS DETAIL],[BASIC PREMIUM],[RIDER PREMIUM],[MODAL PREMIUM]," +
+                            " [STAFFNAME],[STAFFID2],[STAFFNAME2], " + // Add new columns STAFFID2,STAFFNAME2 02_FEB-26 by Imran ul Haq
+ 
+                            "[RIDERS DETAIL],[BASIC PREMIUM],[RIDER PREMIUM],[MODAL PREMIUM]," +
 							"[USERNAME],[CURRENTSTATUS], [OPD Dispatch Date], [Consign NO AND Courier Company]," +
 							" [OPD Rec By Customer Date],[Receive By],[Bank Commission Payment Month]) " +
-							
-							"VALUES (" +
+                            //STAFFID2	STAFFNAME2
+ 
+                            "VALUES (" +
 							"'" + i.ToString() + "','"+ dr["Policy_Number"].ToString() +"', '"+ dr["BranchCode"].ToString() +"','"+ dr["BranchName"].ToString() +"', '"+ dr["BANKNAME"].ToString() + "','" + dr["CLIENTNAME"].ToString() + "','" + dr["CNIC"].ToString() + "'," +
 							"'" + dr["ACCOUNTNO"].ToString() + "','" + dr["acc_branch"].ToString() +"', '', '"+ dr["PROPOSAL_NUMBER"].ToString() +"', "+
 							"'" + dr["NAD_MOBILE"].ToString() + "','" + dr["ADDRESS"].ToString().Trim('\'').Trim('\"').Trim('`') + "', '" + Convert.ToDateTime(dr["CLIENTDOB"]).ToString("dd/MM/yyyy") + "', '" + dr["CLIENTAGE"].ToString() + "', '" + dr["PROPOSALPOSTINGDATE"].ToString() + "', " +
@@ -362,8 +364,8 @@ namespace Bancassurance.Presentation
 							"'" + dr["policyyear"].ToString() + "', '','"+ dr["COLLECTION_DATE"].ToString() + "','Conventional', " +
 							" '"+ dr["PLANDESC"].ToString() + "','" + dr["TERM"].ToString() + "', '" + dr["PAYMENTMODE"].ToString() +"', "+
 							"'"+ dr["PROPOSALPOSTINGDATE"].ToString() + "', '" + Convert.ToString(dr["PROPOSALDATE"]) + "','" + Convert.ToString(dr["PROPOSALREF"]) + "','" + dr["PAYMENTREF"].ToString() +"', "+
-							"'" + dr["COMMENCENTDATE"].ToString() + "', '" + Convert.ToString(dr["STAFFID"]) + "','" + Convert.ToString(dr["STAFFNAME"]) + "', " +
-							"'" + Convert.ToString(dr["Riders Detail"]) +"','"+ Convert.ToString(dr["Basic Premium"]) +"',"+
+							"'" + dr["COMMENCENTDATE"].ToString() + "', '" + Convert.ToString(dr["STAFFID"]) + "','" + Convert.ToString(dr["STAFFNAME"]) + "',' " + Convert.ToString(dr["STAFFID2"]) + "','" + Convert.ToString(dr["STAFFNAME2"]) + "'," +
+                            "'" + Convert.ToString(dr["Riders Detail"]) +"','"+ Convert.ToString(dr["Basic Premium"]) +"',"+
 							"'"+ Convert.ToString(dr["Rider Premium"]) +"','"+ Convert.ToString(dr["Modal Premium"]) +"',"+	
 							"'"+ dr["USERNAME"].ToString() +"',"+
 							"'"+ l  +"','','','','','')";

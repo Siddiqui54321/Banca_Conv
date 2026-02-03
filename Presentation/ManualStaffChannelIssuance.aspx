@@ -152,11 +152,11 @@
             <div id="NormalEntryTableDiv" class="NormalEntryTableDiv" runat="server" style="z-index: 0">
                 <table id="Table1" align="center" border="0" cellspacing="0" cellpadding="2">
                     <tr class="form_heading">
-                        <td height="20" width="750" colspan="12" valign="middle" align="center">STAFF CHANNEL MAPPING     <%--valign="middle" align="center"--%>                   
+                        <td height="20" width="750" colspan="4" valign="middle" align="center">STAFF CHANNEL MAPPING     <%--valign="middle" align="center"--%>                   
                         </td>
                     </tr>
                     <tr>
-                        <td height="10" colspan="6"></td>
+                        <td height="10" colspan="4"></td>
                     </tr>
                     <%--<br />--%>
 
@@ -175,7 +175,7 @@
                         <td id="ctlSubChannel" width="110" align="left">Sub Channel:    
                         </td>
                         <td id="ctlddlCCD_CHANNELDTLCD" width="186">
-                            <SHMA:DropDownList TabIndex="2" BlankValue="False" runat="server" ID="ddlCCD_CHANNELDTLCD"
+                            <SHMA:DropDownList TabIndex="2" BlankValue="False" runat="server" ID="ddlCCD_CHANNELDTLCD" AutoPostBack="true"
                                 onkeydown="return cancelBack(0)" Width="160px" DataValueField="CCD_CODE"
                                 DataTextField="desc_f">
                             </SHMA:DropDownList>
@@ -200,7 +200,19 @@
                                 CssClass="RequiredField"></SHMA:TextBox>
                         </td>
                     </tr>
+                    <tr class="TRow_Alt">
+                        <td width="106" align="right">
+                            <asp:Label ID="lblFMBM" runat="server" Text="FM/BM:" Visible="false"></asp:Label>
+                        </td>
 
+                        <td width="50" id="clttxtStaffFM">
+                            <SHMA:RadioButtonList ID="RadioButtonFMBM" runat="server" Visible="false" AutoPostBack="true" OnSelectedIndexChanged="RadioButtonFMBM_SelectedIndexChanged" RepeatDirection="Horizontal">
+                                <%--<asp:ListItem Selected="True">FM</asp:ListItem>--%>
+                                <asp:ListItem Value="FM">FM</asp:ListItem>
+                                <asp:ListItem Value="BM">BM</asp:ListItem>
+                            </SHMA:RadioButtonList>
+                        </td>
+                    </tr>
                 </table>
                 <tr>
                     <td>
@@ -219,14 +231,14 @@
                     </td>
                     <td>&nbsp;<asp:Button ID="Refresh" class="button2" runat="server" Text="::" OnClick="Refresh_Click" />
                     </td>
-                    </tr>
+                </tr>
                 <div style="margin-left: 200px;" class="auto-style2">
-                        <td>
-                            <br />
-                            <asp:Label ID="Label2" runat="server" Visible="False" Text="Choose Excel file for upload"></asp:Label>
-                            &nbsp;<asp:FileUpload ID="FileUpload1" Visible="False" runat="server" />
-                            <asp:Button ID="btnUpload" class="button2" runat="server" Visible="False" Text="Upload Data" OnClick="btnUpload_Click" />
-                        </td>                    
+                    <td>
+                        <br />
+                        <asp:Label ID="Label2" runat="server" Visible="False" Text="Choose Excel file for upload"></asp:Label>
+                        &nbsp;<asp:FileUpload ID="FileUpload1" Visible="False" runat="server" />
+                        <asp:Button ID="btnUpload" class="button2" runat="server" Visible="False" Text="Upload Data" OnClick="btnUpload_Click" />
+                    </td>
                 </div>
 
                 <div style="height: 250px; overflow: auto">
@@ -243,9 +255,10 @@
 
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
-                                <asp:BoundField DataField="staff_id" HeaderText="Staff ID" ItemStyle-Width="150px" ItemStyle-HorizontalAlign="Center"></asp:BoundField>
+                                <asp:BoundField DataField="staff_id" HeaderText="Staff ID" ItemStyle-Width="125px" ItemStyle-HorizontalAlign="Center"></asp:BoundField>
                                 <asp:BoundField DataField="staff_name" HeaderText="Staff Name" ItemStyle-Width="175px" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
-                                <asp:BoundField DataField="Ccd_Descr" HeaderText="Channel Detail" ItemStyle-Width="200px" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                <asp:BoundField DataField="Ccd_Descr" HeaderText="Channel Detail" ItemStyle-Width="150px" ItemStyle-HorizontalAlign="Left"></asp:BoundField>
+                                <asp:BoundField DataField="ccs_field1" HeaderText="FM/BM" ItemStyle-Width="50px" ItemStyle-HorizontalAlign="Center"></asp:BoundField>
                             </Columns>
                             <EditRowStyle BackColor="#999999" />
                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

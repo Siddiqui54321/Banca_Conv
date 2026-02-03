@@ -936,12 +936,16 @@ vw.np2_commendate CommencementDate  , vw.npr_maturitydate  MaturityDate  ,
             "          from lcsd_systemdtl a\n" +
             "        where a.csh_id = 'AGENT'\n" +
             "           and A.CSD_TYPE = 'COMM_RATE') CommissionPer,\n" +
-
             "       coalesce(p1.np1_accountno,p1.np1_iban) ACCOUNTNO,\n" +
       //      "       p1.NP1_ACCOUNTNO ACCOUNTNO,\n" +
             "       p1.pbr_reference StaffId,\n" +
+            "       sch.staff_name STAFFNAME,\n" +
             "       p1.np1_purpose StaffId2,\n" +      /*--chg-25082023--*/
-            "       sch.staff_name StaffName,\n" +
+//    "       sch.staff_name StaffName,\n" +
+            "       (select id2.staff_name\n" +
+            "          from LSCH_STAFFCHANNELMAPPING id2\n" +
+            "        where id2.cch_code = '2' and id2.ccd_code = p1.np1_channeldetail \n" +
+            "           and id2.staff_id = p1.np1_purpose) STAFFNAME2,\n" +
             "       la.nad_mobile,\n" +
             "       translate(la.nad_address1 || ' ' || la.nad_address2 || ' ' || la.nad_address3,'\"''',' ') address,lb.COLLECTION_AMOUNT,lb.COLLECTION_DATE\n" +
             "  FROM LNP1_POLICYMASTR P1\n" +
