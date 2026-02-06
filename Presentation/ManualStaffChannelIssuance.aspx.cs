@@ -41,7 +41,7 @@ namespace Bancassurance.Presentation
 
             }
 
-            ToggleFMBM(); // 👈 MUST run every time
+            ToggleFMBM(); //  MUST run every time
 
         }
 
@@ -54,6 +54,8 @@ namespace Bancassurance.Presentation
                 lblFMBM.Visible = true;
                 RadioButtonFMBM.Visible = true;
                 RadioButtonFMBM.Enabled = true;
+              //  txtStaffID.Text = "";
+              //  txtStaffName.Text = "";
             }
             else
             {
@@ -61,6 +63,9 @@ namespace Bancassurance.Presentation
                 RadioButtonFMBM.Enabled = false;
                 RadioButtonFMBM.Visible = false;
                 lblFMBM.Visible = false;
+
+                //txtStaffID.Text = "";
+               // txtStaffName.Text = "";
             }
         }
 
@@ -128,7 +133,11 @@ namespace Bancassurance.Presentation
 
         protected void Binddata()
         {
-            string query = @"SELECT S.ccs_field1, S.STAFF_ID,S.STAFF_NAME,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S INNER JOIN cch_channel ch on ch.cch_code = s.cch_code INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code order by LENGTH(ltrim(rtrim(S.STAFF_ID))) asc, ltrim(rtrim(S.STAFF_ID)) asc"; 
+            string query = @"SELECT S.ccs_field1, S.STAFF_ID,S.STAFF_NAME,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING 
+                   S INNER JOIN cch_channel ch on ch.cch_code = s.cch_code INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code " +
+                    "  where S.Ccd_Code='" + ddlCCD_CHANNELDTLCD.SelectedValue.ToString() + "' order by LENGTH(ltrim(rtrim(S.STAFF_ID))) asc, ltrim(rtrim(S.STAFF_ID)) asc"; 
+            
+            
             //string query = @"SELECT S.STAFF_ID,S.STAFF_NAME,Cd.Ccd_Descr FROM LSCH_STAFFCHANNELMAPPING S  
             //                INNER JOIN cch_channel ch on ch.cch_code = s.cch_code
             //                INNER JOIN CCD_CHANNELDETAIL cd on cd.ccd_code = s.ccd_code
@@ -243,6 +252,43 @@ namespace Bancassurance.Presentation
             string txtStaffName_1 = grdStaffChMap.SelectedRow.Cells[1].Text;
             txtStaffID.Text = txtStaffID_1;
             txtStaffName.Text = txtStaffName_1;
+
+            // new
+
+
+
+            string fmbmValue = grdStaffChMap.SelectedRow.Cells[3].Text.Trim();
+
+            // Show & enable FM/BM
+
+          //  lblFMBM.Visible = true;
+
+          //  RadioButtonFMBM.Visible = true;
+
+           // RadioButtonFMBM.Enabled = true;
+
+            // Clear previous selection
+
+            RadioButtonFMBM.ClearSelection();
+
+            // Select FM or BM
+
+            if (fmbmValue == "FM")
+
+            {
+
+                RadioButtonFMBM.Items.FindByValue("FM").Selected = true;
+
+            }
+
+            else if (fmbmValue == "BM")
+
+            {
+
+                RadioButtonFMBM.Items.FindByValue("BM").Selected = true;
+
+            }
+
         }
 
         protected void grdStaffChMap_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -590,7 +636,26 @@ namespace Bancassurance.Presentation
 
         protected void RadioButtonFMBM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ToggleFMBM();
+         //   ToggleFMBM();
+        }
+
+        protected void ddlCCD_CHANNELDTLCD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtStaffID.Text = "";
+            txtStaffName.Text = "";
+            grdStaffChMap.DataSource = null;
+            grdStaffChMap.DataBind();
+            Binddata();
+
+            if(ddlCCD_CHANNELDTLCD.SelectedIndex==0)
+            {
+                RadioButtonFMBM.Visible = true;
+            }
+            else
+            {
+                RadioButtonFMBM.Visible = false;
+
+            }
         }
 
         public string DML(string sql)

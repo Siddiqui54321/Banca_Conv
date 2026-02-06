@@ -177,7 +177,7 @@
                         <td id="ctlddlCCD_CHANNELDTLCD" width="186">
                             <SHMA:DropDownList TabIndex="2" BlankValue="False" runat="server" ID="ddlCCD_CHANNELDTLCD" AutoPostBack="true"
                                 onkeydown="return cancelBack(0)" Width="160px" DataValueField="CCD_CODE"
-                                DataTextField="desc_f">
+                                DataTextField="desc_f" OnSelectedIndexChanged="ddlCCD_CHANNELDTLCD_SelectedIndexChanged">
                             </SHMA:DropDownList>
                         </td>
                     </tr>
@@ -206,7 +206,7 @@
                         </td>
 
                         <td width="50" id="clttxtStaffFM">
-                            <SHMA:RadioButtonList ID="RadioButtonFMBM" runat="server" Visible="false" AutoPostBack="true" OnSelectedIndexChanged="RadioButtonFMBM_SelectedIndexChanged" RepeatDirection="Horizontal">
+                            <SHMA:RadioButtonList ID="RadioButtonFMBM" runat="server" Visible="false"   RepeatDirection="Horizontal">
                                 <%--<asp:ListItem Selected="True">FM</asp:ListItem>--%>
                                 <asp:ListItem Value="FM">FM</asp:ListItem>
                                 <asp:ListItem Value="BM">BM</asp:ListItem>
@@ -251,7 +251,7 @@
                         <asp:GridView ID="grdStaffChMap" runat="server" Height="70px" OnSelectedIndexChanged="grdStaffChMap_SelectedIndexChanged"
                             Width="697px" CellPadding="4" ForeColor="#333333" GridLines="None"
                             AutoGenerateColumns="False"
-                            OnRowDataBound="grdStaffChMap_RowDataBound">
+                            OnRowDataBound="grdStaffChMap_RowDataBound" ShowHeaderWhenEmpty="True">
 
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>

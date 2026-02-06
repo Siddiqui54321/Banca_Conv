@@ -504,11 +504,9 @@
     </Compile>
     <Compile Include="CrystalReports\CrystalReport.aspx.cs">
       <DependentUpon>CrystalReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CrystalReports\Presentation\RemoteService.aspx.cs">
       <DependentUpon>RemoteService.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Data\BeneficiaryData.cs" />
     <Compile Include="Data\CCD_CHANNELDETAILDB.cs">
@@ -666,63 +664,54 @@
     </Compile>
     <Compile Include="Presentation\AgentHierarchy.aspx.cs">
       <DependentUpon>AgentHierarchy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\AgentHierarchy.aspx.designer.cs">
       <DependentUpon>AgentHierarchy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\AMLCFT_Button.aspx.cs">
       <DependentUpon>AMLCFT_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\AMLCFT_Button.aspx.designer.cs">
       <DependentUpon>AMLCFT_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\AMLCFT_Page.aspx.cs">
       <DependentUpon>AMLCFT_Page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\AMLCFT_Page.aspx.designer.cs">
       <DependentUpon>AMLCFT_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ApplicationSelection.aspx.cs">
       <DependentUpon>ApplicationSelection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ApplicationSelection.aspx.designer.cs">
       <DependentUpon>ApplicationSelection.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\BranchSelection.aspx.cs">
       <DependentUpon>BranchSelection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\BranchSelection.aspx.designer.cs">
       <DependentUpon>BranchSelection.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Calculator.aspx.cs">
       <DependentUpon>Calculator.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\Calculator.aspx.designer.cs">
       <DependentUpon>Calculator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\CallReport.aspx.cs">
       <DependentUpon>CallReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\CallReport.aspx.designer.cs">
       <DependentUpon>CallReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Assessment_Button.aspx.cs">
       <DependentUpon>Assessment_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\Assessment_Button.aspx.designer.cs">
       <DependentUpon>Assessment_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\DispatchDataGroup.aspx.cs">
       <DependentUpon>DispatchDataGroup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\DispatchDataGroup.aspx.designer.cs">
       <DependentUpon>DispatchDataGroup.aspx</DependentUpon>
@@ -730,1696 +719,1452 @@
     <Compile Include="Presentation\Excel_Upload.cs" />
     <Compile Include="Presentation\FormDispatch.aspx.cs">
       <DependentUpon>FormDispatch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\FormDispatch.aspx.designer.cs">
       <DependentUpon>FormDispatch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\FormPDF.aspx.cs">
       <DependentUpon>FormPDF.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\FormPDF.aspx.designer.cs">
       <DependentUpon>FormPDF.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\FormPolAlterRequest.aspx.cs">
       <DependentUpon>FormPolAlterRequest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\FormPolAlterRequest.aspx.designer.cs">
       <DependentUpon>FormPolAlterRequest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\GenerateNewBranches.aspx.cs">
       <DependentUpon>GenerateNewBranches.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\GenerateNewBranches.aspx.designer.cs">
       <DependentUpon>GenerateNewBranches.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ListOfPendingAtCBCProposal.aspx.cs">
       <DependentUpon>ListOfPendingAtCBCProposal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ListOfPendingAtCBCProposal.aspx.designer.cs">
       <DependentUpon>ListOfPendingAtCBCProposal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ListOfPendingAtUsersProposal.aspx.cs">
       <DependentUpon>ListOfPendingAtUsersProposal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ListOfPendingAtUsersProposal.aspx.designer.cs">
       <DependentUpon>ListOfPendingAtUsersProposal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ListOfPendingAtCBCProposal_Group.aspx.cs">
       <DependentUpon>ListOfPendingAtCBCProposal_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ListOfPendingAtCBCProposal_Group.aspx.designer.cs">
       <DependentUpon>ListOfPendingAtCBCProposal_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ListOfPendingAtUsersProposal_Group.aspx.cs">
       <DependentUpon>ListOfPendingAtUsersProposal_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ListOfPendingAtUsersProposal_Group.aspx.designer.cs">
       <DependentUpon>ListOfPendingAtUsersProposal_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualStaffChannelIssuance.aspx.cs">
       <DependentUpon>ManualStaffChannelIssuance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualStaffChannelIssuance.aspx.designer.cs">
       <DependentUpon>ManualStaffChannelIssuance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PDFOpeningGroup.aspx.cs">
       <DependentUpon>PDFOpeningGroup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PDFOpeningGroup.aspx.designer.cs">
       <DependentUpon>PDFOpeningGroup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PolicyAlterReqPageGroup.aspx.cs">
       <DependentUpon>PolicyAlterReqPageGroup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PolicyAlterReqPageGroup.aspx.designer.cs">
       <DependentUpon>PolicyAlterReqPageGroup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ProposalDetails.aspx.cs">
       <DependentUpon>ProposalDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ProposalDetails.aspx.designer.cs">
       <DependentUpon>ProposalDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_USERUPLOAD.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_USERUPLOAD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_USERUPLOAD.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_USERUPLOAD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_AMLCFTDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_USERUPLOAD.aspx.cs">
       <DependentUpon>shgn_gp_gp_USERUPLOAD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_USERUPLOAD.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_USERUPLOAD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_USERUPLOAD.aspx.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_USERUPLOAD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_USERUPLOAD.aspx.designer.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_USERUPLOAD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_CD_COMPANYDET.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_CD_COMPANYDET.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_CD_COMPANYDET.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_CD_COMPANYDET.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDET.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\SuitabilityAssessment_Page.aspx.cs">
       <DependentUpon>SuitabilityAssessment_Page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\SuitabilityAssessment_Page.aspx.designer.cs">
       <DependentUpon>SuitabilityAssessment_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PolicyIssuanceReport.aspx.cs">
       <DependentUpon>PolicyIssuanceReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PolicyIssuanceReport.aspx.designer.cs">
       <DependentUpon>PolicyIssuanceReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\DataReports.aspx.cs">
       <DependentUpon>DataReports.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\DataReports.aspx.designer.cs">
       <DependentUpon>DataReports.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\DirectLogin.aspx.cs">
       <DependentUpon>DirectLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\DirectLogin.aspx.designer.cs">
       <DependentUpon>DirectLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\DisplayComment.aspx.cs">
       <DependentUpon>DisplayComment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\DisplayComment.aspx.designer.cs">
       <DependentUpon>DisplayComment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\DownloadBancassuranceFile.aspx.cs">
       <DependentUpon>DownloadBancassuranceFile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\DownloadBancassuranceFile.aspx.designer.cs">
       <DependentUpon>DownloadBancassuranceFile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\DownloadIlasFile.aspx.cs">
       <DependentUpon>DownloadIlasFile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\DownloadIlasFile.aspx.designer.cs">
       <DependentUpon>DownloadIlasFile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\DownloadProposalFile.aspx.cs">
       <DependentUpon>DownloadProposalFile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\DownloadProposalFile.aspx.designer.cs">
       <DependentUpon>DownloadProposalFile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\DownloadUblFile.aspx.cs">
       <DependentUpon>DownloadUblFile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\DownloadUblFile.aspx.designer.cs">
       <DependentUpon>DownloadUblFile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\download_page.aspx.cs">
       <DependentUpon>download_page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\download_page.aspx.designer.cs">
       <DependentUpon>download_page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ExecuteReport.aspx.cs">
       <DependentUpon>ExecuteReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ExecuteReport.aspx.designer.cs">
       <DependentUpon>ExecuteReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\GenerateIllustration-bkp.aspx.cs">
       <DependentUpon>GenerateIllustration-bkp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\GenerateIllustration-bkp.aspx.designer.cs">
       <DependentUpon>GenerateIllustration-bkp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\GenerateIllustration.aspx.cs">
       <DependentUpon>GenerateIllustration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\GenerateIllustration.aspx.designer.cs">
       <DependentUpon>GenerateIllustration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\GenerateIllustration2-Backup.aspx.cs">
       <DependentUpon>GenerateIllustration2-Backup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\GenerateIllustration2-Backup.aspx.designer.cs">
       <DependentUpon>GenerateIllustration2-Backup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\GenerateIllustration2.aspx.cs">
       <DependentUpon>GenerateIllustration2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\GenerateIllustration2.aspx.designer.cs">
       <DependentUpon>GenerateIllustration2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\GoalSeek.aspx.cs">
       <DependentUpon>GoalSeek.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\GoalSeek.aspx.designer.cs">
       <DependentUpon>GoalSeek.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\jsController.aspx.cs">
       <DependentUpon>jsController.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\jsController.aspx.designer.cs">
       <DependentUpon>jsController.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ListOfApprovedProposal.aspx.cs">
       <DependentUpon>ListOfApprovedProposal.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ListOfApprovedProposal.aspx.designer.cs">
       <DependentUpon>ListOfApprovedProposal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ListOfApprovedProposal_Button.aspx.cs">
       <DependentUpon>ListOfApprovedProposal_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ListOfApprovedProposal_Button.aspx.designer.cs">
       <DependentUpon>ListOfApprovedProposal_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ListOfApprovedProposal_Group.aspx.cs">
       <DependentUpon>ListOfApprovedProposal_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ListOfApprovedProposal_Group.aspx.designer.cs">
       <DependentUpon>ListOfApprovedProposal_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposals.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposals.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposals.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposals.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposalsView.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposalsView.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposalsView.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposalsView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposalsView_Button.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposalsView_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposalsView_Button.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposalsView_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposalsView_Group.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposalsView_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposalsView_Group.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposalsView_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposals_Button.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposals_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposals_Button.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposals_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposals_Group.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposals_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceOfPendingProposals_Group.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceOfPendingProposals_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceSearch.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceSearch.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceSearch.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceSearch_Button.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceSearch_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceSearch_Button.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceSearch_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceSearch_Group.aspx.cs">
       <DependentUpon>ManualPolicyIssuanceSearch_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ManualPolicyIssuanceSearch_Group.aspx.designer.cs">
       <DependentUpon>ManualPolicyIssuanceSearch_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\MedicalDetail.aspx.cs">
       <DependentUpon>MedicalDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\MedicalDetail.aspx.designer.cs">
       <DependentUpon>MedicalDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\MedicalDetail_Button.aspx.cs">
       <DependentUpon>MedicalDetail_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\MedicalDetail_Button.aspx.designer.cs">
       <DependentUpon>MedicalDetail_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\MedicalDetail_Page.aspx.cs">
       <DependentUpon>MedicalDetail_Page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\MedicalDetail_Page.aspx.designer.cs">
       <DependentUpon>MedicalDetail_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Parameters.aspx.cs">
       <DependentUpon>Parameters.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\Parameters.aspx.designer.cs">
       <DependentUpon>Parameters.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PendingListForApproval.aspx.cs">
       <DependentUpon>PendingListForApproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PendingListForApproval.aspx.designer.cs">
       <DependentUpon>PendingListForApproval.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PendingListForApproval_Button.aspx.cs">
       <DependentUpon>PendingListForApproval_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PendingListForApproval_Button.aspx.designer.cs">
       <DependentUpon>PendingListForApproval_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PendingListForApproval_Group.aspx.cs">
       <DependentUpon>PendingListForApproval_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PendingListForApproval_Group.aspx.designer.cs">
       <DependentUpon>PendingListForApproval_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PendingListForCallCenterApproval.aspx.cs">
       <DependentUpon>PendingListForCallCenterApproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PendingListForCallCenterApproval.aspx.designer.cs">
       <DependentUpon>PendingListForCallCenterApproval.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PendingListForCallCenterApproval_Button.aspx.cs">
       <DependentUpon>PendingListForCallCenterApproval_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PendingListForCallCenterApproval_Button.aspx.designer.cs">
       <DependentUpon>PendingListForCallCenterApproval_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PendingListForCallCenterApproval_Group.aspx.cs">
       <DependentUpon>PendingListForCallCenterApproval_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PendingListForCallCenterApproval_Group.aspx.designer.cs">
       <DependentUpon>PendingListForCallCenterApproval_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PersonalPage.aspx.cs">
       <DependentUpon>PersonalPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PersonalPage.aspx.designer.cs">
       <DependentUpon>PersonalPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PersonalPage_menue.aspx.cs">
       <DependentUpon>PersonalPage_menue.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PersonalPage_menue.aspx.designer.cs">
       <DependentUpon>PersonalPage_menue.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PersonSelectionLOV.aspx.cs">
       <DependentUpon>PersonSelectionLOV.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PersonSelectionLOV.aspx.designer.cs">
       <DependentUpon>PersonSelectionLOV.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PolicyAcceptance.aspx.cs">
       <DependentUpon>PolicyAcceptance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PolicyAcceptance.aspx.designer.cs">
       <DependentUpon>PolicyAcceptance.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\PolicyAcceptance_Button.aspx.cs">
       <DependentUpon>PolicyAcceptance_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\PolicyAcceptance_Button.aspx.designer.cs">
       <DependentUpon>PolicyAcceptance_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ProposalSelectionLOV.aspx.cs">
       <DependentUpon>ProposalSelectionLOV.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ProposalSelectionLOV.aspx.designer.cs">
       <DependentUpon>ProposalSelectionLOV.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\QuotationSelectionLOV.aspx.cs">
       <DependentUpon>QuotationSelectionLOV.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\QuotationSelectionLOV.aspx.designer.cs">
       <DependentUpon>QuotationSelectionLOV.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ReferredListForCallCenterApproval.aspx.cs">
       <DependentUpon>ReferredListForCallCenterApproval.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ReferredListForCallCenterApproval.aspx.designer.cs">
       <DependentUpon>ReferredListForCallCenterApproval.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\RemoteService.aspx.cs">
       <DependentUpon>RemoteService.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\RemoteService.aspx.designer.cs">
       <DependentUpon>RemoteService.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\SetRequirements.aspx.cs">
       <DependentUpon>SetRequirements.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\SetRequirements.aspx.designer.cs">
       <DependentUpon>SetRequirements.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ACE_NG_RATESUTP.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ACE_NG_RATESUTP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ACE_NG_RATESUTP.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ACE_NG_RATESUTP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_DH_CHANNELDETAIL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_DH_CHANNELDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_DH_CHANNELDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_DH_CHANNELDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_DH_CHANNELSUBDTL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_DH_CHANNELSUBDTL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_DH_CHANNELSUBDTL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_DH_CHANNELSUBDTL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_DS_UC_USERCHANNEL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_DS_UC_USERCHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_DS_UC_USERCHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_DS_UC_USERCHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_DS_UL_LIMITATION.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_DS_UL_LIMITATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_DS_UL_LIMITATION.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_DS_UL_LIMITATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_DS_ER_EXCHANGERATE.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_DS_ER_EXCHANGERATE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_DS_ER_EXCHANGERATE.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_DS_ER_EXCHANGERATE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_DS_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_DS_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_DS_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_DS_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_DS_UC_USERCOUNTRY2.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_DS_UC_USERCOUNTRY2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_DS_UC_USERCOUNTRY2.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_DS_UC_USERCOUNTRY2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GE_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GE_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GE_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GE_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_BENEFECIARY.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_BENEFECIARY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_BENEFECIARY.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_BENEFECIARY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_HOME.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_HOME.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_HOME.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_HOME.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_PERONAL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_PERONAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_PERONAL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_PERONAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_PLANRIDER.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_PLANRIDER.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_PLANRIDER.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_PLANRIDER.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_PURPOSE.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_PURPOSE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_PURPOSE.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_PURPOSE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_TARGETVALUES.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_TARGETVALUES.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_TARGETVALUES.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_TARGETVALUES.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_WITHDRAWAL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_WITHDRAWAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_WITHDRAWAL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_WITHDRAWAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_WITHDRAWALPOPS.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_WITHDRAWALPOPS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_GP_WITHDRAWALPOPS.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_GP_WITHDRAWALPOPS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_LF_LNFUFUNDS.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_LF_LNFUFUNDS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_LF_LNFUFUNDS.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_LF_LNFUFUNDS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_TE_ER_EXCHANGERATE.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_TE_ER_EXCHANGERATE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_TE_ER_EXCHANGERATE.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_TE_ER_EXCHANGERATE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_UC_USERCHANNEL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_UC_USERCHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_UC_USERCHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_UC_USERCHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_UC_USERCOUNTRY2.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_UC_USERCOUNTRY2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_UC_USERCOUNTRY2.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_UC_USERCOUNTRY2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_UM_USERMANAGMENT.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_UM_USERMANAGMENT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ET_UM_USERMANAGMENT.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ET_UM_USERMANAGMENT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ST_CHANNEL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ST_CHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ST_CHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ST_CHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ST_CHANNELDETAIL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ST_CHANNELDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ST_CHANNELDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ST_CHANNELDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ST_CHANNELSUBDTL.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ST_CHANNELSUBDTL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_ST_CHANNELSUBDTL.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_ST_CHANNELSUBDTL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_TE_UL_LIMITATION.aspx.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_TE_UL_LIMITATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_ILUS_TE_UL_LIMITATION.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_ILUS_TE_UL_LIMITATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_LPVF_PPRID_DESCRIPTION.aspx.cs">
       <DependentUpon>shgn_bt_se_button_LPVF_PPRID_DESCRIPTION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_LPVF_PPRID_DESCRIPTION.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_LPVF_PPRID_DESCRIPTION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_LPVL_RIDER_INFORMATION.aspx.cs">
       <DependentUpon>shgn_bt_se_button_LPVL_RIDER_INFORMATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_LPVL_RIDER_INFORMATION.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_LPVL_RIDER_INFORMATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_RIDER_BEHAVIOUR.aspx.cs">
       <DependentUpon>shgn_bt_se_button_RIDER_BEHAVIOUR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_bt_se_button_RIDER_BEHAVIOUR.aspx.designer.cs">
       <DependentUpon>shgn_bt_se_button_RIDER_BEHAVIOUR.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayheader_ILUS_DH_BRANCHPRODUCT.aspx.cs">
       <DependentUpon>shgn_dh_se_displayheader_ILUS_DH_BRANCHPRODUCT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayheader_ILUS_DH_BRANCHPRODUCT.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayheader_ILUS_DH_BRANCHPRODUCT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayheader_ILUS_DH_CHANNELDETAIL.aspx.cs">
       <DependentUpon>shgn_dh_se_displayheader_ILUS_DH_CHANNELDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayheader_ILUS_DH_CHANNELDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayheader_ILUS_DH_CHANNELDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayheader_ILUS_DH_CHANNELSUBDTL.aspx.cs">
       <DependentUpon>shgn_dh_se_displayheader_ILUS_DH_CHANNELSUBDTL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayheader_ILUS_DH_CHANNELSUBDTL.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayheader_ILUS_DH_CHANNELSUBDTL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayheader_ILUS_DH_GUARDIAN.aspx.cs">
       <DependentUpon>shgn_dh_se_displayheader_ILUS_DH_GUARDIAN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayheader_ILUS_DH_GUARDIAN.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayheader_ILUS_DH_GUARDIAN.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_BANCAPARAMS.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_BANCAPARAMS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_BANCAPARAMS.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_BANCAPARAMS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_BASEPRODUCT.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_BASEPRODUCT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_BASEPRODUCT.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_BASEPRODUCT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_BASEPRODUCT_VALIDATION.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_BASEPRODUCT_VALIDATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_BASEPRODUCT_VALIDATION.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_BASEPRODUCT_VALIDATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_DS_UC_USERCHANNEL.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_DS_UC_USERCHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_DS_UC_USERCHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_DS_UC_USERCHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_DS_UL_LIMITATION.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_DS_UL_LIMITATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_DS_UL_LIMITATION.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_DS_UL_LIMITATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_ET_DS_ER_EXCHANGERATE.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_ET_DS_ER_EXCHANGERATE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_ET_DS_ER_EXCHANGERATE.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_ET_DS_ER_EXCHANGERATE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_ET_DS_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_ET_DS_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_ET_DS_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_ET_DS_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_ET_DS_UC_USERCOUNTRY2.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_ET_DS_UC_USERCOUNTRY2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_ET_DS_UC_USERCOUNTRY2.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_ET_DS_UC_USERCOUNTRY2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_ET_GE_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_ET_GE_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_ILUS_ET_GE_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_ILUS_ET_GE_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_RESETPASSWORD.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_RESETPASSWORD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_RESETPASSWORD.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_RESETPASSWORD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_RIDER_BEHAVIOUR.aspx.cs">
       <DependentUpon>shgn_dh_se_displayselection_RIDER_BEHAVIOUR.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_displayselection_RIDER_BEHAVIOUR.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_displayselection_RIDER_BEHAVIOUR.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_enquiry_ILUS_ET_EQ_TARGETVALUES.aspx.cs">
       <DependentUpon>shgn_dh_se_enquiry_ILUS_ET_EQ_TARGETVALUES.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_dh_se_enquiry_ILUS_ET_EQ_TARGETVALUES.aspx.designer.cs">
       <DependentUpon>shgn_dh_se_enquiry_ILUS_ET_EQ_TARGETVALUES.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ACE_NG_RATESUTP.aspx.cs">
       <DependentUpon>shgn_gp_gp_ACE_NG_RATESUTP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ACE_NG_RATESUTP.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ACE_NG_RATESUTP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_BANCAPARAMS.aspx.cs">
       <DependentUpon>shgn_gp_gp_BANCAPARAMS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_BANCAPARAMS.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_BANCAPARAMS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_CITY.aspx.cs">
       <DependentUpon>shgn_gp_gp_CITY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_CITY.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_CITY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_COUNTRY.aspx.cs">
       <DependentUpon>shgn_gp_gp_COUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_COUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_COUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILAS_TREE_DECISION.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILAS_TREE_DECISION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILAS_TREE_DECISION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILAS_TREE_DECISION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILAS_TREE_MANDRIDER.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILAS_TREE_MANDRIDER.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILAS_TREE_MANDRIDER.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILAS_TREE_MANDRIDER.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILAS_TREE_VALIDATION.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILAS_TREE_VALIDATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILAS_TREE_VALIDATION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILAS_TREE_VALIDATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_DS_ER_EXCHANGERATE.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_DS_ER_EXCHANGERATE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_DS_ER_EXCHANGERATE.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_DS_ER_EXCHANGERATE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GE_ER_EXCHANGERATE.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GE_ER_EXCHANGERATE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GE_ER_EXCHANGERATE.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GE_ER_EXCHANGERATE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GE_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GE_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GE_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GE_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GE_UC_USERCOUNTRY2.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GE_UC_USERCOUNTRY2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GE_UC_USERCOUNTRY2.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GE_UC_USERCOUNTRY2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_BENEFECIARY.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_BENEFECIARY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_BENEFECIARY.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_BENEFECIARY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_HOME.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_HOME.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_HOME.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_HOME.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_SutabilityAssessment.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_SutabilityAssessment.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_SutabilityAssessment.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_SutabilityAssessment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_MEDICALDETAIL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_MEDICALDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_MEDICALDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_MEDICALDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_PERONAL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_PERONAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_PERONAL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_PERONAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_PERONAL2.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_PERONAL2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_PERONAL2.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_PERONAL2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_PLANRIDER.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_PLANRIDER.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_PLANRIDER.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_PLANRIDER.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_POLICYACCEPTANCE.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_POLICYACCEPTANCE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_POLICYACCEPTANCE.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_POLICYACCEPTANCE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_PURPOSE.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_PURPOSE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_PURPOSE.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_PURPOSE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_TARGETVALUES.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_TARGETVALUES.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_TARGETVALUES.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_TARGETVALUES.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_WITHDRAWAL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_WITHDRAWAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_WITHDRAWAL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_WITHDRAWAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_WITHDRAWALPOPS.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_WITHDRAWALPOPS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_GP_WITHDRAWALPOPS.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_GP_WITHDRAWALPOPS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_LF_LNFUFUNDS.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_LF_LNFUFUNDS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_LF_LNFUFUNDS.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_LF_LNFUFUNDS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_UC_USERCHANNEL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_UC_USERCHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_UC_USERCHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_UC_USERCHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_UM_USERMANAGMENT.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_UM_USERMANAGMENT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_UM_USERMANAGMENT.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_UM_USERMANAGMENT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_UM_USERMANAGMENT2.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_UM_USERMANAGMENT2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ET_UM_USERMANAGMENT2.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ET_UM_USERMANAGMENT2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GE_UC_USERCHANNEL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GE_UC_USERCHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GE_UC_USERCHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GE_UC_USERCHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GE_UL_LIMITATION.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GE_UL_LIMITATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GE_UL_LIMITATION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GE_UL_LIMITATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GP_BRANCHPRODUCT.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GP_BRANCHPRODUCT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GP_BRANCHPRODUCT.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GP_BRANCHPRODUCT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GP_CHANNELDETAIL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GP_CHANNELDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GP_CHANNELDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GP_CHANNELDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GP_CHANNELSUBDTL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GP_CHANNELSUBDTL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GP_CHANNELSUBDTL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GP_CHANNELSUBDTL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_GP_GUARDIAN.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_GP_GUARDIAN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ST_CHANNEL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ST_CHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_ST_CHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_ST_CHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_TREE_ADMIN.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_TREE_ADMIN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_TREE_ADMIN.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_TREE_ADMIN.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_TREE_CHANNEL.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_TREE_CHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_TREE_CHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_TREE_CHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_TREE_QUESTION.aspx.cs">
       <DependentUpon>shgn_gp_gp_ILUS_TREE_QUESTION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_ILUS_TREE_QUESTION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_ILUS_TREE_QUESTION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LCQN_QUESTIONAIRE.aspx.cs">
       <DependentUpon>shgn_gp_gp_LCQN_QUESTIONAIRE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LCQN_QUESTIONAIRE.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_LCQN_QUESTIONAIRE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVD_VALIDATIONDETAIL.aspx.cs">
       <DependentUpon>shgn_gp_gp_LPVD_VALIDATIONDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVD_VALIDATIONDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_LPVD_VALIDATIONDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVD_VALIDATIONDETAIL_DECISION.aspx.cs">
       <DependentUpon>shgn_gp_gp_LPVD_VALIDATIONDETAIL_DECISION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVD_VALIDATIONDETAIL_DECISION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_LPVD_VALIDATIONDETAIL_DECISION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVF_VALIDFIELDS_DECISION.aspx.cs">
       <DependentUpon>shgn_gp_gp_LPVF_VALIDFIELDS_DECISION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVF_VALIDFIELDS_DECISION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_LPVF_VALIDFIELDS_DECISION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVF_VALIDFIELDS_VALIDATION.aspx.cs">
       <DependentUpon>shgn_gp_gp_LPVF_VALIDFIELDS_VALIDATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVF_VALIDFIELDS_VALIDATION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_LPVF_VALIDFIELDS_VALIDATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVL_RIDER_INFORMATION.aspx.cs">
       <DependentUpon>shgn_gp_gp_LPVL_RIDER_INFORMATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVL_RIDER_INFORMATION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_LPVL_RIDER_INFORMATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVL_VALIDATION_DECISION.aspx.cs">
       <DependentUpon>shgn_gp_gp_LPVL_VALIDATION_DECISION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVL_VALIDATION_DECISION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_LPVL_VALIDATION_DECISION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVL_VALIDATION_VALIDATION.aspx.cs">
       <DependentUpon>shgn_gp_gp_LPVL_VALIDATION_VALIDATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_LPVL_VALIDATION_VALIDATION.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_LPVL_VALIDATION_VALIDATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_PRODUCTFIELDS_GROUP.aspx.cs">
       <DependentUpon>shgn_gp_gp_PRODUCTFIELDS_GROUP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_PRODUCTFIELDS_GROUP.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_PRODUCTFIELDS_GROUP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_PRODUCTQUESTION_GROUP.aspx.cs">
       <DependentUpon>shgn_gp_gp_PRODUCTQUESTION_GROUP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_PRODUCTQUESTION_GROUP.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_PRODUCTQUESTION_GROUP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_PROVINCE.aspx.cs">
       <DependentUpon>shgn_gp_gp_PROVINCE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_PROVINCE.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_PROVINCE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_RESETPASSWORD.aspx.cs">
       <DependentUpon>shgn_gp_gp_RESETPASSWORD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_RESETPASSWORD.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_RESETPASSWORD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_RIDER_BEHAVIOUR_GROUP.aspx.cs">
       <DependentUpon>shgn_gp_gp_RIDER_BEHAVIOUR_GROUP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_RIDER_BEHAVIOUR_GROUP.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_RIDER_BEHAVIOUR_GROUP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_SECURITY_PARA.aspx.cs">
       <DependentUpon>shgn_gp_gp_SECURITY_PARA.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_SECURITY_PARA.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_SECURITY_PARA.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_TAB_COUNTRYSETUP.aspx.cs">
       <DependentUpon>shgn_gp_gp_TAB_COUNTRYSETUP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gp_gp_TAB_COUNTRYSETUP.aspx.designer.cs">
       <DependentUpon>shgn_gp_gp_TAB_COUNTRYSETUP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_ACE_NG_RATESUTP.aspx.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_ACE_NG_RATESUTP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_ACE_NG_RATESUTP.aspx.designer.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_ACE_NG_RATESUTP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_GENERATEFILE.aspx.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_GENERATEFILE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_GENERATEFILE.aspx.designer.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_GENERATEFILE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_ILUS_ET_UM_USERMANAGMENT.aspx.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_ILUS_ET_UM_USERMANAGMENT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_ILUS_ET_UM_USERMANAGMENT.aspx.designer.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_ILUS_ET_UM_USERMANAGMENT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_RESETPASSWORD.aspx.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_RESETPASSWORD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_gs_se_stdgridscreen_RESETPASSWORD.aspx.designer.cs">
       <DependentUpon>shgn_gs_se_stdgridscreen_RESETPASSWORD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_BANCAPARAMS.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_BANCAPARAMS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_BANCAPARAMS.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_BANCAPARAMS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_CITY.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_CITY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_CITY.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_CITY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_COUNTRY.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_COUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_COUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_COUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_BENEFECIARY.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_BENEFECIARY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_BENEFECIARY.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_BENEFECIARY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_HOME.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_HOME.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDETINS.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDETINS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDETINS.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PERSONALDETINS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PROPOSALDET.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PROPOSALDET.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PROPOSALDET.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PER_PROPOSALDET.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PLANDETAILS.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PLANDETAILS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PLANDETAILS.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PLANDETAILS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PROPOSAL.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PROPOSAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PROPOSAL.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PROPOSAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PURPOSE.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PURPOSE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_PURPOSE.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_PURPOSE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_TARGETVALUES.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_TARGETVALUES.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_TARGETVALUES.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_TARGETVALUES.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_WELCOME.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_WELCOME.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_WELCOME.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_WELCOME.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_WITHDRAWAL.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_WITHDRAWAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_NM_WITHDRAWAL.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_NM_WITHDRAWAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UC_ADDRESS.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UC_ADDRESS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UC_ADDRESS.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UC_ADDRESS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UC_USERCHANNEL.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UC_USERCHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UC_USERCHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UC_USERCHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UM_USERMANAGMENT.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UM_USERMANAGMENT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UM_USERMANAGMENT.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UM_USERMANAGMENT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UM_USERMANAGMENT2.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UM_USERMANAGMENT2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ET_UM_USERMANAGMENT2.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ET_UM_USERMANAGMENT2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_BRANCHPRODUCT.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_BRANCHPRODUCT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_BRANCHPRODUCT.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_BRANCHPRODUCT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_CHANNEL.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_CHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_CHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_CHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_CHANNELDETAIL.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_CHANNELDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_CHANNELDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_CHANNELDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_CHANNELSUBDTL.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_CHANNELSUBDTL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_CHANNELSUBDTL.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_CHANNELSUBDTL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_GUARDIAN.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_GUARDIAN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_ILUS_ST_GUARDIAN.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_ILUS_ST_GUARDIAN.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LCCN_COLUMN.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LCCN_COLUMN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LCCN_COLUMN.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LCCN_COLUMN.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LCQN_QUESTIONAIRE.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LCQN_QUESTIONAIRE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LCQN_QUESTIONAIRE.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LCQN_QUESTIONAIRE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVD_VALIDATIONDETAIL.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVD_VALIDATIONDETAIL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVD_VALIDATIONDETAIL.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVD_VALIDATIONDETAIL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVD_VALIDATIONDETAIL_DECISION.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVD_VALIDATIONDETAIL_DECISION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVD_VALIDATIONDETAIL_DECISION.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVD_VALIDATIONDETAIL_DECISION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVF_PPRID_DESCRIPTION.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVF_PPRID_DESCRIPTION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVF_PPRID_DESCRIPTION.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVF_PPRID_DESCRIPTION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVF_VALIDFIELDS_DECISION.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVF_VALIDFIELDS_DECISION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVF_VALIDFIELDS_DECISION.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVF_VALIDFIELDS_DECISION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVF_VALIDFIELDS_VALIDATION.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVF_VALIDFIELDS_VALIDATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVF_VALIDFIELDS_VALIDATION.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVF_VALIDFIELDS_VALIDATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVL_RIDER_INFORMATION.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVL_RIDER_INFORMATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVL_RIDER_INFORMATION.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVL_RIDER_INFORMATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVL_VALIDATION_DECISION.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVL_VALIDATION_DECISION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVL_VALIDATION_DECISION.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVL_VALIDATION_DECISION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVL_VALIDATION_VALIDATION.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVL_VALIDATION_VALIDATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_LPVL_VALIDATION_VALIDATION.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_LPVL_VALIDATION_VALIDATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_MANUALADJUSTMENT.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_MANUALADJUSTMENT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_MANUALADJUSTMENT.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_MANUALADJUSTMENT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_PRODUCTQUESTION.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_PRODUCTQUESTION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_PRODUCTQUESTION.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_PRODUCTQUESTION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_PROVINCE.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_PROVINCE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_PROVINCE.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_PROVINCE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_SECURITY_PARA.aspx.cs">
       <DependentUpon>shgn_ss_se_stdscreen_SECURITY_PARA.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ss_se_stdscreen_SECURITY_PARA.aspx.designer.cs">
       <DependentUpon>shgn_ss_se_stdscreen_SECURITY_PARA.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILAS_TREE_DECISION.aspx.cs">
       <DependentUpon>shgn_ta_op_ILAS_TREE_DECISION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILAS_TREE_DECISION.aspx.designer.cs">
       <DependentUpon>shgn_ta_op_ILAS_TREE_DECISION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILAS_TREE_MANDRIDER.aspx.cs">
       <DependentUpon>shgn_ta_op_ILAS_TREE_MANDRIDER.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILAS_TREE_MANDRIDER.aspx.designer.cs">
       <DependentUpon>shgn_ta_op_ILAS_TREE_MANDRIDER.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILAS_TREE_VALIDATION.aspx.cs">
       <DependentUpon>shgn_ta_op_ILAS_TREE_VALIDATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILAS_TREE_VALIDATION.aspx.designer.cs">
       <DependentUpon>shgn_ta_op_ILAS_TREE_VALIDATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILUS_TREE_ADMIN.aspx.cs">
       <DependentUpon>shgn_ta_op_ILUS_TREE_ADMIN.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILUS_TREE_ADMIN.aspx.designer.cs">
       <DependentUpon>shgn_ta_op_ILUS_TREE_ADMIN.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILUS_TREE_CHANNEL.aspx.cs">
       <DependentUpon>shgn_ta_op_ILUS_TREE_CHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILUS_TREE_CHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_ta_op_ILUS_TREE_CHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILUS_TREE_QUESTION.aspx.cs">
       <DependentUpon>shgn_ta_op_ILUS_TREE_QUESTION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_ILUS_TREE_QUESTION.aspx.designer.cs">
       <DependentUpon>shgn_ta_op_ILUS_TREE_QUESTION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_TAB_COUNTRYSETUP.aspx.cs">
       <DependentUpon>shgn_ta_op_TAB_COUNTRYSETUP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ta_op_TAB_COUNTRYSETUP.aspx.designer.cs">
       <DependentUpon>shgn_ta_op_TAB_COUNTRYSETUP.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_LF_LNFUFUNDS.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_LF_LNFUFUNDS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_LF_LNFUFUNDS.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_LF_LNFUFUNDS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_NM_PURPOSE.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_NM_PURPOSE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_NM_PURPOSE.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_NM_PURPOSE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TB_BENEFECIARY.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TB_BENEFECIARY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TB_BENEFECIARY.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TB_BENEFECIARY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TB_PLANDETAILS.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TB_PLANDETAILS.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TB_PLANDETAILS.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TB_PLANDETAILS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TB_VERTICALWITHDRAWAL.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TB_VERTICALWITHDRAWAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TB_VERTICALWITHDRAWAL.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TB_VERTICALWITHDRAWAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TB_WITHDRAWAL.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TB_WITHDRAWAL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TB_WITHDRAWAL.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TB_WITHDRAWAL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TE_ER_CHANGEPASSWORD.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TE_ER_CHANGEPASSWORD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TE_ER_CHANGEPASSWORD.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TE_ER_CHANGEPASSWORD.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TE_ER_EXCHANGERATE.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TE_ER_EXCHANGERATE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_TE_ER_EXCHANGERATE.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_TE_ER_EXCHANGERATE.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_UC_USERCHANNEL.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_UC_USERCHANNEL.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_UC_USERCHANNEL.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_UC_USERCHANNEL.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_UC_USERCOUNTRY.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_UC_USERCOUNTRY.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_UC_USERCOUNTRY.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_UC_USERCOUNTRY.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_UC_USERCOUNTRY2.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_UC_USERCOUNTRY2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ET_UC_USERCOUNTRY2.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ET_UC_USERCOUNTRY2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ST_BRANCHPRODUCT.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ST_BRANCHPRODUCT.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_ST_BRANCHPRODUCT.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_ST_BRANCHPRODUCT.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_TE_UL_LIMITATION.aspx.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_TE_UL_LIMITATION.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\shgn_ts_se_tblscreen_ILUS_TE_UL_LIMITATION.aspx.designer.cs">
       <DependentUpon>shgn_ts_se_tblscreen_ILUS_TE_UL_LIMITATION.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\sideFrame.aspx.cs">
       <DependentUpon>sideFrame.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\sideFrame.aspx.designer.cs">
       <DependentUpon>sideFrame.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\Test1234.aspx.cs">
       <DependentUpon>Test1234.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\Test1234.aspx.designer.cs">
       <DependentUpon>Test1234.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\TestPage.aspx.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\TestPage.aspx.designer.cs">
       <DependentUpon>TestPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\TEST_PAGE.aspx.cs">
       <DependentUpon>TEST_PAGE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\TipOfTheDay.aspx.cs">
       <DependentUpon>TipOfTheDay.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\TipOfTheDay.aspx.designer.cs">
       <DependentUpon>TipOfTheDay.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\topFrame.aspx.cs">
       <DependentUpon>topFrame.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\topFrame.aspx.designer.cs">
       <DependentUpon>topFrame.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\TransferPolicy.aspx.cs">
       <DependentUpon>TransferPolicy.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\TransferPolicy.aspx.designer.cs">
       <DependentUpon>TransferPolicy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\TransferPolicy_Button.aspx.cs">
       <DependentUpon>TransferPolicy_Button.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\TransferPolicy_Button.aspx.designer.cs">
       <DependentUpon>TransferPolicy_Button.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\TransferPolicy_Group.aspx.cs">
       <DependentUpon>TransferPolicy_Group.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\TransferPolicy_Group.aspx.designer.cs">
       <DependentUpon>TransferPolicy_Group.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\uploader.ascx.cs">
       <DependentUpon>uploader.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\uploader.ascx.designer.cs">
       <DependentUpon>uploader.ascx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\UserManagmentButtons.aspx.cs">
       <DependentUpon>UserManagmentButtons.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\UserManagmentButtons.aspx.designer.cs">
       <DependentUpon>UserManagmentButtons.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\ValidationError.aspx.cs">
       <DependentUpon>ValidationError.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\ValidationError.aspx.designer.cs">
       <DependentUpon>ValidationError.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\VerticalGrider.aspx.cs">
       <DependentUpon>VerticalGrider.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\VerticalGrider.aspx.designer.cs">
       <DependentUpon>VerticalGrider.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\VerticalLister.aspx.cs">
       <DependentUpon>VerticalLister.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Presentation\VerticalLister.aspx.designer.cs">
       <DependentUpon>VerticalLister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Presentation\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Security\EncryptionManager.cs">
       <SubType>Code</SubType>
