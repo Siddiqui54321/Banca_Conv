@@ -428,38 +428,112 @@ namespace Bancassurance.Presentation
                     conn.Close();
 
 
-
-                    for (int row = 0; row <= GridView1.Rows.Count - 1; row++)
+                    string bank1 = ddlCCD_CHANNELDTLCD.SelectedItem.Text.Trim();
+                    if (bank1 == "JS Bank")
                     {
+                        for (int row = 0; row <= GridView1.Rows.Count - 1; row++)
 
-                        string staffId = CleanCell(GridView1.Rows[row].Cells[0].Text);
-                        string staffName = CleanCell(GridView1.Rows[row].Cells[1].Text);
-                        string field1 = CleanCell(GridView1.Rows[row].Cells[2].Text);
 
-                        Sql = "Insert into LSCH_STAFFCHANNELMAPPING (staff_id,staff_name,ccs_field1,cch_code,ccd_code)" +
-                            " values('" + staffId + "'," +
-                       "'" + staffName + "'," +
-                       "'" + field1 + "'," +
-                       //"'" + "2" + "'," +                       
-                       "'" + ddlCCH_CHANNELCD.SelectedValue + "', " +
-                       "'" + ddlCCD_CHANNELDTLCD.SelectedValue + "')"; 
-                        //SessionObject.Set("s_USE_USERID"
-                        //Label5.Text = Sql;
-                        //lblAlert.Text = Sql;
-
-                        Msg = DML(Sql);
-                        if (Msg == "done")
                         {
-                            uploadedRec = uploadedRec + 1;
-                        }
-                        else
-                        {
-                            NotUpLoadRec = NotUpLoadRec + 1;
+
+                            string staffId = CleanCell(GridView1.Rows[row].Cells[0].Text);
+                            string staffName = CleanCell(GridView1.Rows[row].Cells[1].Text);
+                            string field1 = CleanCell(GridView1.Rows[row].Cells[2].Text);
+
+                            Sql = "Insert into LSCH_STAFFCHANNELMAPPING (staff_id,staff_name,ccs_field1,cch_code,ccd_code)" +
+                                " values('" + staffId + "'," +
+                           "'" + staffName + "'," +
+                           "'" + field1 + "'," +
+                           //"'" + "2" + "'," +                       
+                           "'" + ddlCCH_CHANNELCD.SelectedValue + "', " +
+                           "'" + ddlCCD_CHANNELDTLCD.SelectedValue + "')";
+                            //SessionObject.Set("s_USE_USERID"
+                            //Label5.Text = Sql;
+                            //lblAlert.Text = Sql;
+
+                            Msg = DML(Sql);
+                            if (Msg == "done")
+                            {
+                                uploadedRec = uploadedRec + 1;
+                            }
+                            else
+                            {
+                                NotUpLoadRec = NotUpLoadRec + 1;
+
+                            }
+
 
                         }
+                    }
+                    else
+                    {
+                        for (int row = 0; row <= GridView1.Rows.Count - 1; row++)
+
+
+                        {
+
+                            string staffId = CleanCell(GridView1.Rows[row].Cells[0].Text);
+                            string staffName = CleanCell(GridView1.Rows[row].Cells[1].Text);
+
+                            Sql = "Insert into LSCH_STAFFCHANNELMAPPING (staff_id,staff_name,ccs_field1,cch_code,ccd_code)" +
+                                " values('" + staffId + "'," +
+                           "'" + staffName + "'," +
+                            "NULL, " +
+                           //"'" + "2" + "'," +                       
+                           "'" + ddlCCH_CHANNELCD.SelectedValue + "', " +
+                           "'" + ddlCCD_CHANNELDTLCD.SelectedValue + "')";
+                            //SessionObject.Set("s_USE_USERID"
+                            //Label5.Text = Sql;
+                            //lblAlert.Text = Sql;
+
+                            Msg = DML(Sql);
+                            if (Msg == "done")
+                            {
+                                uploadedRec = uploadedRec + 1;
+                            }
+                            else
+                            {
+                                NotUpLoadRec = NotUpLoadRec + 1;
+
+                            }
+
+
+                        }
+                    }
+
+                    //for (int row = 0; row <= GridView1.Rows.Count - 1; row++)
+                       
+                    
+                    //{
+
+                    //    string staffId = CleanCell(GridView1.Rows[row].Cells[0].Text);
+                    //    string staffName = CleanCell(GridView1.Rows[row].Cells[1].Text);
+                    //    string field1 = CleanCell(GridView1.Rows[row].Cells[2].Text);
+
+                    //    Sql = "Insert into LSCH_STAFFCHANNELMAPPING (staff_id,staff_name,ccs_field1,cch_code,ccd_code)" +
+                    //        " values('" + staffId + "'," +
+                    //   "'" + staffName + "'," +
+                    //   "'" + field1 + "'," +
+                    //   //"'" + "2" + "'," +                       
+                    //   "'" + ddlCCH_CHANNELCD.SelectedValue + "', " +
+                    //   "'" + ddlCCD_CHANNELDTLCD.SelectedValue + "')"; 
+                    //    //SessionObject.Set("s_USE_USERID"
+                    //    //Label5.Text = Sql;
+                    //    //lblAlert.Text = Sql;
+
+                    //    Msg = DML(Sql);
+                    //    if (Msg == "done")
+                    //    {
+                    //        uploadedRec = uploadedRec + 1;
+                    //    }
+                    //    else
+                    //    {
+                    //        NotUpLoadRec = NotUpLoadRec + 1;
+
+                    //    }
 
  
-                    }
+                    //}
 
                     btnSave.Visible = true;
 
